@@ -210,8 +210,8 @@
 		A858BBF72B64361E004859BC /* Problems */ = {
 			isa = PBXGroup;
 			children = (
-				A858BC8B2B650017004859BC /* ListNode.swift */,
 				A858BBF82B64361E004859BC /* Problems.swift */,
+				A858BC8E2B654D1D004859BC /* DataStructures */,
 				A858BC0C2B6436F8004859BC /* Problems_50 */,
 			);
 			path = Problems;
@@ -272,6 +272,14 @@
 				A858BC1A2B643745004859BC /* Problem_1.swift */,
 			);
 			name = Problems_50;
+			sourceTree = "<group>";
+		};
+		A858BC8E2B654D1D004859BC /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				A858BC8B2B650017004859BC /* ListNode.swift */,
+			);
+			name = DataStructures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

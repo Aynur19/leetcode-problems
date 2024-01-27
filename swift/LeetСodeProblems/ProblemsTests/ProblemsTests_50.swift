@@ -8,7 +8,7 @@
 import XCTest
 @testable import Problems
 
-extension ProblemsTests 
+extension ProblemsTests {
     // MARK: Problem 49. Group Anagrams
     func testsProblem_49() throws {
         lazy var testsData_49: [(strs: [String], expected: [[String]])] = {
