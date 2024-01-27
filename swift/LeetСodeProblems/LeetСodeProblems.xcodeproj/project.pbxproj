@@ -96,6 +96,9 @@
 		A858BC8A2B64FF50004859BC /* Problems.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BBF82B64361E004859BC /* Problems.swift */; };
 		A858BC8C2B650017004859BC /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BC8B2B650017004859BC /* ListNode.swift */; };
 		A858BC8D2B650017004859BC /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BC8B2B650017004859BC /* ListNode.swift */; };
+		A858BC932B654DF6004859BC /* Problem_53.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BC922B654DF6004859BC /* Problem_53.swift */; };
+		A858BC952B654E34004859BC /* ProblemsTests_100.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BC942B654E34004859BC /* ProblemsTests_100.swift */; };
+		A858BC962B659310004859BC /* Problem_53.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BC922B654DF6004859BC /* Problem_53.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +171,8 @@
 		A858BC352B64374D004859BC /* Problem_13.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem_13.swift; sourceTree = "<group>"; };
 		A858BC5F2B64388F004859BC /* ProblemsTests_50.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsTests_50.swift; sourceTree = "<group>"; };
 		A858BC8B2B650017004859BC /* ListNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
+		A858BC922B654DF6004859BC /* Problem_53.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem_53.swift; sourceTree = "<group>"; };
+		A858BC942B654E34004859BC /* ProblemsTests_100.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsTests_100.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +217,7 @@
 			children = (
 				A858BBF82B64361E004859BC /* Problems.swift */,
 				A858BC902B654D91004859BC /* DataStructures */,
+				A858BC912B654DC1004859BC /* Problems_100 */,
 				A858BC0C2B6436F8004859BC /* Problems_50 */,
 			);
 			path = Problems;
@@ -221,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				A858BC032B643670004859BC /* ProblemsTests.swift */,
+				A858BC942B654E34004859BC /* ProblemsTests_100.swift */,
 				A858BC5F2B64388F004859BC /* ProblemsTests_50.swift */,
 			);
 			path = ProblemsTests;
@@ -280,6 +287,14 @@
 				A858BC8B2B650017004859BC /* ListNode.swift */,
 			);
 			path = DataStructures;
+			sourceTree = "<group>";
+		};
+		A858BC912B654DC1004859BC /* Problems_100 */ = {
+			isa = PBXGroup;
+			children = (
+				A858BC922B654DF6004859BC /* Problem_53.swift */,
+			);
+			name = Problems_100;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,6 +422,7 @@
 				A858BC5A2B64374D004859BC /* Problem_18.swift in Sources */,
 				A858BC422B64374D004859BC /* Problem_28.swift in Sources */,
 				A858BC452B64374D004859BC /* Problem_29.swift in Sources */,
+				A858BC932B654DF6004859BC /* Problem_53.swift in Sources */,
 				A858BC512B64374D004859BC /* Problem_35.swift in Sources */,
 				A858BC5E2B64374D004859BC /* Problem_13.swift in Sources */,
 				A858BC3A2B64374D004859BC /* Problem_15.swift in Sources */,
@@ -425,6 +441,7 @@
 				A858BC7F2B64FF32004859BC /* Problem_37.swift in Sources */,
 				A858BC8A2B64FF50004859BC /* Problems.swift in Sources */,
 				A858BC862B64FF32004859BC /* Problem_24.swift in Sources */,
+				A858BC952B654E34004859BC /* ProblemsTests_100.swift in Sources */,
 				A858BC682B64FF32004859BC /* Problem_16.swift in Sources */,
 				A858BC6D2B64FF32004859BC /* Problem_27.swift in Sources */,
 				A858BC792B64FF32004859BC /* Problem_14.swift in Sources */,
@@ -436,6 +453,7 @@
 				A858BC8D2B650017004859BC /* ListNode.swift in Sources */,
 				A858BC7E2B64FF32004859BC /* Problem_48.swift in Sources */,
 				A858BC7D2B64FF32004859BC /* Problem_5.swift in Sources */,
+				A858BC962B659310004859BC /* Problem_53.swift in Sources */,
 				A858BC822B64FF32004859BC /* Problem_25.swift in Sources */,
 				A858BC6B2B64FF32004859BC /* Problem_36.swift in Sources */,
 				A858BC6F2B64FF32004859BC /* Problem_32.swift in Sources */,
