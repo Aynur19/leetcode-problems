@@ -211,7 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				A858BBF82B64361E004859BC /* Problems.swift */,
-				A858BC8E2B654D1D004859BC /* DataStructures */,
+				A858BC902B654D91004859BC /* DataStructures */,
 				A858BC0C2B6436F8004859BC /* Problems_50 */,
 			);
 			path = Problems;
@@ -274,12 +274,12 @@
 			name = Problems_50;
 			sourceTree = "<group>";
 		};
-		A858BC8E2B654D1D004859BC /* DataStructures */ = {
+		A858BC902B654D91004859BC /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
 				A858BC8B2B650017004859BC /* ListNode.swift */,
 			);
-			name = DataStructures;
+			path = DataStructures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
