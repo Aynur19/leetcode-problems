@@ -142,6 +142,8 @@
 		A858BCD92B66C814004859BC /* Problem_228.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BCD72B66C814004859BC /* Problem_228.swift */; };
 		A858BCDB2B66CE14004859BC /* MyQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BCDA2B66CE14004859BC /* MyQueue.swift */; };
 		A858BCDC2B66CE14004859BC /* MyQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BCDA2B66CE14004859BC /* MyQueue.swift */; };
+		A858BCDE2B66D630004859BC /* Problem_234.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BCDD2B66D630004859BC /* Problem_234.swift */; };
+		A858BCDF2B66D630004859BC /* Problem_234.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BCDD2B66D630004859BC /* Problem_234.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +241,7 @@
 		A858BCD42B66A170004859BC /* Problem_206.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_206.swift; sourceTree = "<group>"; };
 		A858BCD72B66C814004859BC /* Problem_228.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_228.swift; sourceTree = "<group>"; };
 		A858BCDA2B66CE14004859BC /* MyQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQueue.swift; sourceTree = "<group>"; };
+		A858BCDD2B66D630004859BC /* Problem_234.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_234.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,6 +409,7 @@
 				A858BCD72B66C814004859BC /* Problem_228.swift */,
 				A858BCD42B66A170004859BC /* Problem_206.swift */,
 				A858BCCF2B6698ED004859BC /* Problem_205.swift */,
+				A858BCDD2B66D630004859BC /* Problem_234.swift */,
 			);
 			name = Problems_250;
 			sourceTree = "<group>";
@@ -512,6 +516,7 @@
 				A858BBF92B64361E004859BC /* Problems.swift in Sources */,
 				A858BC502B64374D004859BC /* Problem_14.swift in Sources */,
 				A858BC522B64374D004859BC /* Problem_19.swift in Sources */,
+				A858BCDE2B66D630004859BC /* Problem_234.swift in Sources */,
 				A858BC592B64374D004859BC /* Problem_8.swift in Sources */,
 				A858BC582B64374D004859BC /* Problem_49.swift in Sources */,
 				A858BC3B2B64374D004859BC /* Problem_3.swift in Sources */,
@@ -572,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A858BC992B6593F5004859BC /* LRUCache.swift in Sources */,
+				A858BCDF2B66D630004859BC /* Problem_234.swift in Sources */,
 				A858BC7F2B64FF32004859BC /* Problem_37.swift in Sources */,
 				A858BC8A2B64FF50004859BC /* Problems.swift in Sources */,
 				A858BCAF2B65943A004859BC /* Problem_125.swift in Sources */,

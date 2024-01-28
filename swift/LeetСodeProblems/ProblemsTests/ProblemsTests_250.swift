@@ -9,6 +9,23 @@ import XCTest
 @testable import Problems
 
 extension ProblemsTests {
+    // MARK: Problem 234. Summary Ranges
+    func testsProblem_234() throws {
+        lazy var testsData_234: [(head: ListNode?, expected: Bool)] = {
+            var testsData = [(head: ListNode?, expected: Bool)]()
+            
+            testsData.append((head: .init(1, .init(2, .init(2, .init(1)))), expected: true))
+            testsData.append((head: .init(1, .init(2)), expected: false))
+            
+            return testsData
+        }()
+        
+        for data in testsData_234 {
+            let actual = Problems.problem_234_isPalindrome(data.head)
+            XCTAssertEqual(actual, data.expected, "head: \(data.head?.description ?? "[]")")
+        }
+    }
+    
     // MARK: Problem 232. Implement Queue using Stacks
     func testsProblem_232() throws {
         lazy var testsData_232: [(commands: [String], args: [[Int]], expected: [Int])] = {
