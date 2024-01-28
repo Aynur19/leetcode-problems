@@ -9,6 +9,37 @@ import XCTest
 @testable import Problems
 
 extension ProblemsTests {
+    // MARK: Problem 206. Reverse Linked List
+    
+    func testsProblem_206() throws {
+        lazy var testsData_206: [(head: ListNode?, expected: ListNode?)] = {
+            var testsData = [(head: ListNode?, expected: ListNode?)]()
+            
+            testsData.append((
+                head: .init(1, .init(2, .init(3, .init(4, .init(5))))),
+                expected: .init(5, .init(4, .init(3, .init(2, .init(1)))))
+            ))
+            testsData.append((
+                head: .init(1, .init(2)),
+                expected: .init(2, .init(1))
+            ))
+            testsData.append((head: nil, expected: nil))
+            
+            return testsData
+        }()
+        
+//        for data in testsData_206 {
+//            let actual = Problems.problem_206_reverseList(data.head)
+//            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "head: \(data.head?.description ?? "[]")")
+//        }
+        
+        
+        for data in testsData_206 {
+            let actual = Problems.problem_206_reverseList2(data.head)
+            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "head: \(data.head?.description ?? "[]")")
+        }
+    }
+    
     // MARK: Problem 205. Isomorphic Strings
     func testsProblem_205() throws {
         lazy var testsData_205: [(s: String, t: String, expected: Bool)] = {
