@@ -9,6 +9,47 @@ import XCTest
 @testable import Problems
 
 extension ProblemsTests {
+    // MARK: Problem 232. Implement Queue using Stacks
+    func testsProblem_232() throws {
+        lazy var testsData_232: [(commands: [String], args: [[Int]], expected: [Int])] = {
+            var testsData = [(commands: [String], args: [[Int]], expected: [Int])]()
+            
+            testsData.append((
+                commands: ["MyQueue", "push", "push", "peek", "pop", "empty"],
+                args: [[], [1], [2], [], [], []],
+                expected: [1, 1, 0]
+            ))
+            
+            return testsData
+        }()
+        
+        for data in testsData_232 {
+            var actual = [Int]()
+            let myQueue = MyQueue()
+            
+            for i in 1..<data.commands.count {
+                var method = ""
+                switch data.commands[i] {
+                    case "push":
+                        method = "\(i)) push(\(data.args[i])): ->  "
+                        myQueue.push(data.args[i][0])
+                    case "peek":
+                        method = "\(i)) peek(): ->  "
+                        actual.append(myQueue.peek())
+                    case "pop":
+                        method = "\(i)) pop(): ->  "
+                        actual.append(myQueue.pop())
+                    default:
+                        method = "\(i)) empty(): ->  "
+                        actual.append(myQueue.empty() ? 1 : 0)
+                }
+                
+                print("\(i)) \(method)\(myQueue)")
+            }
+            XCTAssertEqual(actual, data.expected, "commands: \(data.commands), args: \(data.args)")
+        }
+    }
+    
     // MARK: Problem 228. Summary Ranges
     func testsProblem_228() throws {
         lazy var testsData_228: [(nums: [Int], expected: [String])] = {
