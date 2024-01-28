@@ -34,8 +34,10 @@ extension ProblemsTests {
         
         for data in testsData_200 {
             let actual = Problems.problem_200_numIslands(data.grid)
+            let actual2 = Problems.problem_200_numIslands2(data.grid)
             
             XCTAssertEqual(actual, data.expected, "grid: \(data.grid)")
+            XCTAssertEqual(actual2, data.expected, "grid: \(data.grid)")
         }
     }
     
