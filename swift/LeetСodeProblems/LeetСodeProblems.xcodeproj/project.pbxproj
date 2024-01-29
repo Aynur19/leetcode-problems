@@ -158,6 +158,11 @@
 		A8AC0EFE2B67EBB3009DE6DE /* Problem_279.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AC0EFC2B67EBB3009DE6DE /* Problem_279.swift */; };
 		A8AC0F002B68091B009DE6DE /* Problem_283.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AC0EFF2B68091B009DE6DE /* Problem_283.swift */; };
 		A8AC0F012B68091B009DE6DE /* Problem_283.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AC0EFF2B68091B009DE6DE /* Problem_283.swift */; };
+		A8AC0F032B680DB8009DE6DE /* NestedIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AC0F022B680DB8009DE6DE /* NestedIterator.swift */; };
+		A8AC0F042B680DB8009DE6DE /* NestedIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AC0F022B680DB8009DE6DE /* NestedIterator.swift */; };
+		A8AC0F062B682867009DE6DE /* ProblemsTests_350.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AC0F052B682867009DE6DE /* ProblemsTests_350.swift */; };
+		A8AC0F082B682E4E009DE6DE /* NestedInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AC0F072B682E4E009DE6DE /* NestedInteger.swift */; };
+		A8AC0F092B682E4E009DE6DE /* NestedInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AC0F072B682E4E009DE6DE /* NestedInteger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,6 +268,9 @@
 		A8AC0EFA2B67DB77009DE6DE /* ProblemsTests_300.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsTests_300.swift; sourceTree = "<group>"; };
 		A8AC0EFC2B67EBB3009DE6DE /* Problem_279.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_279.swift; sourceTree = "<group>"; };
 		A8AC0EFF2B68091B009DE6DE /* Problem_283.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_283.swift; sourceTree = "<group>"; };
+		A8AC0F022B680DB8009DE6DE /* NestedIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedIterator.swift; sourceTree = "<group>"; };
+		A8AC0F052B682867009DE6DE /* ProblemsTests_350.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsTests_350.swift; sourceTree = "<group>"; };
+		A8AC0F072B682E4E009DE6DE /* NestedInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedInteger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +328,7 @@
 		A858BC022B643670004859BC /* ProblemsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A8AC0F052B682867009DE6DE /* ProblemsTests_350.swift */,
 				A8AC0EFA2B67DB77009DE6DE /* ProblemsTests_300.swift */,
 				A858BCD22B669AF4004859BC /* ProblemsTests_250.swift */,
 				A858BCC52B659610004859BC /* ProblemsTests_200.swift */,
@@ -388,6 +397,8 @@
 				A858BCB32B6594B7004859BC /* TreeNode.swift */,
 				A858BCC82B6685D2004859BC /* Queue.swift */,
 				A858BCDA2B66CE14004859BC /* MyQueue.swift */,
+				A8AC0F022B680DB8009DE6DE /* NestedIterator.swift */,
+				A8AC0F072B682E4E009DE6DE /* NestedInteger.swift */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -547,11 +558,13 @@
 				A858BC572B64374D004859BC /* Problem_38.swift in Sources */,
 				A858BCB12B659480004859BC /* Problem_150.swift in Sources */,
 				A858BC8C2B650017004859BC /* ListNode.swift in Sources */,
+				A8AC0F032B680DB8009DE6DE /* NestedIterator.swift in Sources */,
 				A858BC4C2B64374D004859BC /* Problem_24.swift in Sources */,
 				A858BC372B64374D004859BC /* Problem_30.swift in Sources */,
 				A858BBF92B64361E004859BC /* Problems.swift in Sources */,
 				A858BC502B64374D004859BC /* Problem_14.swift in Sources */,
 				A858BC522B64374D004859BC /* Problem_19.swift in Sources */,
+				A8AC0F082B682E4E009DE6DE /* NestedInteger.swift in Sources */,
 				A858BCDE2B66D630004859BC /* Problem_234.swift in Sources */,
 				A858BC592B64374D004859BC /* Problem_8.swift in Sources */,
 				A858BC582B64374D004859BC /* Problem_49.swift in Sources */,
@@ -622,6 +635,7 @@
 				A858BC992B6593F5004859BC /* LRUCache.swift in Sources */,
 				A858BCDF2B66D630004859BC /* Problem_234.swift in Sources */,
 				A858BC7F2B64FF32004859BC /* Problem_37.swift in Sources */,
+				A8AC0F092B682E4E009DE6DE /* NestedInteger.swift in Sources */,
 				A8AC0F012B68091B009DE6DE /* Problem_283.swift in Sources */,
 				A858BC8A2B64FF50004859BC /* Problems.swift in Sources */,
 				A8AC0EF92B67D907009DE6DE /* Problem_268.swift in Sources */,
@@ -633,7 +647,9 @@
 				A858BCA92B65943A004859BC /* Problem_136.swift in Sources */,
 				A858BC6D2B64FF32004859BC /* Problem_27.swift in Sources */,
 				A858BC792B64FF32004859BC /* Problem_14.swift in Sources */,
+				A8AC0F042B680DB8009DE6DE /* NestedIterator.swift in Sources */,
 				A858BC7B2B64FF32004859BC /* Problem_8.swift in Sources */,
+				A8AC0F062B682867009DE6DE /* ProblemsTests_350.swift in Sources */,
 				A8AC0EFE2B67EBB3009DE6DE /* Problem_279.swift in Sources */,
 				A858BC742B64FF32004859BC /* Problem_43.swift in Sources */,
 				A8AC0EF52B67D379009DE6DE /* Problem_242.swift in Sources */,
