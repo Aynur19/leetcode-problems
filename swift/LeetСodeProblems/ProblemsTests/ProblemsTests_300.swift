@@ -9,6 +9,31 @@ import XCTest
 @testable import Problems
 
 final class ProblemsTests_300: XCTestCase {
+    // MARK: Problem 279. Perfect Squares
+    func testsProblem_279() throws {
+        lazy var testsData_279: [(n: Int, expected: Int)] = {
+            var testsData = [(n: Int, expected: Int)]()
+            
+            testsData.append((n: 12, expected: 3))
+            testsData.append((n: 13, expected: 2))
+            testsData.append((n: 1, expected: 1))
+            
+            return testsData
+        }()
+        
+        for data in testsData_279 {
+            let actual = Problems.problem_279_numSquares(data.n)
+//            let actual2 = Problems.problem_268_missingNumber2(data.n)
+//            let actual3 = Problems.problem_268_missingNumber3(data.n)
+//            let actual4 = Problems.problem_268_missingNumber4(data.n)
+            
+            XCTAssertEqual(actual, data.expected, "n: \(data.n)")
+//            XCTAssertEqual(actual2, data.expected, "n: \(data.n)")
+//            XCTAssertEqual(actual3, data.expected, "n: \(data.n)")
+//            XCTAssertEqual(actual4, data.expected, "n: \(data.n)")
+        }
+    }
+    
     // MARK: Problem 268. Missing Number
     func testsProblem_268() throws {
         lazy var testsData_268: [(nums: [Int], expected: Int)] = {
