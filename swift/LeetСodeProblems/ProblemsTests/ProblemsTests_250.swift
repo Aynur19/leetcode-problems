@@ -9,6 +9,23 @@ import XCTest
 @testable import Problems
 
 extension ProblemsTests {
+    // MARK: Problem 238. Product of Array Except Self
+    func testsProblem_238() throws {
+        lazy var testsData_238: [(nums: [Int], expected: [Int])] = {
+            var testsData = [(nums: [Int], expected: [Int])]()
+            
+            testsData.append((nums: [1,2,3,4], expected: [24,12,8,6]))
+            testsData.append((nums: [-1,1,0,-3,3], expected: [0,0,9,0,0]))
+            
+            return testsData
+        }()
+        
+        for data in testsData_238 {
+            let actual = Problems.problem_238_productExceptSelf(data.nums)
+            XCTAssertEqual(actual, data.expected, "nums: \(data.nums)")
+        }
+    }
+    
     // MARK: Problem 236. Lowest Common Ancestor of a Binary Tree
     func testsProblem_236() throws {
         lazy var testsData_236: [(root: TreeNode?, p: TreeNode?, q: TreeNode?, expected: TreeNode?)] = {

@@ -38,7 +38,7 @@
 
 extension Problems {
     // Approach: Depth-First Search
-    // Time complexity: O(log n) = 70 ms
+    // Time complexity: O(n) = 70 ms
     // Space complexity: O(1) = 18.44 MB
     static func problem_236_lowestCommonAncestor(_ root: TreeNode?, _ p: TreeNode?, _ q: TreeNode?) -> TreeNode? {
         var lca: TreeNode?
