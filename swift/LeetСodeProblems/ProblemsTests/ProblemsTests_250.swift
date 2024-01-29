@@ -8,7 +8,7 @@
 import XCTest
 @testable import Problems
 
-extension ProblemsTests {
+public final class ProblemsTests_250: XCTestCase {
     
     // MARK: Problem 242. Valid Anagram
     func testsProblem_242() throws {

@@ -8,7 +8,7 @@
 import XCTest
 @testable import Problems
 
-extension ProblemsTests {
+public final class ProblemsTests_200: XCTestCase {
     // MARK: Problem 200. Number of Islands
         func testsProblem_200() throws {
         lazy var testsData_200: [(grid: [[Character]], expected: Int)] = {

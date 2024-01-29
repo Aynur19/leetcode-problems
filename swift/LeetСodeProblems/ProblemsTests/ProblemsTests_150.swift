@@ -8,7 +8,7 @@
 import XCTest
 @testable import Problems
 
-extension ProblemsTests {
+public final class ProblemsTests_150: XCTestCase {
     // MARK: Problem 150. Evaluate Reverse Polish Notation
     func testsProblem_150() throws {
         lazy var testsData_150: [(tokens: [String], expected: Int)] = {

@@ -8,7 +8,7 @@
 import XCTest
 @testable import Problems
 
-extension ProblemsTests {
+public final class ProblemsTests_100: XCTestCase {
     // MARK: Problem 53. Maximum Subarray
     func testsProblem_53() throws {
         lazy var testsData_53: [(nums: [Int], expected: Int)] = {
