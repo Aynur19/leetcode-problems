@@ -9,6 +9,25 @@ import XCTest
 @testable import Problems
 
 extension ProblemsTests {
+    
+    // MARK: Problem 242. Valid Anagram
+    func testsProblem_242() throws {
+        lazy var testsData_242: [(s: String, t: String, expected: Bool)] = {
+            var testsData = [(s: String, t: String, expected: Bool)]()
+            
+            testsData.append((s: "anagram", t: "nagaram", expected: true))
+            testsData.append((s: "rat", t: "car", expected: false))
+            testsData.append((s: "aa", t: "a", expected: false))
+            
+            return testsData
+        }()
+        
+        for data in testsData_242 {
+            let actual = Problems.problem_242_isAnagram(data.s, data.t)
+            XCTAssertEqual(actual, data.expected, "s: '\(data.s)'; t: '\(data.t)'")
+        }
+    }
+    
     // MARK: Problem 238. Product of Array Except Self
     func testsProblem_238() throws {
         lazy var testsData_238: [(nums: [Int], expected: [Int])] = {

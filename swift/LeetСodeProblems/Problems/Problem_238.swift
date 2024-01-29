@@ -34,8 +34,8 @@
 
 extension Problems {
     // Approach: Array, Prefix Sum
-    // Time complexity: O() = 161 ms
-    // Space complexity: O() = 22.23 MB
+    // Time complexity: O(n) = 161 ms
+    // Space complexity: O(1) = 22.23 MB
     static func problem_238_productExceptSelf(_ nums: [Int]) -> [Int] {
         var result = Array<Int>(repeating: 1, count: nums.count)
         var tmp = 1
