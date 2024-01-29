@@ -9,6 +9,41 @@ import XCTest
 @testable import Problems
 
 extension ProblemsTests {
+    // MARK: Problem 236. Lowest Common Ancestor of a Binary Tree
+    func testsProblem_236() throws {
+        lazy var testsData_236: [(root: TreeNode?, p: TreeNode?, q: TreeNode?, expected: TreeNode?)] = {
+            var testsData = [(root: TreeNode?, p: TreeNode?, q: TreeNode?, expected: TreeNode?)]()
+            
+            let p1: TreeNode? = .init(5, .init(6), .init(2, .init(7), .init(4)))
+            let q1: TreeNode? = .init(1, .init(0), .init(8))
+            let root1: TreeNode? = .init(3, p1, q1)
+            let expected1: TreeNode? = root1
+            testsData.append((root: root1, p: p1, q: q1, expected: expected1))
+            
+            let q2: TreeNode? = .init(4)
+            let p2: TreeNode? = .init(5, .init(6), .init(2, .init(7), q2))
+            let root2: TreeNode? = .init(3, p2, .init(1, .init(0), .init(8)))
+            let expected2: TreeNode? = p2
+            testsData.append((root: root2, p: p2, q: q2, expected: expected2))
+            
+            let q3: TreeNode? = .init(2)
+            let p3: TreeNode? = .init(1)
+            let root3: TreeNode? = p3
+            root3?.left = q3
+            let expected3: TreeNode? = root3
+            testsData.append((root: root3, p: p3, q: q3, expected: expected3))
+            
+            return testsData
+        }()
+        
+        var idx = 0
+        for data in testsData_236 {
+            idx += 1
+            let actual = Problems.problem_236_lowestCommonAncestor(data.root, data.p, data.q)
+            XCTAssertEqual(actual, data.expected, "test case: \(idx)")
+        }
+    }
+    
     // MARK: Problem 235. Lowest Common Ancestor of a Binary Search Tree
     func testsProblem_235() throws {
         lazy var testsData_235: [(root: TreeNode?, p: TreeNode?, q: TreeNode?, expected: TreeNode?)] = {
@@ -28,7 +63,7 @@ extension ProblemsTests {
             
             let q3: TreeNode? = .init(1)
             let p3: TreeNode? = .init(2)
-            let root3: TreeNode? = p2
+            let root3: TreeNode? = p3
             root3?.left = q3
             let expected3: TreeNode? = root3
             testsData.append((root: root3, p: p3, q: q3, expected: expected3))

@@ -146,6 +146,8 @@
 		A858BCDF2B66D630004859BC /* Problem_234.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BCDD2B66D630004859BC /* Problem_234.swift */; };
 		A858BCE12B678019004859BC /* Problem_235.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BCE02B678019004859BC /* Problem_235.swift */; };
 		A858BCE22B678019004859BC /* Problem_235.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BCE02B678019004859BC /* Problem_235.swift */; };
+		A858BCE42B678DBA004859BC /* Problem_236.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BCE32B678DBA004859BC /* Problem_236.swift */; };
+		A858BCE52B678DBA004859BC /* Problem_236.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BCE32B678DBA004859BC /* Problem_236.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -245,6 +247,7 @@
 		A858BCDA2B66CE14004859BC /* MyQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQueue.swift; sourceTree = "<group>"; };
 		A858BCDD2B66D630004859BC /* Problem_234.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_234.swift; sourceTree = "<group>"; };
 		A858BCE02B678019004859BC /* Problem_235.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_235.swift; sourceTree = "<group>"; };
+		A858BCE32B678DBA004859BC /* Problem_236.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_236.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,6 +417,7 @@
 				A858BCD72B66C814004859BC /* Problem_228.swift */,
 				A858BCD42B66A170004859BC /* Problem_206.swift */,
 				A858BCCF2B6698ED004859BC /* Problem_205.swift */,
+				A858BCE32B678DBA004859BC /* Problem_236.swift */,
 			);
 			name = Problems_250;
 			sourceTree = "<group>";
@@ -544,6 +548,7 @@
 				A858BC412B64374D004859BC /* Problem_27.swift in Sources */,
 				A858BCD02B6698ED004859BC /* Problem_205.swift in Sources */,
 				A858BC432B64374D004859BC /* Problem_1.swift in Sources */,
+				A858BCE42B678DBA004859BC /* Problem_236.swift in Sources */,
 				A858BC482B64374D004859BC /* Problem_32.swift in Sources */,
 				A858BCAE2B65943A004859BC /* Problem_125.swift in Sources */,
 				A858BC3E2B64374D004859BC /* Problem_6.swift in Sources */,
@@ -596,6 +601,7 @@
 				A858BC7B2B64FF32004859BC /* Problem_8.swift in Sources */,
 				A858BC742B64FF32004859BC /* Problem_43.swift in Sources */,
 				A858BCAD2B65943A004859BC /* Problem_103.swift in Sources */,
+				A858BCE52B678DBA004859BC /* Problem_236.swift in Sources */,
 				A858BC842B64FF32004859BC /* Problem_38.swift in Sources */,
 				A858BC732B64FF32004859BC /* Problem_10.swift in Sources */,
 				A858BC602B64388F004859BC /* ProblemsTests_50.swift in Sources */,

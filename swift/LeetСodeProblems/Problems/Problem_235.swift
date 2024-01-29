@@ -39,7 +39,7 @@
 extension Problems {
     // Approach: Binary Search
     // Time complexity: O(log n) = 110 ms
-    // Space complexity: O(1) = 1649 MB
+    // Space complexity: O(1) = 16.49 MB
     static func problem_235_lowestCommonAncestor(_ root: TreeNode?, _ p: TreeNode?, _ q: TreeNode?) -> TreeNode? {
         guard var tmp = root,
               let p = p,
