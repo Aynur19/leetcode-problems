@@ -7,7 +7,7 @@
 
 //  392. Is Subsequence
 //  Easy
-//  Topics
+//  Topics: Two Pointers, String, Dynamic Programming
 
 //  Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
 //

@@ -22,10 +22,7 @@ final class ProblemsTests_400: XCTestCase {
         
         for data in testsData_392 {
             let actual = Problems.problem_392_isSubsequence(data.s, data.t)
-//            let actual2 = Problems.problem_387_firstUniqChar2(data.s)
-            
             XCTAssertEqual(actual, data.expected, "s: '\(data.s)'; t: '\(data.t)'")
-//            XCTAssertEqual(actual2, data.expected, "s: '\(data.s)'")
         }
     }
     
