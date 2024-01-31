@@ -8,6 +8,27 @@
 import XCTest
 
 final class ProblemsTests_400: XCTestCase {
+    // MARK: Problem 392. Is Subsequence
+    func testsProblem_392() throws {
+        lazy var testsData_392: [(s: String, t: String, expected: Bool)] = {
+            var testsData = [(s: String, t: String, expected: Bool)]()
+            
+            testsData.append((s: "abc", t: "ahbgdc", expected: true))
+            testsData.append((s: "axc", t: "ahbgdc", expected: false))
+            testsData.append((s: "", t: "ahbgdc", expected: true))
+            
+            return testsData
+        }()
+        
+        for data in testsData_392 {
+            let actual = Problems.problem_392_isSubsequence(data.s, data.t)
+//            let actual2 = Problems.problem_387_firstUniqChar2(data.s)
+            
+            XCTAssertEqual(actual, data.expected, "s: '\(data.s)'; t: '\(data.t)'")
+//            XCTAssertEqual(actual2, data.expected, "s: '\(data.s)'")
+        }
+    }
+    
     // MARK: Problem 387. First Unique Character in a String
     func testsProblem_387() throws {
         lazy var testsData_387: [(s: String, expected: Int)] = {
