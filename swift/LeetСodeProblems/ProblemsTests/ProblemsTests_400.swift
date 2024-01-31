@@ -8,6 +8,205 @@
 import XCTest
 
 final class ProblemsTests_400: XCTestCase {
+    // MARK: Problem 380. Insert Delete GetRandom O(1)
+    func testsProblem_380() throws {
+        struct TestData {
+            let command: String
+            let value: Int
+            let isInserted: Bool
+            let isRemoved: Bool
+            let randomVal: [Int]
+            
+            init(
+                _ command: String = "insert",
+                _ value: Int = 0,
+                isInserted: Bool = false,
+                isRemoved: Bool = false,
+                randomVal: [Int] = []
+            ) {
+                self.command = command
+                self.value = value
+                self.isInserted = isInserted
+                self.isRemoved = isRemoved
+                self.randomVal = randomVal
+            }
+        }
+        
+        lazy var testsData_380: [[TestData]] = {
+            var testsData = [[TestData]]()
+            
+            testsData.append([
+                .init("RandomizedSet"),
+                .init("insert", 1, isInserted: true),
+                .init("remove", 2, isRemoved: false),
+                .init("insert", 2, isInserted: true),
+                .init("getRandom", randomVal: [1, 2]),
+                .init("remove", 1, isRemoved: true),
+                .init("insert", 2, isInserted: false),
+                .init("getRandom", randomVal: [2])
+            ])
+            testsData.append([
+                .init("RandomizedSet"),
+                .init("insert", 3, isInserted: true),
+                .init("insert", 3, isInserted: false),
+                .init("getRandom", randomVal: [3]),
+                .init("getRandom", randomVal: [3]),
+                .init("insert", 1, isInserted: true),
+                .init("remove", 3, isRemoved: true),
+                .init("getRandom", randomVal: [1]),
+                .init("getRandom", randomVal: [1]),
+                .init("insert", 0, isInserted: true),
+                .init("remove", 0, isRemoved: true),
+            ])
+            testsData.append([
+                .init("RandomizedSet"),
+                .init("remove", 0, isRemoved: false),
+                .init("remove", 0, isRemoved: false),
+                .init("insert", 0, isInserted: true),
+                .init("getRandom", randomVal: [0]),
+                .init("remove", 0, isRemoved: true),
+                .init("insert", 0, isInserted: true)
+            ])
+            testsData.append([
+                .init("RandomizedSet"),
+                .init("insert", -7, isInserted: true),
+                .init("getRandom", randomVal: [-7]),
+                .init("getRandom", randomVal: [-7]),
+                .init("getRandom", randomVal: [-7]),
+                .init("insert", 6, isInserted: true),
+                .init("insert", 7, isInserted: true),
+                .init("insert", 10, isInserted: true),
+                .init("insert", 3, isInserted: true),
+                .init("insert", 8, isInserted: true),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8]),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8]),
+                .init("insert", -8, isInserted: true),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8]),
+                .init("insert", 6, isInserted: false),
+                .init("insert", -8, isInserted: false),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8]),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8]),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8]),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8]),
+                .init("remove", 2, isRemoved: false),
+                .init("insert", 2, isInserted: true),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2]),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2]),
+                .init("insert", 5, isInserted: true),
+                .init("remove", -5, isRemoved: false),
+                .init("remove", -8, isRemoved: true),
+                .init("insert", -8, isInserted: true),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5]),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5]),
+                .init("insert", -4, isInserted: true),
+                .init("insert", 10, isInserted: false),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, -4]),
+                .init("remove", 7, isRemoved: true),
+                .init("remove", -1, isRemoved: false),
+                .init("insert", 8, isInserted: false),
+                .init("remove", -6, isRemoved: false),
+                .init("getRandom", randomVal: [-7, 6, 10, 3, 8, -8, 2, 5, -4]),
+                .init("getRandom", randomVal: [-7, 6, 10, 3, 8, -8, 2, 5, -4]),
+                .init("remove", 9, isRemoved: false),
+                .init("getRandom", randomVal: [-7, 6, 10, 3, 8, -8, 2, 5, -4]),
+                .init("insert", 7, isInserted: true),
+                .init("insert", 0, isInserted: true),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, -4, 0]),
+                .init("remove", -10, isRemoved: false),
+                .init("remove", -4, isRemoved: true),
+                .init("remove", -3, isRemoved: false),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0]),
+                .init("insert", -4, isInserted: true),
+                .init("insert", -5, isInserted: true),
+                .init("insert", 8, isInserted: false),
+                .init("insert", -2, isInserted: true),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2]),
+                .init("insert", -9, isInserted: true),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9]),
+                .init("remove", 7, isRemoved: true),
+                .init("insert", -2, isInserted: false),
+                .init("insert", 7, isInserted: true),
+                .init("insert", 4, isInserted: true),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9, 4]),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9, 4]),
+                .init("insert", -6, isInserted: true),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9, 4, -6]),
+                .init("insert", -8, isInserted: false),
+                .init("insert", 2, isInserted: false),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9, 4, -6]),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9, 4, -6]),
+                .init("remove", 9, isRemoved: false),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9, 4, -6]),
+                .init("remove", -1, isRemoved: false),
+                .init("insert", 3, isInserted: false),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9, 4, -6]),
+                .init("insert", 0, isInserted: false),
+                .init("insert", -3, isInserted: true),
+                .init("insert", -1, isInserted: true),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9, 4, -6, -3, -1]),
+                .init("insert", -8, isInserted: false),
+                .init("insert", -10, isInserted: true),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9, 4, -6, -3, -1, -10]),
+                .init("insert", 3, isInserted: false),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9, 4, -6, -3, -1, -10]),
+                .init("insert", 4, isInserted: false),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9, 4, -6, -3, -1, -10]),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9, 4, -6, -3, -1, -10]),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9, 4, -6, -3, -1, -10]),
+                .init("insert", -10, isInserted: false),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9, 4, -6, -3, -1, -10]),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9, 4, -6, -3, -1, -10]),
+                .init("insert", 0, isInserted: false),
+                .init("insert", -2, isInserted: false),
+                .init("insert", 5, isInserted: false),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -2, -9, 4, -6, -3, -1, -10]),
+                .init("remove", -2, isRemoved: true),
+                .init("insert", 5, isInserted: false),
+                .init("insert", 10, isInserted: false),
+                .init("getRandom", randomVal: [-7, 6, 7, 10, 3, 8, -8, 2, 5, 0, -4, -5, -9, 4, -6, -3, -1, -10]),
+                .init("insert", 9, isInserted: true),
+                .init("insert", 0, isInserted: false),
+                .init("insert", 7, isInserted: false),
+                .init("insert", -2, isInserted: true),
+            ])
+            return testsData
+        }()
+        
+        for testCaseIdx in 1...testsData_380.count {
+            let data = testsData_380[testCaseIdx - 1]
+            let implementations: [RandomizedSetProtocol] = [
+                RandomizedSet(),
+                RandomizedSet2(),
+                RandomizedSet3()
+            ]
+            
+            for impIdx in 1...implementations.count {
+                let imp = implementations[impIdx - 1]
+                for testCase in data {
+                    switch testCase.command {
+                        case "insert":
+                            XCTAssertEqual(
+                                imp.insert(testCase.value), testCase.isInserted,
+                                "test case: \(testCaseIdx); imp case: \(impIdx)"
+                            )
+                        case "remove":
+                            XCTAssertEqual(
+                                imp.remove(testCase.value), testCase.isRemoved,
+                                "test case: \(testCaseIdx); imp case: \(impIdx)"
+                            )
+                        case "getRandom":
+                            let value = imp.getRandom()
+                            XCTAssertTrue(
+                                testCase.randomVal.contains { $0 == value },
+                                "test case: \(testCaseIdx); imp case: \(impIdx)"
+                            )
+                        default: break
+                    }
+                }
+            }
+        }
+    }
+    
     // MARK: Problem 374. Guess Number Higher or Lower
     func testsProblem_374() throws {
         lazy var testsData_374: [(n: Int, pick: Int, expected: Int)] = {

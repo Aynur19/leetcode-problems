@@ -172,6 +172,8 @@
 		A8C99E8E2B6965F100B8145D /* GuessGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C99E8D2B6965F100B8145D /* GuessGame.swift */; };
 		A8C99E8F2B6965F100B8145D /* GuessGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C99E8D2B6965F100B8145D /* GuessGame.swift */; };
 		A8C99E912B696E7A00B8145D /* ProblemsTests_400.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C99E902B696E7A00B8145D /* ProblemsTests_400.swift */; };
+		A8C99E932B69737700B8145D /* RandomizedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C99E922B69737700B8145D /* RandomizedSet.swift */; };
+		A8C99E942B69737700B8145D /* RandomizedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C99E922B69737700B8145D /* RandomizedSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -285,6 +287,7 @@
 		A8AC0F072B682E4E009DE6DE /* NestedInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedInteger.swift; sourceTree = "<group>"; };
 		A8C99E8D2B6965F100B8145D /* GuessGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessGame.swift; sourceTree = "<group>"; };
 		A8C99E902B696E7A00B8145D /* ProblemsTests_400.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsTests_400.swift; sourceTree = "<group>"; };
+		A8C99E922B69737700B8145D /* RandomizedSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizedSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,6 +421,7 @@
 				A8AC0F022B680DB8009DE6DE /* NestedIterator.swift */,
 				A8AC0F072B682E4E009DE6DE /* NestedInteger.swift */,
 				A8C99E8D2B6965F100B8145D /* GuessGame.swift */,
+				A8C99E922B69737700B8145D /* RandomizedSet.swift */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -600,6 +604,7 @@
 				A858BC552B64374D004859BC /* Problem_25.swift in Sources */,
 				A858BC572B64374D004859BC /* Problem_38.swift in Sources */,
 				A858BCB12B659480004859BC /* Problem_150.swift in Sources */,
+				A8C99E932B69737700B8145D /* RandomizedSet.swift in Sources */,
 				A858BC8C2B650017004859BC /* ListNode.swift in Sources */,
 				A89228CE2B68CD750086BEF6 /* Problem_347.swift in Sources */,
 				A8AC0F032B680DB8009DE6DE /* NestedIterator.swift in Sources */,
@@ -699,6 +704,7 @@
 				A8AC0F042B680DB8009DE6DE /* NestedIterator.swift in Sources */,
 				A858BC7B2B64FF32004859BC /* Problem_8.swift in Sources */,
 				A8AC0F062B682867009DE6DE /* ProblemsTests_350.swift in Sources */,
+				A8C99E942B69737700B8145D /* RandomizedSet.swift in Sources */,
 				A8AC0EFE2B67EBB3009DE6DE /* Problem_279.swift in Sources */,
 				A858BC742B64FF32004859BC /* Problem_43.swift in Sources */,
 				A8AC0EF52B67D379009DE6DE /* Problem_242.swift in Sources */,
