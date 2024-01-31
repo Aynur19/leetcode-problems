@@ -8,6 +8,27 @@
 import XCTest
 
 final class ProblemsTests_400: XCTestCase {
+    // MARK: Problem 387. First Unique Character in a String
+    func testsProblem_387() throws {
+        lazy var testsData_387: [(s: String, expected: Int)] = {
+            var testsData = [(s: String, expected: Int)]()
+            
+            testsData.append((s: "leetcode", expected: 0))
+            testsData.append((s: "loveleetcode", expected: 2))
+            testsData.append((s: "aabb", expected: -1))
+            
+            return testsData
+        }()
+        
+        for data in testsData_387 {
+            let actual = Problems.problem_387_firstUniqChar(data.s)
+            let actual2 = Problems.problem_387_firstUniqChar2(data.s)
+            
+            XCTAssertEqual(actual, data.expected, "s: '\(data.s)'")
+            XCTAssertEqual(actual2, data.expected, "s: '\(data.s)'")
+        }
+    }
+    
     // MARK: Problem 380. Insert Delete GetRandom O(1)
     func testsProblem_380() throws {
         struct TestData {
