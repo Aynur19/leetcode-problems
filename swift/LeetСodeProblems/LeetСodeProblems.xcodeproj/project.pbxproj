@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8366AB92B6B748C006F7E4B /* Problem_424.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8366AB82B6B748C006F7E4B /* Problem_424.swift */; };
+		A8366ABA2B6B748C006F7E4B /* Problem_424.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8366AB82B6B748C006F7E4B /* Problem_424.swift */; };
 		A858BBF92B64361E004859BC /* Problems.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BBF82B64361E004859BC /* Problems.swift */; };
 		A858BC052B643670004859BC /* libProblems.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A858BBF52B64361E004859BC /* libProblems.a */; };
 		A858BC362B64374D004859BC /* Problem_37.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BC0D2B643741004859BC /* Problem_37.swift */; };
@@ -206,6 +208,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A8366AB82B6B748C006F7E4B /* Problem_424.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_424.swift; sourceTree = "<group>"; };
 		A858BBF52B64361E004859BC /* libProblems.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libProblems.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A858BBF82B64361E004859BC /* Problems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problems.swift; sourceTree = "<group>"; };
 		A858BC012B643670004859BC /* ProblemsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProblemsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -360,6 +363,7 @@
 		A858BC022B643670004859BC /* ProblemsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A8C99E9F2B6ACB9700B8145D /* ProblemsTests_450.swift */,
 				A8C99E902B696E7A00B8145D /* ProblemsTests_400.swift */,
 				A8AC0F052B682867009DE6DE /* ProblemsTests_350.swift */,
 				A8AC0EFA2B67DB77009DE6DE /* ProblemsTests_300.swift */,
@@ -368,7 +372,6 @@
 				A858BCB92B659512004859BC /* ProblemsTests_150.swift */,
 				A858BC942B654E34004859BC /* ProblemsTests_100.swift */,
 				A858BC5F2B64388F004859BC /* ProblemsTests_50.swift */,
-				A8C99E9F2B6ACB9700B8145D /* ProblemsTests_450.swift */,
 			);
 			path = ProblemsTests;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 		A8C99E9B2B6AC86E00B8145D /* Problems_450 */ = {
 			isa = PBXGroup;
 			children = (
+				A8366AB82B6B748C006F7E4B /* Problem_424.swift */,
 				A8C99E9C2B6AC8A000B8145D /* Problem_404.swift */,
 			);
 			name = Problems_450;
@@ -644,6 +648,7 @@
 				A858BC3B2B64374D004859BC /* Problem_3.swift in Sources */,
 				A858BC5B2B64374D004859BC /* Problem_48.swift in Sources */,
 				A858BC392B64374D004859BC /* Problem_31.swift in Sources */,
+				A8366AB92B6B748C006F7E4B /* Problem_424.swift in Sources */,
 				A8AC0EF82B67D907009DE6DE /* Problem_268.swift in Sources */,
 				A858BC5D2B64374D004859BC /* Problem_22.swift in Sources */,
 				A858BC402B64374D004859BC /* Problem_23.swift in Sources */,
@@ -744,6 +749,7 @@
 				A858BC602B64388F004859BC /* ProblemsTests_50.swift in Sources */,
 				A858BCD12B6698ED004859BC /* Problem_205.swift in Sources */,
 				A858BCA72B65943A004859BC /* Problem_110.swift in Sources */,
+				A8366ABA2B6B748C006F7E4B /* Problem_424.swift in Sources */,
 				A858BC8D2B650017004859BC /* ListNode.swift in Sources */,
 				A858BC7E2B64FF32004859BC /* Problem_48.swift in Sources */,
 				A858BCC42B6595FA004859BC /* Problem_200.swift in Sources */,

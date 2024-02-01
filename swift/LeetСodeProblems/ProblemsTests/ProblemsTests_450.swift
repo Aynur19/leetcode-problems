@@ -8,6 +8,38 @@
 import XCTest
 
 final class ProblemsTests_450: XCTestCase {
+    
+    // MARK: Problem 424. Longest Repeating Character Replacement
+    func testsProblem_424() throws {
+        lazy var testsData_424: [(s: String, k: Int, expected: Int)] = {
+            var testsData = [(s: String, k: Int, expected: Int)]()
+            
+            testsData.append((s: "ABAB", k: 2, expected: 4))
+            testsData.append((s: "AABABBA", k: 1, expected: 4))
+            testsData.append((s: "AABA", k: 0, expected: 2))
+            testsData.append((s: "ABAA", k: 0, expected: 2))
+            testsData.append((s: "BAAA", k: 0, expected: 3))
+            testsData.append((s: "AAAA", k: 2, expected: 4))
+            testsData.append((s: "AAAB", k: 0, expected: 3))
+            testsData.append((s: "ABBB", k: 2, expected: 4))
+            testsData.append((
+                s: "KRSCDCSONAJNHLBMDQGIFCPEKPOHQIHLTDIQGEKLRLCQNBOHNDQGHJPNDQPERNFSSSRDEQLFPCCCARFMDLHADJADAGNNSBNCJQOF",
+                k: 4, expected: 7))
+            
+            return testsData
+        }()
+        
+        var testCase = 0
+        for data in testsData_424 {
+            testCase += 1
+            let actual = Problems.problem_424_characterReplacement(data.s, data.k)
+            let actual2 = Problems.problem_424_characterReplacement2(data.s, data.k)
+            
+            XCTAssertEqual(actual, data.expected, "s: '\(data.s)'; k: \(data.k)")
+            XCTAssertEqual(actual2, data.expected, "s: '\(data.s)'; k: \(data.k)")
+        }
+    }
+    
     // MARK: Problem 404. Sum of Left Leaves
     func testsProblem_404() throws {
         lazy var testsData_404: [(root: TreeNode?, expected: Int)] = {
@@ -44,5 +76,4 @@ final class ProblemsTests_450: XCTestCase {
             XCTAssertEqual(actual3, data.expected, "testCase: \(testCase)")
         }
     }
-    
 }
