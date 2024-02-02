@@ -8,6 +8,39 @@
 import XCTest
 
 final class ProblemsTests_450: XCTestCase {
+    // MARK: Problem 443. String Compression
+    func testsProblem_443() throws {
+        lazy var testsData_443: [(chars: [Character], expectedChars: [Character], expected: Int)] = {
+            var testsData = [(chars: [Character], expectedChars: [Character], expected: Int)]()
+            
+            testsData.append((
+                chars: ["a", "a", "b", "b", "c", "c", "c"],
+                expectedChars: ["a", "2", "b", "2", "c", "3", "c"],
+                expected: 6
+            ))
+            testsData.append((
+                chars: ["a"],
+                expectedChars: ["a"],
+                expected: 1
+            ))
+            testsData.append((
+                chars: ["a", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b"],
+                expectedChars: ["a", "b", "1", "2", "b", "b", "b", "b", "b", "b", "b", "b", "b"],
+                expected: 4
+            ))
+            
+            return testsData
+        }()
+        
+        for data in testsData_443 {
+            var chars = data.chars
+            let actual = Problems.problem_443_compress(&chars)
+            
+            XCTAssertEqual(chars, data.expectedChars, "chars: '\(data.chars)'")
+            XCTAssertEqual(actual, data.expected, "chars: '\(data.chars)'")
+        }
+    }
+    
     // MARK: Problem 438. Find All Anagrams in a String
     func testsProblem_438() throws {
         lazy var testsData_438: [(s: String, p: String, expected: [Int])] = {
@@ -20,9 +53,7 @@ final class ProblemsTests_450: XCTestCase {
             return testsData
         }()
         
-        var testCase = 0
         for data in testsData_438 {
-            testCase += 1
             let actual = Problems.problem_438_findAnagrams(data.s, data.p)
             let actual2 = Problems.problem_438_findAnagrams(data.s, data.p)
             
@@ -51,9 +82,7 @@ final class ProblemsTests_450: XCTestCase {
             return testsData
         }()
         
-        var testCase = 0
         for data in testsData_424 {
-            testCase += 1
             let actual = Problems.problem_424_characterReplacement(data.s, data.k)
             let actual2 = Problems.problem_424_characterReplacement2(data.s, data.k)
             
