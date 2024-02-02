@@ -8,6 +8,28 @@
 import XCTest
 
 final class ProblemsTests_450: XCTestCase {
+    // MARK: Problem 438. Find All Anagrams in a String
+    func testsProblem_438() throws {
+        lazy var testsData_438: [(s: String, p: String, expected: [Int])] = {
+            var testsData = [(s: String, p: String, expected: [Int])]()
+            
+            testsData.append((s: "cbaebabacd", p: "abc", expected: [0, 6]))
+            testsData.append((s: "abab", p: "ab", expected: [0, 1, 2]))
+            testsData.append((s: "abaacbabc", p: "abc", expected: [3, 4, 6]))
+            
+            return testsData
+        }()
+        
+        var testCase = 0
+        for data in testsData_438 {
+            testCase += 1
+            let actual = Problems.problem_438_findAnagrams(data.s, data.p)
+            let actual2 = Problems.problem_438_findAnagrams(data.s, data.p)
+            
+            XCTAssertEqual(actual, data.expected, "s: '\(data.s)'; p: '\(data.p)'")
+            XCTAssertEqual(actual2, data.expected, "s: '\(data.s)'; p: '\(data.p)'")
+        }
+    }
     
     // MARK: Problem 424. Longest Repeating Character Replacement
     func testsProblem_424() throws {
