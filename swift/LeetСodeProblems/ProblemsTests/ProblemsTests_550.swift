@@ -8,6 +8,31 @@
 import XCTest
 
 final class ProblemsTests_550: XCTestCase {
+    // MARK: Problem 557. Reverse Words in a String III
+    func testsProblem_557() throws {
+        lazy var testsData_557: [(s: String, expected: String)] = {
+            var testsData = [(s: String, expected: String)]()
+            
+            testsData.append((
+                s: "Let's take LeetCode contest", 
+                expected: "s'teL ekat edoCteeL tsetnoc"
+            ))
+            testsData.append((s: "Mr Ding", expected: "rM gniD"))
+            
+            return testsData
+        }()
+        
+        for data in testsData_557 {
+            let actual = Problems.problem_557_reverseWords(data.s)
+            let actual2 = Problems.problem_557_reverseWords2(data.s)
+//            let actual3 = Problems.problem_523_checkSubarraySum3(data.nums, data.k)
+            
+            XCTAssertEqual(actual, data.expected, "s: '\(data.s)'")
+            XCTAssertEqual(actual2, data.expected, "s: '\(data.s)'")
+//            XCTAssertEqual(actual3, data.expected, "nums: \(data.nums); k: \(data.k)")
+        }
+    }
+    
     // MARK: Problem 523. Continuous Subarray Sum
     func testsProblem_523() throws {
         lazy var testsData_523: [(nums: [Int], k: Int, expected: Bool)] = {
@@ -31,5 +56,4 @@ final class ProblemsTests_550: XCTestCase {
             XCTAssertEqual(actual3, data.expected, "nums: \(data.nums); k: \(data.k)")
         }
     }
-    
 }
