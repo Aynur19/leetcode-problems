@@ -8,6 +8,93 @@
 import XCTest
 
 final class ProblemsTests_450: XCTestCase {
+    // MARK: Problem 449. Serialize and Deserialize BST
+    func testsProblem_449() throws {
+        lazy var testsData_449: [(root: TreeNode?, expectedData: [String], expectedObject: TreeNode?)] = {
+            var testsData = [(root: TreeNode?, expectedData: [String], expectedObject: TreeNode?)]()
+            
+            testsData.append((
+                root: .init(2, .init(1), .init(3)),
+                expectedData: ["2;1;?;?;3;?;?;", "2;1;3;?;?;?;?;"],
+                expectedObject: .init(2, .init(1), .init(3))
+            ))
+            testsData.append((
+                root: nil,
+                expectedData: ["", ""],
+                expectedObject: nil
+            ))
+            testsData.append((
+                root: .init(3, .init(1, nil, .init(2)), .init(4)),
+                expectedData: ["3;1;?;2;?;?;4;?;?;", "3;1;4;?;2;?;?;?;?;"],
+                expectedObject: .init(3, .init(1, nil, .init(2)), .init(4))
+            ))
+            testsData.append((
+                root: .init(5, .init(3, .init(2, .init(1), nil), .init(4)), .init(6)),
+                expectedData: [
+                    "5;3;2;1;?;?;?;4;?;?;6;?;?;",
+                    "5;3;6;2;4;?;?;1;?;?;?;?;?;"
+                ],
+                expectedObject: .init(3, .init(1, nil, .init(2)), .init(4))
+            ))
+            testsData.append((
+                root: .init(15,
+                            .init(13,
+                                  .init(9, .init(1), nil),
+                                  .init(10, .init(3), .init(4))
+                            ),
+                            .init(14,
+                                  .init(11, .init(5), .init(6)),
+                                  .init(12, nil, .init(8))
+                            )
+                        ),
+                expectedData: [
+                    "15;13;9;1;?;?;?;10;3;?;?;4;?;?;14;11;5;?;?;6;?;?;12;?;8;?;?;",
+                    "15;13;14;9;10;11;12;1;?;3;4;5;6;?;8;?;?;?;?;?;?;?;?;?;?;?;?;"
+                ],
+                expectedObject: .init(15,
+                                      .init(13,
+                                            .init(9, .init(1), nil),
+                                            .init(10, .init(3), .init(4))
+                                      ),
+                                      .init(14,
+                                            .init(11, .init(5), .init(6)),
+                                            .init(12, nil, .init(8))
+                                      )
+                                  )
+            ))
+            
+            return testsData
+        }()
+        
+        let codec = Codec()
+        for testCaseIdx in 1...testsData_449.count {
+            let data = testsData_449[testCaseIdx - 1]
+            
+            for idx in 1...3 {
+                let actualSerialize = codec.serialize(data.root, idx)
+                let actualDeserialize = codec.deserialize(actualSerialize, idx)
+                let expectedData = data.expectedData[idx == 3 ? 1 : 0]
+                
+                XCTAssertEqual(
+                    actualSerialize, expectedData,
+                    "test case: \(testCaseIdx)"
+                )
+                
+                if let root = data.root {
+                    XCTAssertTrue(
+                        (actualDeserialize! === root),
+                        "test case: \(testCaseIdx)"
+                    )
+                } else {
+                    XCTAssertTrue(
+                        actualDeserialize == nil,
+                        "test case: \(testCaseIdx)"
+                    )
+                }
+            }
+        }
+    }
+    
     // MARK: Problem 443. String Compression
     func testsProblem_443() throws {
         lazy var testsData_443: [(chars: [Character], expectedChars: [Character], expected: Int)] = {
