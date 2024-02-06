@@ -8,6 +8,24 @@
 import XCTest
 
 final class ProblemsTests_600: XCTestCase {
+    // MARK: Problem 560. Subarray Sum Equals K
+    func testsProblem_560() throws {
+        lazy var testsData_560: [(nums: [Int], k: Int, expected: Int)] = {
+            var testsData = [(nums: [Int], k: Int, expected: Int)]()
+            
+            testsData.append((nums: [1, 1, 1], k: 2, expected: 2))
+            testsData.append((nums: [1, 2, 3], k: 3, expected: 2))
+            testsData.append((nums: [-1, -1, 1], k: 0, expected: 1))
+            
+            return testsData
+        }()
+        
+        for data in testsData_560 {
+            let actual = Problems.problem_560_subarraySum(data.nums, data.k)
+            XCTAssertEqual(actual, data.expected, "nums: \(data.nums); k: \(data.k)")
+        }
+    }
+    
     // MARK: Problem 557. Reverse Words in a String III
     func testsProblem_557() throws {
         lazy var testsData_557: [(s: String, expected: String)] = {

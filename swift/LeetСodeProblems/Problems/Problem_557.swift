@@ -50,7 +50,6 @@ extension Problems {
         var right = 0
         var iter = s.makeIterator()
         let n = reversedChars.count
-        let lastIdx = n - 1
         
         while right < n {
             if reversedChars[right] == " " {
