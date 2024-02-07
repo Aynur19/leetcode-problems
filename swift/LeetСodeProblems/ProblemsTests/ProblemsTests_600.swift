@@ -8,6 +8,27 @@
 import XCTest
 
 final class ProblemsTests_600: XCTestCase {
+    // MARK: Problem 567. Permutation in String
+    func testsProblem_567() throws {
+        lazy var testsData_567: [(s1: String, s2: String, expected: Bool)] = {
+            var testsData = [(s1: String, s2: String, expected: Bool)]()
+            
+            testsData.append((s1: "ab", s2: "eidbaooo", expected: true))
+            testsData.append((s1: "ab", s2: "eidboaoo", expected: false))
+            testsData.append((s1: "adc", s2: "dcda", expected: true))
+            
+            return testsData
+        }()
+        
+        for data in testsData_567 {
+            let actual = Problems.problem_567_checkInclusion(data.s1, data.s2)
+            let actual2 = Problems.problem_567_checkInclusion2(data.s1, data.s2)
+            
+            XCTAssertEqual(actual, data.expected, "s1: '\(data.s1)'; s2: '\(data.s2)'")
+            XCTAssertEqual(actual2, data.expected, "s1: '\(data.s1)'; s2: '\(data.s2)'")
+        }
+    }
+    
     // MARK: Problem 560. Subarray Sum Equals K
     func testsProblem_560() throws {
         lazy var testsData_560: [(nums: [Int], k: Int, expected: Int)] = {

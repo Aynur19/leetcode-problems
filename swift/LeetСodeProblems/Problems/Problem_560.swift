@@ -7,7 +7,7 @@
 
 //  560. Subarray Sum Equals K
 //  Medium
-//  Topics
+//  Topics: Array, Hash Table, Prefix Sum
 
 //  Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.
 //
@@ -29,8 +29,8 @@
 // help: https://www.youtube.com/watch?v=UWPKvrproqQ&ab_channel=3.5%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8%D0%B2%D0%BD%D0%B5%D0%B4%D0%B5%D0%BB%D1%8E
 extension Problems {
     // Approach: Hash Table, Prefix Sum
-    // Time complexity: O(n) =  ms
-    // Space complexity: O(n) =  MB
+    // Time complexity: O(n) = 85 ms
+    // Space complexity: O(n) = 16.5 MB
     static func problem_560_subarraySum(_ nums: [Int], _ k: Int) -> Int {
         let n = nums.count
         if n == 1 { return nums[0] == k ? 1 : 0 }
