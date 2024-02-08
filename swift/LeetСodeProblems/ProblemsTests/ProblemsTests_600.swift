@@ -8,6 +8,33 @@
 import XCTest
 
 final class ProblemsTests_600: XCTestCase {
+    // MARK: Problem 581. Shortest Unsorted Continuous Subarray
+    func testsProblem_581() throws {
+        lazy var testsData_581: [(nums: [Int], expected: Int)] = {
+            var testsData = [(nums: [Int], expected: Int)]()
+            
+            testsData.append((nums: [2,1,1,1,1], expected: 5))
+            testsData.append((nums: [1,2,3,5,4], expected: 2))
+            testsData.append((nums: [2,1,4,5,3], expected: 5))
+            testsData.append((nums: [2,6,4,8,10,9,15], expected: 5))
+            testsData.append((nums: [2,6,-4,8,10,9,15], expected: 6))
+            testsData.append((nums: [2,6,-4,-8,10,9,15], expected: 6))
+            testsData.append((nums: [1,2,3,4], expected: 0))
+            testsData.append((nums: [1], expected: 0))
+            testsData.append((nums: [1,3,2,2,2], expected: 4))
+            
+            return testsData
+        }()
+        
+        for data in testsData_581 {
+            let actual = Problems.problem_581_findUnsortedSubarray(data.nums)
+            let actual2 = Problems.problem_581_findUnsortedSubarray2(data.nums)
+            
+            XCTAssertEqual(actual, data.expected, "nums: \(data.nums)")
+            XCTAssertEqual(actual2, data.expected, "nums: \(data.nums)")
+        }
+    }
+    
     // MARK: Problem 567. Permutation in String
     func testsProblem_567() throws {
         lazy var testsData_567: [(s1: String, s2: String, expected: Bool)] = {
