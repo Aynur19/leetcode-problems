@@ -66,7 +66,7 @@ final class ProblemsTests_450: XCTestCase {
             return testsData
         }()
         
-        let codec = Codec()
+        let codec = TreeCodec()
         for testCaseIdx in 1...testsData_449.count {
             let data = testsData_449[testCaseIdx - 1]
             

@@ -33,7 +33,7 @@
 //  0 <= Node.val <= 10^4
 //  The input tree is guaranteed to be a binary search tree.
 
-final class Codec {
+final class TreeCodec {
     // Encodes a tree to a single string.
     func serialize(_ root: TreeNode?, _ option: Int = 0) -> String {
         switch option {
