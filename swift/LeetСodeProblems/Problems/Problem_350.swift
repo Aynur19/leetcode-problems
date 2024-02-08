@@ -88,11 +88,13 @@ extension Problems {
             counts.append(.init(sortedNums1[sortedNums1.count - 1], count: count))
             
             var result = [Int]()
-            nums2.forEach { num in
-                if let pair = counts.lowerBound(where: { $0.num < num }),
-                   pair.count > 0 && pair.num == num {
-                    result.append(pair.num)
-                    pair.count -= 1
+            for num in nums2 { 
+                if let idx = counts.lowerBound(where: { $0.num >= num }) {
+                    let pair = counts[idx]
+                    if pair.count > 0 && pair.num == num {
+                        result.append(pair.num)
+                        pair.count -= 1
+                    }
                 }
             }
             
@@ -125,10 +127,13 @@ extension Problems {
             
             var result = [Int]()
             nums2.forEach { num in
-                if let pair = pairs.lowerBound(where: { $0.num < num || $0.num == num && !$0.present }),
-                   pair.num == num {
-                    result.append(pair.num)
-                    pair.present = false
+                if let idx = pairs.lowerBound(where: { $0.num >= num && $0.present }) {
+                    let pair = pairs[idx]
+                    
+                    if pair.num == num {
+                        result.append(pair.num)
+                        pair.present = false
+                    }
                 }
             }
             

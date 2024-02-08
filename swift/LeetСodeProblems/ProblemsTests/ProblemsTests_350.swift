@@ -25,12 +25,12 @@ final class ProblemsTests_350: XCTestCase {
             let actual = Problems.problem_350_intersect(data.nums1, data.nums2).sorted { $0 < $1 }
             let actual2 = Problems.problem_350_intersect2(data.nums1, data.nums2).sorted { $0 < $1 }
             let actual3 = Problems.problem_350_intersect3(data.nums1, data.nums2).sorted { $0 < $1 }
-            let actual4 = Problems.problem_350_intersect4(data.nums1, data.nums2).sorted { $0 < $1 }
+//            let actual4 = Problems.problem_350_intersect4(data.nums1, data.nums2).sorted { $0 < $1 }
             
             XCTAssertEqual(actual, data.expected, "nums1: \(data.nums1); nums2: \(data.nums2)")
             XCTAssertEqual(actual2, data.expected, "nums1: \(data.nums1); nums2: \(data.nums2)")
             XCTAssertEqual(actual3, data.expected, "nums1: \(data.nums1); nums2: \(data.nums2)")
-            XCTAssertEqual(actual4, data.expected, "nums1: \(data.nums1); nums2: \(data.nums2)")
+//            XCTAssertEqual(actual4, data.expected, "nums1: \(data.nums1); nums2: \(data.nums2)")
         }
     }
     

@@ -29,8 +29,10 @@ extension Array {
         }
     }
     
-    @inlinable public func lowerBound(where predicate: (Element) -> Bool) -> Element? {
-        guard count > 1 else { return predicate(self[0]) ? nil : self[0] }
+    @inlinable public func lowerBound(where predicate: (Element) -> Bool) -> Int? {
+        guard count > 1 else { return predicate(self[0]) ? 0 : nil }
+        if predicate(self[0]) { return 0 }
+        
         
         var left = 0
         var right = count - 1
@@ -42,12 +44,12 @@ extension Array {
             if left == right { break }
             
             if predicate(self[idx]) {
-                left = idx + 1
-            } else {
                 right = idx
+            } else {
+                left = idx + 1
             }
         }
         
-        return predicate(self[idx]) ? nil : self[idx]
+        return predicate(self[idx]) ? idx : nil
     }
 }

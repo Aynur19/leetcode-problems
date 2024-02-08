@@ -8,6 +8,27 @@
 import XCTest
 
 final class ProblemsTests_700: XCTestCase {
+    // MARK: Problem 658. Find K Closest Elements
+    func testsProblem_658() throws {
+        typealias TestCase = (arr: [Int], k: Int, x: Int, expected: [Int])
+        lazy var testsData_658: [TestCase] = {
+            var testsData = [TestCase]()
+            
+            testsData.append((arr: [1,2,3,4,5], k: 4, x: 3, expected: [1,2,3,4]))
+            testsData.append((arr: [1,2,3,4,5], k: 4, x: -1, expected: [1,2,3,4]))
+            testsData.append((arr: [1,1,1,10,10,10], k: 1, x: 9, expected: [10]))
+            
+            return testsData
+        }()
+        
+        for data in testsData_658 {
+            let message = "arr: \(data.arr); k: \(data.k); x: \(data.x)"
+            let actual = Problems.problem_658_findClosestElements(data.arr, data.k, data.x)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
     // MARK: Problem 652. Find Duplicate Subtrees
     func testsProblem_652() throws {
         typealias TestCase = (root: TreeNode?, expected: [TreeNode?])
