@@ -6,10 +6,17 @@
 //
 
 public final class StringIterator {
-    private(set) var idx = -1
-    private(set) var char: Character = " "
-    private(set) var isEnd = false
-    private var iter: String.Iterator
+    fileprivate(set) var idx = -1
+    fileprivate(set) var char: Character = " "
+    fileprivate(set) var isEnd = false
+    fileprivate var iter: String.Iterator
+    
+    init(_ iterator: StringIterator) {
+        self.idx = iterator.idx
+        self.char = iterator.char
+        self.isEnd = iterator.isEnd
+        self.iter = iterator.iter
+    }
     
     init(_ string: String) {
         isEnd = string.isEmpty

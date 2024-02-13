@@ -8,6 +8,29 @@
 import XCTest
 
 final class ProblemsTests_700: XCTestCase {
+    // MARK: Problem 680. Valid Palindrome II
+    func testsProblem_680() throws {
+        typealias TestCase = (s: String, expected: Bool)
+        lazy var testsData_680: [TestCase] = {
+            var testsData = [TestCase]()
+            
+            testsData.append((s: "aba", expected: true))
+            testsData.append((s: "abca", expected: true))
+            testsData.append((s: "abc", expected: false))
+            
+            return testsData
+        }()
+        
+        for data in testsData_680 {
+            let message = "s: '\(data.s)'"
+            let actual = Problems.problem_680_validPalindrome(data.s)
+            let actual2 = Problems.problem_680_validPalindrome2(data.s)
+            
+            XCTAssertEqual(actual, data.expected, message)
+            XCTAssertEqual(actual2, data.expected, message)
+        }
+    }
+    
     // MARK: Problem 658. Find K Closest Elements
     func testsProblem_658() throws {
         typealias TestCase = (arr: [Int], k: Int, x: Int, expected: [Int])
