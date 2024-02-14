@@ -17,14 +17,13 @@ extension Array {
     
         while true {
             idx = (right + left) / 2
-            
-            if left == right { return item == self[idx] ? 0 : nil }
-            if item == self[idx] { return idx }
-            
+
+            if left == right { return item == self[idx] ? idx : nil }
+        
             if item > self[idx] {
-                right = idx
-            } else {
                 left = idx + 1
+            } else {
+                right = idx
             }
         }
     }
