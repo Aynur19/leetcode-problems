@@ -8,6 +8,26 @@
 import XCTest
 
 final class PorblemsTests_800: XCTestCase {
+    // MARK: Problem 771. Jewels and Stones
+    func testsProblem_771() throws {
+        typealias TestCase = (jewels: String, stones: String, expected: Int)
+        lazy var testsData_771: [TestCase] = {
+            var testsData = [TestCase]()
+            
+            testsData.append((jewels: "aA", stones: "aAAbbbb", expected: 3))
+            testsData.append((jewels: "z", stones: "ZZ", expected: 0))
+            
+            return testsData
+        }()
+        
+        for data in testsData_771 {
+            let message = "jewels: '\(data.jewels)'; stones: '\(data.stones)'"
+            let actual = Problems.problems_771_numJewelsInStones(data.jewels, data.stones)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
     // MARK: Problem 763. Partition Labels
     func testsProblem_763() throws {
         typealias TestCase = (s: String, expected: [Int])
