@@ -8,6 +8,34 @@
 import XCTest
 
 final class ProblemsTests_700: XCTestCase {
+    // MARK: Problem 692. Top K Frequent Words
+    func testsProblem_692() throws {
+        typealias TestCase = (words: [String], k: Int, expected: [String])
+        lazy var testsData_692: [TestCase] = {
+            var testsData = [TestCase]()
+            
+            testsData.append((
+                words: ["i","love","leetcode","i","love","coding"],
+                k: 2,
+                expected: ["i","love"]
+            ))
+            testsData.append((
+                words: ["the","day","is","sunny","the","the","the","sunny","is","is"],
+                k: 4,
+                expected: ["the","is","sunny","day"]
+            ))
+            
+            return testsData
+        }()
+        
+        for data in testsData_692 {
+            let message = "words: '\(data.words)'; k: \(data.k)"
+            let actual = Problems.problem_692_topKFrequent(data.words, data.k)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
     // MARK: Problem 680. Valid Palindrome II
     func testsProblem_680() throws {
         typealias TestCase = (s: String, expected: Bool)

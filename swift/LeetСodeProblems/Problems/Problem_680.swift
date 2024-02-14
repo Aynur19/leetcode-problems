@@ -8,7 +8,7 @@
 //  680. Valid Palindrome II
 //  Attempted
 //  Easy
-//  Topics
+//  Topics: Two Pointers, String, Greedy 
 
 //  Given a string s, return true if the s can be palindrome after deleting at most one character from it.
 
