@@ -8,6 +8,32 @@
 import XCTest
 
 final class ProblemsTests_1000: XCTestCase {
+    // MARK: Problem 986. Interval List Intersections
+    func testsProblem_986() throws {
+        typealias TestCase = (firstList: [[Int]], secondList: [[Int]], expected: [[Int]])
+        
+        lazy var testsData_986: [TestCase] = {
+            var testsData = [TestCase]()
+            
+//            testsData.append((
+//                firstList: [[0,2],[5,10],[13,23],[24,25]],
+//                secondList: [[1,5],[8,12],[15,24],[25,26]],
+//                expected: [[1,2],[5,5],[8,10],[15,23],[24,24],[25,25]]
+//            ))
+            testsData.append((firstList: [[1,3],[5,9]], secondList: [], expected: []))
+            
+            return testsData
+        }()
+        
+        
+        for data in testsData_986 {
+            let message = "firstList: \(data.firstList); secondList: \(data.secondList)"
+            let actual = Problems.problem_986_intervalIntersection(data.firstList, data.secondList)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
     // MARK: Problem 977. Squares of a Sorted Array
     func testsProblem_977() throws {
         typealias TestCase = (nums: [Int], expected: [Int])
