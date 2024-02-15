@@ -1,5 +1,5 @@
 //
-//  ProblemsTests_450.swift
+//  ProblemsTests_500.swift
 //  ProblemsTests
 //
 //  Created by Aynur Nasybullin on 31.01.2024.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class ProblemsTests_450: XCTestCase {
+final class ProblemsTests_500: XCTestCase {
     // MARK: Problem 449. Serialize and Deserialize BST
     func testsProblem_449() throws {
         lazy var testsData_449: [(root: TreeNode?, expectedData: [String], expectedObject: TreeNode?)] = {

@@ -1,5 +1,5 @@
 //
-//  ProblemsTests_1050.swift
+//  ProblemsTests_1100.swift
 //  ProblemsTests
 //
 //  Created by Aynur Nasybullin on 15.02.2024.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class ProblemsTests_1050: XCTestCase {
+final class ProblemsTests_1100: XCTestCase {
     // MARK: Problem 1004. Max Consecutive Ones III
     func testsProblem_1004() throws {
         typealias TestCase = (nums: [Int], k: Int, expected: Int)

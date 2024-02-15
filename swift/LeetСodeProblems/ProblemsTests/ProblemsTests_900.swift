@@ -1,5 +1,5 @@
 //
-//  ProblemsTests_850.swift
+//  ProblemsTests_900.swift
 //  ProblemsTests
 //
 //  Created by Aynur Nasybullin on 14.02.2024.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class ProblemsTests_850: XCTestCase {
+final class ProblemsTests_900: XCTestCase {
     // MARK: Problem 849. Maximize Distance to Closest Person
     func testsProblem_849() throws {
         typealias TestCase = (seats: [Int], expected: Int)
