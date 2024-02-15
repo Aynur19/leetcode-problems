@@ -8,6 +8,28 @@
 import XCTest
 
 final class ProblemsTests_1000: XCTestCase {
+    // MARK: Problem 977. Squares of a Sorted Array
+    func testsProblem_977() throws {
+        typealias TestCase = (nums: [Int], expected: [Int])
+        
+        lazy var testsData_977: [TestCase] = {
+            var testsData = [TestCase]()
+            
+            testsData.append((nums: [-4,-1,0,3,10], expected: [0,1,9,16,100]))
+            testsData.append((nums: [-7,-3,2,3,11], expected: [4,9,9,49,121]))
+            
+            return testsData
+        }()
+        
+        
+        for data in testsData_977 {
+            let message = "nums: \(data.nums)"
+            let actual = Problems.problem_977_sortedSquares(data.nums)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
     // MARK: Problem 974. Subarray Sums Divisible by K
     func testsProblem_974() throws {
         typealias TestCase = (nums: [Int], k: Int, expected: Int)
@@ -19,17 +41,6 @@ final class ProblemsTests_1000: XCTestCase {
             testsData.append((nums: [5], k: 9, expected: 0))
             testsData.append((nums: [-1,2,9], k: 2, expected: 2))
             testsData.append((nums: [2,-2,2,-4], k: 6, expected: 2))
-            
-            /// 2   -2   2   -4
-            /// 2    0   2   -2
-            /// 2    0   2   -2
-            /// 2    2   4    2
-            /// 1 (2) + 1 (0)
-            ///
-            /// -1   2   9
-            /// -1   1  10
-            /// -1   1    0
-            ///
             
             return testsData
         }()

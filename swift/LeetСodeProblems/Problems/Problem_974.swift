@@ -28,13 +28,6 @@
 //  -10^4 <= nums[i] <= 10^4
 //  2 <= k <= 10^4
 
-// [ 4, 5, 0,-2,-3, 1, 4]
-// [ 4, 9, 9, 7, 4, 5, 9]
-///  4 != 5             count = 0
-///  9 - 4 = 5         count = 1  [5]
-///  9 - 9 = 0         count = 2  [5, 0]
-///
-
 extension Problems {
     // Approach: Prefix Sum, Hash Table, Counting
     // Time complexity: O(n) = 110 ms
