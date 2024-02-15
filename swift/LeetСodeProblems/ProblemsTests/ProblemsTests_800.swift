@@ -1,5 +1,5 @@
 //
-//  PorblemsTests_800.swift
+//  ProblemsTests_800.swift
 //  ProblemsTests
 //
 //  Created by Aynur Nasybullin on 14.02.2024.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class PorblemsTests_800: XCTestCase {
+final class ProblemsTests_800: XCTestCase {
     // MARK: Problem 771. Jewels and Stones
     func testsProblem_771() throws {
         typealias TestCase = (jewels: String, stones: String, expected: Int)
