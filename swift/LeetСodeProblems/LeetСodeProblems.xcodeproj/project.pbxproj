@@ -224,6 +224,9 @@
 		D724F0FA2B7E652C00E526D0 /* Problem_977.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724F0F82B7E652C00E526D0 /* Problem_977.swift */; };
 		D724F0FC2B7E68B000E526D0 /* Problem_986.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724F0FB2B7E68B000E526D0 /* Problem_986.swift */; };
 		D724F0FD2B7E68B100E526D0 /* Problem_986.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724F0FB2B7E68B000E526D0 /* Problem_986.swift */; };
+		D725FEB42B809D0E00DBBD20 /* Problem_1446.swift in Sources */ = {isa = PBXBuildFile; fileRef = D725FEB32B809D0E00DBBD20 /* Problem_1446.swift */; };
+		D725FEB52B809D0E00DBBD20 /* Problem_1446.swift in Sources */ = {isa = PBXBuildFile; fileRef = D725FEB32B809D0E00DBBD20 /* Problem_1446.swift */; };
+		D725FEB72B809F6000DBBD20 /* ProblemsTests_1500.swift in Sources */ = {isa = PBXBuildFile; fileRef = D725FEB62B809F6000DBBD20 /* ProblemsTests_1500.swift */; };
 		D73B136F2B7E71EB00A870F1 /* Problem_1004.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73B136E2B7E71EB00A870F1 /* Problem_1004.swift */; };
 		D73B13702B7E71EC00A870F1 /* Problem_1004.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73B136E2B7E71EB00A870F1 /* Problem_1004.swift */; };
 		D73B13732B7E746F00A870F1 /* ProblemsTests_1100.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73B13722B7E746F00A870F1 /* ProblemsTests_1100.swift */; };
@@ -374,6 +377,8 @@
 		D724F0F52B7E0B0000E526D0 /* ProblemsTests_1000.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsTests_1000.swift; sourceTree = "<group>"; };
 		D724F0F82B7E652C00E526D0 /* Problem_977.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_977.swift; sourceTree = "<group>"; };
 		D724F0FB2B7E68B000E526D0 /* Problem_986.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_986.swift; sourceTree = "<group>"; };
+		D725FEB32B809D0E00DBBD20 /* Problem_1446.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_1446.swift; sourceTree = "<group>"; };
+		D725FEB62B809F6000DBBD20 /* ProblemsTests_1500.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsTests_1500.swift; sourceTree = "<group>"; };
 		D73B136E2B7E71EB00A870F1 /* Problem_1004.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_1004.swift; sourceTree = "<group>"; };
 		D73B13722B7E746F00A870F1 /* ProblemsTests_1100.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsTests_1100.swift; sourceTree = "<group>"; };
 		D73B13762B7F29C300A870F1 /* Problem_2215.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_2215.swift; sourceTree = "<group>"; };
@@ -647,6 +652,14 @@
 			name = Problems_1000;
 			sourceTree = "<group>";
 		};
+		D725FEB22B809CE300DBBD20 /* Problems_1500 */ = {
+			isa = PBXGroup;
+			children = (
+				D725FEB32B809D0E00DBBD20 /* Problem_1446.swift */,
+			);
+			name = Problems_1500;
+			sourceTree = "<group>";
+		};
 		D73B136B2B7E716B00A870F1 /* ProblemsTests_1000 */ = {
 			isa = PBXGroup;
 			children = (
@@ -667,6 +680,7 @@
 		D73B136C2B7E71BC00A870F1 /* Problems_2000 */ = {
 			isa = PBXGroup;
 			children = (
+				D725FEB22B809CE300DBBD20 /* Problems_1500 */,
 				D73B136D2B7E71CC00A870F1 /* Problems_1100 */,
 			);
 			name = Problems_2000;
@@ -684,6 +698,7 @@
 			isa = PBXGroup;
 			children = (
 				D73B13722B7E746F00A870F1 /* ProblemsTests_1100.swift */,
+				D725FEB62B809F6000DBBD20 /* ProblemsTests_1500.swift */,
 			);
 			name = ProblemsTests_2000;
 			sourceTree = "<group>";
@@ -866,6 +881,7 @@
 				A858BCE42B678DBA004859BC /* Problem_236.swift in Sources */,
 				A858BC482B64374D004859BC /* Problem_32.swift in Sources */,
 				A8AC0EF42B67D379009DE6DE /* Problem_242.swift in Sources */,
+				D725FEB42B809D0E00DBBD20 /* Problem_1446.swift in Sources */,
 				D73B136F2B7E71EB00A870F1 /* Problem_1004.swift in Sources */,
 				A858BCAE2B65943A004859BC /* Problem_125.swift in Sources */,
 				A858BC3E2B64374D004859BC /* Problem_6.swift in Sources */,
@@ -965,9 +981,11 @@
 				D724F0FA2B7E652C00E526D0 /* Problem_977.swift in Sources */,
 				A858BC962B659310004859BC /* Problem_53.swift in Sources */,
 				D724F0F02B7DEE8400E526D0 /* Problem_938.swift in Sources */,
+				D725FEB72B809F6000DBBD20 /* ProblemsTests_1500.swift in Sources */,
 				A86D9C472B73B09100F4390A /* StringIterator.swift in Sources */,
 				A858BC822B64FF32004859BC /* Problem_25.swift in Sources */,
 				A86D9C3E2B72968E00F4390A /* ProblemsTests_600.swift in Sources */,
+				D725FEB52B809D0E00DBBD20 /* Problem_1446.swift in Sources */,
 				D724F0D62B7CF42100E526D0 /* Problems_763.swift in Sources */,
 				A858BCA52B65943A004859BC /* Problem_121.swift in Sources */,
 				D763B3402B7BEF4900DF766A /* Problem_692.swift in Sources */,

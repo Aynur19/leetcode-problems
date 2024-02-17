@@ -45,8 +45,8 @@ extension Problems {
         let nums2 = Set(nums2)
         
         let diffs1 = Array(nums1.subtracting(nums2))
-        var diffs2 = Array(nums2.subtracting(nums1))
+        let diffs2 = Array(nums2.subtracting(nums1))
         
-        return [diffs1, Array(diffs2)]
+        return [diffs1, diffs2]
     }
 }
