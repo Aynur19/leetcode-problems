@@ -17,6 +17,8 @@ final class ProblemsTests_1500: XCTestCase {
             
             testsData.append((s: "leetcode", expected: 2))
             testsData.append((s: "abbcccddddeeeeedcba", expected: 5))
+            testsData.append((s: "j", expected: 1))
+            testsData.append((s: "cc", expected: 2))
             
             return testsData
         }()

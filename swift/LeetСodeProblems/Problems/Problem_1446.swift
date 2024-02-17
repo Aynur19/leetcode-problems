@@ -7,7 +7,7 @@
 
 //  1446. Consecutive Characters
 //  Easy
-//  Topics
+//  Topics: String
 
 //  The power of the string is the maximum length of a non-empty substring that contains only one unique character.
 //
@@ -28,9 +28,12 @@
 //  s consists of only lowercase English letters.
 
 extension Problems {
+    // Approach: Iteration
+    // Time complexity: O(n) = 0 ms
+    // Space complexity: O(1) = 15.92 MB
     static func problem_1446_maxPower(_ s: String) -> Int {
         guard var current = s.first else { return 0 }
-        var maxPower = 0
+        var maxPower = 1
         var count = 0
         
         for char in s {
@@ -43,6 +46,6 @@ extension Problems {
             count += 1
         }
         
-        return maxPower
+        return max(maxPower, count)
     }
 }
