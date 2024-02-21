@@ -32,15 +32,6 @@
 //  Explanation: At i = 0: no number is common, so C[0] = 0.
 //    At i = 1: only 3 is common in A and B, so C[1] = 1.
 //    At i = 2: 1, 2, and 3 are common in A and B, so C[2] = 3.
- 
-//          A       B       C
-//  0:      2       3       0
-//  1:      3       1       1
-//  2:      1       2       3
-//  3:      7       4       3
-//  4:      6       5       3
-//  5:      5       6       5
-//  6:      4       7       7
 
 //  Constraints:
 //  1 <= A.length == B.length == n <= 50

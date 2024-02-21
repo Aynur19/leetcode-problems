@@ -298,4 +298,26 @@ public final class ProblemsTests_300: XCTestCase {
             XCTAssertEqual(actual, data.expected, "s: '\(data.s)'; t: '\(data.t)'")
         }
     }
+    
+    // MARK: Problem 201. Bitwise AND of Numbers Range
+    func testsProblem_201() throws {
+        typealias TestCase = (left: Int, right: Int, expected: Int)
+        
+        lazy var testsData_201: [TestCase] = {
+            var testsData = [TestCase]()
+            
+            testsData.append((left: 5, right: 7, expected: 4))
+            testsData.append((left: 0, right: 0, expected: 0))
+            testsData.append((left: 1, right: 2147483647, expected: 0))
+            
+            return testsData
+        }()
+        
+        for data in testsData_201 {
+            let message = "left: \(data.left); right: \(data.right)"
+            let actual = Problems.problem_201_rangeBitwiseAnd(data.left, data.right)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
 }
