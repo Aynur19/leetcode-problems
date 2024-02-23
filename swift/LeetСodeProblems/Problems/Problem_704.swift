@@ -1,5 +1,5 @@
 //
-//  Problems_704.swift
+//  Problem_704.swift
 //  LeetСodeProblems
 //
 //  Created by Aynur Nasybullin on 14.02.2024.

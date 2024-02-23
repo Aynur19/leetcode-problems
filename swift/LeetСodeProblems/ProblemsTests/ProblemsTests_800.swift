@@ -8,6 +8,37 @@
 import XCTest
 
 final class ProblemsTests_800: XCTestCase {
+    
+    // MARK: Problem 787. Cheapest Flights Within K Stops
+    func testsProblem_787() throws {
+        typealias TestCase = (n: Int, flights: [[Int]], src: Int, dst: Int, k: Int, expected: Int)
+        
+        lazy var testsData_787: [TestCase] = {
+            var testsData = [TestCase]()
+            
+            testsData.append((
+                n: 4, flights: [[0,1,100], [1,2,100], [2,0,100], [1,3,600], [2,3,200]],
+                src: 0, dst: 3, k: 1, expected: 700
+            ))
+            testsData.append((
+                n: 3, flights: [[0,1,100], [1,2,100], [0,2,500]],
+                src: 0, dst: 2, k: 1, expected: 200
+            ))
+            testsData.append((
+                n: 3, flights: [[0,1,100], [1,2,100], [0,2,500]],
+                src: 0, dst: 2, k: 0, expected: 500))
+            
+            return testsData
+        }()
+        
+        for data in testsData_787 {
+            let message = "n: \(data.n); flights: \(data.flights); src: \(data.src); dst: \(data.dst); k: \(data.k)"
+            let actual = Problems.problem_787_findCheapestPrice(data.n, data.flights, data.src, data.dst, data.k)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
     // MARK: Problem 771. Jewels and Stones
     func testsProblem_771() throws {
         typealias TestCase = (jewels: String, stones: String, expected: Int)
