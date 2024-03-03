@@ -17,7 +17,7 @@
                BlueprintIdentifier = "A858BBF42B64361E004859BC"
                BuildableName = "libProblems.a"
                BlueprintName = "Problems"
-               ReferencedContainer = "container:Leet&#x421;odeProblems.xcodeproj">
+               ReferencedContainer = "container:LeetCodeProblems.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -37,7 +37,7 @@
                BlueprintIdentifier = "A858BC002B643670004859BC"
                BuildableName = "ProblemsTests.xctest"
                BlueprintName = "ProblemsTests"
-               ReferencedContainer = "container:Leet&#x421;odeProblems.xcodeproj">
+               ReferencedContainer = "container:LeetCodeProblems.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,7 +65,7 @@
             BlueprintIdentifier = "A858BBF42B64361E004859BC"
             BuildableName = "libProblems.a"
             BlueprintName = "Problems"
-            ReferencedContainer = "container:Leet&#x421;odeProblems.xcodeproj">
+            ReferencedContainer = "container:LeetCodeProblems.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

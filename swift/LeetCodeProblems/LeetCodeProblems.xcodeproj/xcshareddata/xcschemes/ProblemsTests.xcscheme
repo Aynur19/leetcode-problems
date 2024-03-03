@@ -21,7 +21,7 @@
                BlueprintIdentifier = "A858BC002B643670004859BC"
                BuildableName = "ProblemsTests.xctest"
                BlueprintName = "ProblemsTests"
-               ReferencedContainer = "container:Leet&#x421;odeProblems.xcodeproj">
+               ReferencedContainer = "container:LeetCodeProblems.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

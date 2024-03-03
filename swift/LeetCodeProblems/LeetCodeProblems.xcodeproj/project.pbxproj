@@ -878,7 +878,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A858BBEE2B6434D1004859BC /* Build configuration list for PBXProject "LeetСodeProblems" */;
+			buildConfigurationList = A858BBEE2B6434D1004859BC /* Build configuration list for PBXProject "LeetCodeProblems" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1476,7 +1476,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A858BBEE2B6434D1004859BC /* Build configuration list for PBXProject "LeetСodeProblems" */ = {
+		A858BBEE2B6434D1004859BC /* Build configuration list for PBXProject "LeetCodeProblems" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A858BBEF2B6434D1004859BC /* Debug */,
