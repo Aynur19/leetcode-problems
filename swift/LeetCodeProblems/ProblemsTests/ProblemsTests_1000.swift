@@ -80,6 +80,28 @@ final class ProblemsTests_1000: XCTestCase {
         }
     }
     
+    // MARK: Problem 948. Bag of Tokens
+    func testsProblem_948() throws {
+        typealias TestCase = (tokens: [Int], power: Int, expected: Int)
+        
+        lazy var testsData_948: [TestCase] = {
+            var testsData = [TestCase]()
+            
+            testsData.append((tokens: [100], power: 50, expected: 0))
+            testsData.append((tokens: [200,100], power: 150, expected: 1))
+            testsData.append((tokens: [100,200,300,400], power: 200, expected: 2))
+            
+            return testsData
+        }()
+        
+        for data in testsData_948 {
+            let message = "tokens: \(data.tokens); power: \(data.power)"
+            let actual = Problems.problem_948_bagOfTokensScore(data.tokens, data.power)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
     // MARK: Problem 938. Range Sum of BST
     func testsProblem_938() throws {
         typealias TestCase = (root: TreeNode?, low: Int, high: Int, expected: Int)
