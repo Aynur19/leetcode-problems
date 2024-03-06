@@ -266,6 +266,8 @@
 		D7A31CF72B94C106006D170D /* Problem_1071.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A31CF52B94C106006D170D /* Problem_1071.swift */; };
 		D7A31CF92B95A269006D170D /* Problem_948.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A31CF82B95A269006D170D /* Problem_948.swift */; };
 		D7A31CFA2B95A269006D170D /* Problem_948.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A31CF82B95A269006D170D /* Problem_948.swift */; };
+		D7FFF4432B98E83200237372 /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF4422B98E83200237372 /* MinStack.swift */; };
+		D7FFF4442B98E83200237372 /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF4422B98E83200237372 /* MinStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -431,6 +433,7 @@
 		D767DB0D2B888BBB00E97D31 /* Problem_787.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_787.swift; sourceTree = "<group>"; };
 		D7A31CF52B94C106006D170D /* Problem_1071.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_1071.swift; sourceTree = "<group>"; };
 		D7A31CF82B95A269006D170D /* Problem_948.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_948.swift; sourceTree = "<group>"; };
+		D7FFF4422B98E83200237372 /* MinStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -545,6 +548,7 @@
 		A858BC902B654D91004859BC /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
+				D7FFF4422B98E83200237372 /* MinStack.swift */,
 				D724F0E92B7D343000E526D0 /* RecentCounter.swift */,
 				A858BCB62B6594E6004859BC /* DoubleLinkedList.swift */,
 				A858BCCB2B669805004859BC /* LinkedList.swift */,
@@ -939,6 +943,7 @@
 				A86D9C3A2B7282AA00F4390A /* Problem_557.swift in Sources */,
 				A86D9C532B751CA000F4390A /* Problem_658.swift in Sources */,
 				A858BBF92B64361E004859BC /* Problems.swift in Sources */,
+				D7FFF4432B98E83200237372 /* MinStack.swift in Sources */,
 				A858BC502B64374D004859BC /* Problem_14.swift in Sources */,
 				D75E0F982B931C9200C4C0AB /* Problem_1768.swift in Sources */,
 				A8C99E962B6AB71500B8145D /* Problem_387.swift in Sources */,
@@ -1173,6 +1178,7 @@
 				A86D9C362B722FC100F4390A /* Problem_523.swift in Sources */,
 				D725FECC2B84AD4000DBBD20 /* ProblemsTests_2700.swift in Sources */,
 				A858BC6E2B64FF32004859BC /* Problem_21.swift in Sources */,
+				D7FFF4442B98E83200237372 /* MinStack.swift in Sources */,
 				A86D9C412B7296F100F4390A /* Problem_560.swift in Sources */,
 				D725FEC32B83865500DBBD20 /* ProblemsTests_1600.swift in Sources */,
 				D724F0F42B7DFD8900E526D0 /* Problem_974.swift in Sources */,
