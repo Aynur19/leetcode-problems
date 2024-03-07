@@ -274,6 +274,8 @@
 		D7FFF44A2B99ADB500237372 /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF4482B99ADB500237372 /* Trie.swift */; };
 		D7FFF44C2B99D28400237372 /* WordDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF44B2B99D28400237372 /* WordDictionary.swift */; };
 		D7FFF44D2B99D28400237372 /* WordDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF44B2B99D28400237372 /* WordDictionary.swift */; };
+		D7FFF44F2B99F53F00237372 /* MyStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF44E2B99F53F00237372 /* MyStack.swift */; };
+		D7FFF4502B99F53F00237372 /* MyStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF44E2B99F53F00237372 /* MyStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -443,6 +445,7 @@
 		D7FFF4452B99A2EF00237372 /* BSTIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTIterator.swift; sourceTree = "<group>"; };
 		D7FFF4482B99ADB500237372 /* Trie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
 		D7FFF44B2B99D28400237372 /* WordDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDictionary.swift; sourceTree = "<group>"; };
+		D7FFF44E2B99F53F00237372 /* MyStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -558,9 +561,10 @@
 			isa = PBXGroup;
 			children = (
 				D7FFF4422B98E83200237372 /* MinStack.swift */,
+				D7FFF44E2B99F53F00237372 /* MyStack.swift */,
 				D724F0E92B7D343000E526D0 /* RecentCounter.swift */,
-				A858BCB62B6594E6004859BC /* DoubleLinkedList.swift */,
 				A858BCCB2B669805004859BC /* LinkedList.swift */,
+				A858BCB62B6594E6004859BC /* DoubleLinkedList.swift */,
 				A858BC8B2B650017004859BC /* ListNode.swift */,
 				A858BC972B6593F4004859BC /* LRUCache.swift */,
 				A858BCB32B6594B7004859BC /* TreeNode.swift */,
@@ -1060,6 +1064,7 @@
 				A858BCAC2B65943A004859BC /* Problem_103.swift in Sources */,
 				A858BCA62B65943A004859BC /* Problem_110.swift in Sources */,
 				A858BC4B2B64374D004859BC /* Problem_43.swift in Sources */,
+				D7FFF44F2B99F53F00237372 /* MyStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1203,6 +1208,7 @@
 				D73B13702B7E71EC00A870F1 /* Problem_1004.swift in Sources */,
 				A858BCB52B6594B7004859BC /* TreeNode.swift in Sources */,
 				A858BC7C2B64FF32004859BC /* Problem_7.swift in Sources */,
+				D7FFF4502B99F53F00237372 /* MyStack.swift in Sources */,
 				A858BCB82B6594E6004859BC /* DoubleLinkedList.swift in Sources */,
 				A858BC662B64FF32004859BC /* Problem_22.swift in Sources */,
 				A858BCE22B678019004859BC /* Problem_235.swift in Sources */,

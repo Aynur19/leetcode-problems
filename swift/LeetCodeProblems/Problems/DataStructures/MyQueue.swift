@@ -51,13 +51,13 @@
 // Time complexity: O(1) = 0
 // Space complexity: O(n) = 16.36
 public final class MyQueue {
-    private var head: LinkedList<Int>?
-    private var end: LinkedList<Int>?
+    private var head: LinkedList2<Int>?
+    private var end: LinkedList2<Int>?
 
     init() { }
     
     init(_ value: Int) {
-        self.head = LinkedList(value)
+        self.head = LinkedList2(value)
         self.end = self.head
     }
     

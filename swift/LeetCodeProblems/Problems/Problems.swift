@@ -6,3 +6,5 @@
 //
 
 final class Problems { }
+
+final class ProblemsTestCases { }

@@ -8,13 +8,13 @@
 import Foundation
 
 public final class Queue<ValueType> {
-    private var list: LinkedList<ValueType>?
-    private var end: LinkedList<ValueType>?
+    private var list: LinkedList2<ValueType>?
+    private var end: LinkedList2<ValueType>?
     
     init() { }
     
     init(_ value: ValueType) {
-        self.list = LinkedList(value)
+        self.list = LinkedList2(value)
         self.end = self.list
     }
     
@@ -48,6 +48,12 @@ public final class Queue<ValueType> {
         return value
     }
 }
+
+//extension Queue {
+//    func pushBack() -> ValueType? {
+//        let
+//    }
+//}
 
 extension Queue: CustomStringConvertible
 where ValueType: CustomStringConvertible {

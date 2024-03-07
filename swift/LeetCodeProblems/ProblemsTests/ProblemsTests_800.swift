@@ -80,6 +80,36 @@ final class ProblemsTests_800: XCTestCase {
         }
     }
     
+    // MARK: Problem 707. Design Linked List
+    func testsProblem_707() throws {
+        let testsData_707 = ProblemsTestCases.testsData_707()
+        
+        for testCases in testsData_707 {
+            let list = LinkedList(missedValue: -1)
+            
+            for data in testCases {
+                let message = "command: '\(data.command)'; args: \(data.args)"
+                var actual = 0
+                
+                switch data.command {
+                    case "addAtHead":
+                        list.addAtHead(data.args[0])
+                    case "addAtTail":
+                        list.addAtTail(data.args[0])
+                    case "addAtIndex":
+                        list.addAtIndex(data.args[0], data.args[1])
+                    case "deleteAtIndex":
+                        list.deleteAtIndex(data.args[0])
+                    case "get":
+                        actual = list.get(data.args[0])
+                        XCTAssertEqual(actual, data.expected, message)
+                    default:
+                        break
+                }
+            }
+        }
+    }
+    
     // MARK: Problem 704. Binary Search
     func testsProblem_704() throws {
         typealias TestCase = (nums: [Int], target: Int, expected: Int)
