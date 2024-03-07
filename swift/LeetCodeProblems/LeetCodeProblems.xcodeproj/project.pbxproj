@@ -270,6 +270,10 @@
 		D7FFF4442B98E83200237372 /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF4422B98E83200237372 /* MinStack.swift */; };
 		D7FFF4462B99A2EF00237372 /* BSTIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF4452B99A2EF00237372 /* BSTIterator.swift */; };
 		D7FFF4472B99A2F000237372 /* BSTIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF4452B99A2EF00237372 /* BSTIterator.swift */; };
+		D7FFF4492B99ADB500237372 /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF4482B99ADB500237372 /* Trie.swift */; };
+		D7FFF44A2B99ADB500237372 /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF4482B99ADB500237372 /* Trie.swift */; };
+		D7FFF44C2B99D28400237372 /* WordDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF44B2B99D28400237372 /* WordDictionary.swift */; };
+		D7FFF44D2B99D28400237372 /* WordDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF44B2B99D28400237372 /* WordDictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -437,6 +441,8 @@
 		D7A31CF82B95A269006D170D /* Problem_948.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_948.swift; sourceTree = "<group>"; };
 		D7FFF4422B98E83200237372 /* MinStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinStack.swift; sourceTree = "<group>"; };
 		D7FFF4452B99A2EF00237372 /* BSTIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTIterator.swift; sourceTree = "<group>"; };
+		D7FFF4482B99ADB500237372 /* Trie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
+		D7FFF44B2B99D28400237372 /* WordDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -568,6 +574,8 @@
 				A86D9C452B73B09100F4390A /* StringIterator.swift */,
 				D725FEC42B83888200DBBD20 /* ATM.swift */,
 				D7FFF4452B99A2EF00237372 /* BSTIterator.swift */,
+				D7FFF4482B99ADB500237372 /* Trie.swift */,
+				D7FFF44B2B99D28400237372 /* WordDictionary.swift */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -985,6 +993,7 @@
 				A858BCE12B678019004859BC /* Problem_235.swift in Sources */,
 				A858BCD52B66A170004859BC /* Problem_206.swift in Sources */,
 				A858BC3F2B64374D004859BC /* Problem_16.swift in Sources */,
+				D7FFF44C2B99D28400237372 /* WordDictionary.swift in Sources */,
 				D725FEC52B83888200DBBD20 /* ATM.swift in Sources */,
 				A8AC0F002B68091B009DE6DE /* Problem_283.swift in Sources */,
 				A858BC492B64374D004859BC /* Problem_26.swift in Sources */,
@@ -1012,6 +1021,7 @@
 				A86D9C4D2B74C84C00F4390A /* Problem_652.swift in Sources */,
 				D725FECE2B85D87100DBBD20 /* Problem_201.swift in Sources */,
 				A858BCBF2B6595FA004859BC /* Problem_167.swift in Sources */,
+				D7FFF4492B99ADB500237372 /* Trie.swift in Sources */,
 				D725FEBC2B822F9600DBBD20 /* Problem_1493.swift in Sources */,
 				D767DB0E2B888BBB00E97D31 /* Problem_787.swift in Sources */,
 				A858BC3C2B64374D004859BC /* Problem_21.swift in Sources */,
@@ -1057,6 +1067,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7FFF44A2B99ADB500237372 /* Trie.swift in Sources */,
 				A858BC992B6593F5004859BC /* LRUCache.swift in Sources */,
 				A858BCDF2B66D630004859BC /* Problem_234.swift in Sources */,
 				A8C99E9E2B6AC8A000B8145D /* Problem_404.swift in Sources */,
@@ -1101,6 +1112,7 @@
 				A858BCD12B6698ED004859BC /* Problem_205.swift in Sources */,
 				A858BCA72B65943A004859BC /* Problem_110.swift in Sources */,
 				A8366ABA2B6B748C006F7E4B /* Problem_424.swift in Sources */,
+				D7FFF44D2B99D28400237372 /* WordDictionary.swift in Sources */,
 				D75E0F9F2B93D5A500C4C0AB /* Problem_1609.swift in Sources */,
 				A858BC8D2B650017004859BC /* ListNode.swift in Sources */,
 				A858BC7E2B64FF32004859BC /* Problem_48.swift in Sources */,

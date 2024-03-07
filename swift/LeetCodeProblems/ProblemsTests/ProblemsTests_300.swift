@@ -250,6 +250,97 @@ public final class ProblemsTests_300: XCTestCase {
         }
     }
     
+    // MARK: Problem 211. Design Add and Search Words Data Structure
+    func testsProblem_211() throws {
+        typealias TestCase = (command: String, args: String, expected: Bool)
+        
+        lazy var testsData_211: [[TestCase]] = {
+            var testsData = [[TestCase]]()
+            
+            testsData.append([
+                (command: "WordDictionary", args: "", expected: true),
+                (command: "addWord", args: "bad", expected: true),
+                (command: "addWord", args: "dad", expected: true),
+                (command: "addWord", args: "mad", expected: true),
+                (command: "search", args: "pad", expected: false),
+                (command: "search", args: "bad", expected: true),
+                (command: "search", args: ".ad", expected: true),
+                (command: "search", args: "b..", expected: true)
+            ])
+            
+            testsData.append([
+                (command: "WordDictionary", args: "", expected: true),
+                (command: "addWord", args: "a", expected: true),
+                (command: "addWord", args: "a", expected: true),
+                (command: "search", args: ".", expected: true),
+                (command: "search", args: "a", expected: true),
+                (command: "search", args: "aa", expected: false),
+                (command: "search", args: "a", expected: true),
+                (command: "search", args: "a.", expected: false),
+                (command: "search", args: ".a", expected: false)
+            ])
+            
+            return testsData
+        }()
+        
+        for testCases in testsData_211 {
+            let wd = WordDictionary()
+            
+            for data in testCases {
+                let message = "command: '\(data.command)'; args: '\(data.args)'"
+                var actual = false
+                
+                switch data.command {
+                    case "addWord":
+                        wd.addWord(data.args)
+                    case "search":
+                        actual = wd.search(data.args)
+                        XCTAssertEqual(actual, data.expected, message)
+                    default:
+                        break
+                }
+            }
+        }
+    }
+    
+    // MARK: Problem 208. Implement Trie (Prefix Tree)
+    func testsProblem_208() throws {
+        typealias TestCase = (command: String, args: String, expected: Bool)
+        
+        lazy var testsData_208: [TestCase] = {
+            var testsData = [TestCase]()
+            
+            testsData.append((command: "Trie", args: "", expected: true))
+            testsData.append((command: "insert", args: "apple", expected: true))
+            testsData.append((command: "search", args: "apple", expected: true))
+            testsData.append((command: "search", args: "app", expected: false))
+            testsData.append((command: "startsWith", args: "app", expected: true))
+            testsData.append((command: "insert", args: "app", expected: true))
+            testsData.append((command: "search", args: "app", expected: true))
+            
+            return testsData
+        }()
+        
+        let trie = Trie()
+        for data in testsData_208 {
+            let message = "command: '\(data.command)'; args: '\(data.args)'"
+            var actual = false
+            
+            switch data.command {
+                case "insert":
+                    trie.insert(data.args)
+                case "search":
+                    actual = trie.search(data.args)
+                    XCTAssertEqual(actual, data.expected, message)
+                case "startsWith":
+                    actual = trie.startsWith(data.args)
+                    XCTAssertEqual(actual, data.expected, message)
+                default:
+                    break
+            }
+        }
+    }
+    
     // MARK: Problem 206. Reverse Linked List
     func testsProblem_206() throws {
         func testsData_206() -> [(head: ListNode?, expected: ListNode?)] {
