@@ -268,6 +268,8 @@
 		D7A31CFA2B95A269006D170D /* Problem_948.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A31CF82B95A269006D170D /* Problem_948.swift */; };
 		D7FFF4432B98E83200237372 /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF4422B98E83200237372 /* MinStack.swift */; };
 		D7FFF4442B98E83200237372 /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF4422B98E83200237372 /* MinStack.swift */; };
+		D7FFF4462B99A2EF00237372 /* BSTIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF4452B99A2EF00237372 /* BSTIterator.swift */; };
+		D7FFF4472B99A2F000237372 /* BSTIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFF4452B99A2EF00237372 /* BSTIterator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -434,6 +436,7 @@
 		D7A31CF52B94C106006D170D /* Problem_1071.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_1071.swift; sourceTree = "<group>"; };
 		D7A31CF82B95A269006D170D /* Problem_948.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_948.swift; sourceTree = "<group>"; };
 		D7FFF4422B98E83200237372 /* MinStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinStack.swift; sourceTree = "<group>"; };
+		D7FFF4452B99A2EF00237372 /* BSTIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTIterator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -564,6 +567,7 @@
 				A86D9C302B70B5E300F4390A /* TreeCodec.swift */,
 				A86D9C452B73B09100F4390A /* StringIterator.swift */,
 				D725FEC42B83888200DBBD20 /* ATM.swift */,
+				D7FFF4452B99A2EF00237372 /* BSTIterator.swift */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -989,6 +993,7 @@
 				A89228D52B68F63A0086BEF6 /* ArrayExt.swift in Sources */,
 				A858BCD02B6698ED004859BC /* Problem_205.swift in Sources */,
 				D7A31CF62B94C106006D170D /* Problem_1071.swift in Sources */,
+				D7FFF4462B99A2EF00237372 /* BSTIterator.swift in Sources */,
 				A8C99E8E2B6965F100B8145D /* GuessGame.swift in Sources */,
 				A858BC432B64374D004859BC /* Problem_1.swift in Sources */,
 				A858BCE42B678DBA004859BC /* Problem_236.swift in Sources */,
@@ -1191,6 +1196,7 @@
 				A858BCE22B678019004859BC /* Problem_235.swift in Sources */,
 				A8C99E972B6AB71500B8145D /* Problem_387.swift in Sources */,
 				A858BC782B64FF32004859BC /* Problem_15.swift in Sources */,
+				D7FFF4472B99A2F000237372 /* BSTIterator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
