@@ -47,8 +47,7 @@
 //  Please do not use the built-in LinkedList library.
 //  At most 2000 calls will be made to get, addAtHead, addAtTail, addAtIndex and deleteAtIndex.
 
-
-public final class LinkedList<ValueType> {
+public final class LinkedList<ValueType>: ListProtocol {
     private class Node {
         var value: ValueType
         var next: Node?
@@ -115,24 +114,27 @@ extension LinkedList {
         count += 1
     }
     
-    func addAtIndex(_ index: Int, _ val: ValueType) {
-        guard index <= count else { return }
+    func addAtIndex(_ index: Int, _ val: ValueType) -> Bool {
+        guard index <= count else { return false }
         
         guard index > 0 else {
-            return addAtHead(val)
+            addAtHead(val)
+            return true
         }
         
         guard index != count else {
-            return addAtTail(val)
+            addAtTail(val)
+            return true
         }
         
-        guard let prev = getNode(index - 1) else { return }
+        guard let prev = getNode(index - 1) else { return false }
         
         let addedNode = Node(value: val)
         addedNode.next = prev.next
         prev.next = addedNode
         
         count += 1
+        return true
     }
 }
     
@@ -226,6 +228,7 @@ where ValueType: CustomStringConvertible {
     }
 }
 
+
 extension ProblemsTestCases {
     typealias TestCase_707 = [(command: String, args: [Int], expected: Int)]
     
@@ -279,48 +282,5 @@ extension ProblemsTestCases {
         ])
         
         return testsData
-    }
-}
-
-public final class LinkedList2<ValueType> {
-    public var value: ValueType
-    public var next: LinkedList2?
-    
-    public init(_ value: ValueType, _ next: LinkedList2? = nil) {
-        self.value = value
-    }
-    
-    public func addNext(_ next: LinkedList2? = nil) {
-        self.next = next
-    }
-    
-    public func addNext(value: ValueType) {
-        self.next = .init(value)
-    }
-    
-    public func addPrev(_ prev: LinkedList2) -> LinkedList2 {
-        prev.next = self
-        return prev
-    }
-    
-    public func addPrev(value: ValueType) -> LinkedList2 {
-        return LinkedList2(value, self)
-    }
-}
-
-extension LinkedList2: CustomStringConvertible
-where ValueType: CustomStringConvertible {
-    public var description: String {
-        var current = self
-        var result: [String] = ["\(value)"]
-        
-        while true {
-            if let tmp = current.next {
-                result.append("\(tmp.value)")
-                current = tmp
-            } else { break }
-        }
-        
-        return result.joined(separator: "<->")
     }
 }

@@ -48,56 +48,56 @@
 //  Space complexity:
 //    - O(1)        -> for 1 call of push(), pop(), top(), getMin()
 //    - 17.87 MB    -> for all calls
-public class MinStack {
-    typealias ValueType = Int
-    
-    struct MinStackValue<ValType> where ValType : Comparable   {
-        let value: ValType
-        let minVal: ValType
-        
-        init(_ value: ValType, minVal: ValType) {
-            self.value = value
-            self.minVal = minVal
-        }
-    }
-    
-    private var stack: DoubleLinkedList<MinStackValue<ValueType>>?
-
-    init() { }
-    
-    func push(_ val: ValueType) {
-        if let stack = self.stack {
-            stack.setNext(.init(value: .init(val, minVal: min(stack.value.minVal, val))))
-            self.stack = stack.next
-            return
-        }
-        
-        self.stack = DoubleLinkedList<MinStackValue>(value: .init(val, minVal: val))
-    }
-    
-    func pop() {
-        guard let stack = self.stack?.prev else {
-            self.stack = nil
-            return
-        }
-        
-        _ = stack.removeNext()
-        self.stack = stack
-    }
-    
-    func top() -> ValueType {
-        guard let stack = self.stack else {
-            return 0
-        }
-        
-        return stack.value.value
-    }
-    
-    func getMin() -> ValueType {
-        guard let stack = self.stack else {
-            return 0
-        }
-        
-        return stack.value.minVal
-    }
-}
+//public class MinStack {
+//    typealias ValueType = Int
+//    
+//    struct MinStackValue<ValType> where ValType : Comparable   {
+//        let value: ValType
+//        let minVal: ValType
+//        
+//        init(_ value: ValType, minVal: ValType) {
+//            self.value = value
+//            self.minVal = minVal
+//        }
+//    }
+//    
+//    private var stack: DoubleLinkedList<MinStackValue<ValueType>>?
+//
+//    init() { }
+//    
+//    func push(_ val: ValueType) {
+//        if let stack = self.stack {
+//            stack.setNext(.init(value: .init(val, minVal: min(stack.value.minVal, val))))
+//            self.stack = stack.next
+//            return
+//        }
+//        
+//        self.stack = DoubleLinkedList<MinStackValue>(value: .init(val, minVal: val))
+//    }
+//    
+//    func pop() {
+//        guard let stack = self.stack?.prev else {
+//            self.stack = nil
+//            return
+//        }
+//        
+//        _ = stack.removeNext()
+//        self.stack = stack
+//    }
+//    
+//    func top() -> ValueType {
+//        guard let stack = self.stack else {
+//            return 0
+//        }
+//        
+//        return stack.value.value
+//    }
+//    
+//    func getMin() -> ValueType {
+//        guard let stack = self.stack else {
+//            return 0
+//        }
+//        
+//        return stack.value.minVal
+//    }
+//}

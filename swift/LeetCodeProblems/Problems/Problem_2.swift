@@ -76,3 +76,36 @@ extension Problems {
     }
 }
 
+extension ProblemsTestCases {
+    typealias TestCase_2 = (l1: ListNode?, l2: ListNode?, expected: ListNode?)
+     
+    static func testsData_2() -> [TestCase_2] {
+        var testsData = [TestCase_2]()
+        
+        testsData.append((
+            l1: ListNode(2, .init(4, .init(3))),
+            l2: ListNode(5, .init(6, .init(4))),
+            expected: ListNode(7, .init(0, .init(8)))
+        ))
+        
+        testsData.append((
+            l1: ListNode(0),
+            l2: ListNode(0),
+            expected: ListNode(0)
+        ))
+        
+        testsData.append((
+            l1: ListNode(9, .init(9, .init(9, .init(9, .init(9, .init(9, .init(9))))))),
+            l2: ListNode(9, .init(9, .init(9, .init(9)))),
+            expected: ListNode(8, .init(9, .init(9, .init(9, .init(0, .init(0, .init(0, .init(1))))))))
+        ))
+        
+        testsData.append((
+            l1: ListNode(2, .init(4, .init(9))),
+            l2: ListNode(5, .init(6, .init(4, .init(9)))),
+            expected: ListNode(7, .init(0, .init(4, .init(0, .init(1)))))
+        ))
+        
+        return testsData
+    }
+}

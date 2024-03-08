@@ -52,3 +52,17 @@ extension Problems {
         return []
     }
 }
+
+extension ProblemsTestCases {
+    typealias TestCase_1 = (nums: [Int], target: Int, expected: [Int])
+    
+    static func testsData_1() -> [TestCase_1] {
+        var testsData = [TestCase_1]()
+        
+        testsData.append((nums: [2, 7, 11, 15], target: 9, expected: [0, 1]))
+        testsData.append((nums: [3, 2, 4],      target: 6, expected: [1, 2]))
+        testsData.append((nums: [3, 3],         target: 6, expected: [0, 1]))
+        
+        return testsData
+    }
+}

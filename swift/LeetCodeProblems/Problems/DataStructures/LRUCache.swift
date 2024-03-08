@@ -49,77 +49,77 @@
 import Foundation
 
 // help: https://www.youtube.com/watch?v=KptTnhWtBZY
-final public class LRUCache {
-    private var capacity: Int
-    private var keyToValue = [Int:Int]()
-    private var keyToIterator = [Int:DoubleLinkedList<Int>]()
-    var order: DoubleLinkedList<Int>?
-    
-    init(_ capacity: Int) {
-        self.capacity = capacity
-    }
-    
-    func get(_ key: Int) -> Int {
-        guard let val = keyToValue[key] else { return -1 }
-        
-        toFront(by: key)
-        
-        return val
-    }
-    
-    private func toFront(by key: Int) {
-        guard let listIt = keyToIterator[key],
-              order != keyToIterator[key]
-        else { return }
-        
-        listIt.prev?.next = listIt.next
-        listIt.next?.prev = listIt.prev
-        listIt.prev = nil
-        listIt.next = order
-        order?.prev = listIt
-        order = listIt
-        keyToIterator[key] = order
-    }
-    
-    func put(_ key: Int, _ value: Int) {
-        if keyToValue[key] != nil {
-            keyToValue[key] = value
-            toFront(by: key)
-            return
-        } else {
-            if keyToValue.count >= capacity {
-                if let last = order?.getLast() {
-                    last.prev?.next = nil
-                    keyToValue[last.value] = nil
-                    keyToIterator[last.value] = nil
-                }
-            }
-        }
-        
-        keyToValue[key] = value
-        
-        let newItem = DoubleLinkedList(value: key, next: order)
-        order?.prev = newItem
-        keyToIterator[key] = newItem
-        order = newItem
-    }
-}
-
-extension LRUCache: CustomStringConvertible {
-    public var description: String {
-        var result: [String] = []
-        var current = order
-        
-        while true {
-            if let tmp = current,
-               let value = keyToValue[tmp.value] {
-                result.append("[\(tmp.value):\(value)]")
-                current = tmp.next
-            } else {
-                break
-            }
-        }
-        
-        return result.joined(separator: "<->")
-    }
-}
+//final public class LRUCache {
+//    private var capacity: Int
+//    private var keyToValue = [Int:Int]()
+//    private var keyToIterator = [Int:DoubleLinkedList<Int>]()
+//    var order: DoubleLinkedList<Int>?
+//    
+//    init(_ capacity: Int) {
+//        self.capacity = capacity
+//    }
+//    
+//    func get(_ key: Int) -> Int {
+//        guard let val = keyToValue[key] else { return -1 }
+//        
+//        toFront(by: key)
+//        
+//        return val
+//    }
+//    
+//    private func toFront(by key: Int) {
+//        guard let listIt = keyToIterator[key],
+//              order != keyToIterator[key]
+//        else { return }
+//        
+//        listIt.prev?.next = listIt.next
+//        listIt.next?.prev = listIt.prev
+//        listIt.prev = nil
+//        listIt.next = order
+//        order?.prev = listIt
+//        order = listIt
+//        keyToIterator[key] = order
+//    }
+//    
+//    func put(_ key: Int, _ value: Int) {
+//        if keyToValue[key] != nil {
+//            keyToValue[key] = value
+//            toFront(by: key)
+//            return
+//        } else {
+//            if keyToValue.count >= capacity {
+//                if let last = order?.getLast() {
+//                    last.prev?.next = nil
+//                    keyToValue[last.value] = nil
+//                    keyToIterator[last.value] = nil
+//                }
+//            }
+//        }
+//        
+//        keyToValue[key] = value
+//        
+//        let newItem = DoubleLinkedList(value: key, next: order)
+//        order?.prev = newItem
+//        keyToIterator[key] = newItem
+//        order = newItem
+//    }
+//}
+//
+//extension LRUCache: CustomStringConvertible {
+//    public var description: String {
+//        var result: [String] = []
+//        var current = order
+//        
+//        while true {
+//            if let tmp = current,
+//               let value = keyToValue[tmp.value] {
+//                result.append("[\(tmp.value):\(value)]")
+//                current = tmp.next
+//            } else {
+//                break
+//            }
+//        }
+//        
+//        return result.joined(separator: "<->")
+//    }
+//}

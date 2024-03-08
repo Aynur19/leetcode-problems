@@ -48,108 +48,108 @@ protocol RecentCounterProtocol {
 //  Space complexity:
 //    - O(1)        -> for 1 call of ping()
 //    - 17.59 MB    -> for all calls
-final class RecentCounter1: RecentCounterProtocol {
-    private var head: DoubleLinkedList<Int>?
-    private var end: DoubleLinkedList<Int>?
-    private var count = 0
-    
-    private static let maxPing = 3000
-    
-    init() { }
-    
-    func ping(_ t: Int) -> Int {
-        count += 1
-        
-        if head == nil {
-            head = .init(value: t)
-            end = head
-            return count
-        }
-        
-        head?.setPrev(.init(value: t))
-        head = head?.prev
-        
-        while true {
-            if let val = end?.value {
-                if t - Self.maxPing > val {
-                    end = end?.prev
-                    _ = end?.removeNext()
-                    count -= 1
-                } else { break }
-            }
-        }
-        
-        return count
-    }
-}
-
-//  Approach: Queue, Linked List
-//  Time complexity:
-//    - O(1)        -> for 1 call of ping()
-//    - 294 ms      -> for all calls
-//  Space complexity:
-//    - O(1)        -> for 1 call of ping()
-//    - 17.30 MB    -> for all calls
-final class RecentCounter2: RecentCounterProtocol {
-    private let queue: Queue<Int>
-    private var count = 0
-    
-    private static let maxPing = 3000
-    
-    init() { 
-        queue = .init()
-    }
-    
-    func ping(_ t: Int) -> Int {
-        count += 1
-        queue.enqueue(t)
-        
-        while true {
-            if let val = queue.peek() {
-                if t - Self.maxPing > val {
-                    _ = queue.dequeue()
-                    count -= 1
-                } else { break }
-            }
-        }
-        
-        return count
-    }
-}
-
-//  Approach: Array, Two Pointers
-//  Time complexity:
-//    - O(1)        -> for 1 call of ping()
-//    - 275 ms      -> for all calls
-//  Space complexity:
-//    - O(1)        -> for 1 call of ping()
-//    - 16.86 MB    -> for all calls
-final class RecentCounter3: RecentCounterProtocol {
-    private var values: [Int]
-    private var count = 0
-    private var firstIdx = -1
-    private var lastIdx = 0
-    
-    private static let maxPing = 3000
-    private let n: Int
-    
-    init() {
-        values = Array(repeating: 0, count: Self.maxPing + 2)
-        n = values.count
-    }
-    
-    func ping(_ t: Int) -> Int {
-        firstIdx = firstIdx < n - 1 ? firstIdx + 1 : 0
-        values[firstIdx] = t
-        count += 1
-        
-        while true {
-            if values[lastIdx] < t - Self.maxPing {
-                lastIdx = lastIdx < n - 1 ? lastIdx + 1 : 0
-                count -= 1
-            } else { break }
-        }
-        
-        return count
-    }
-}
+//final class RecentCounter1: RecentCounterProtocol {
+//    private var head: DoubleLinkedList<Int>?
+//    private var end: DoubleLinkedList<Int>?
+//    private var count = 0
+//    
+//    private static let maxPing = 3000
+//    
+//    init() { }
+//    
+//    func ping(_ t: Int) -> Int {
+//        count += 1
+//        
+//        if head == nil {
+//            head = .init(value: t)
+//            end = head
+//            return count
+//        }
+//        
+//        head?.setPrev(.init(value: t))
+//        head = head?.prev
+//        
+//        while true {
+//            if let val = end?.value {
+//                if t - Self.maxPing > val {
+//                    end = end?.prev
+//                    _ = end?.removeNext()
+//                    count -= 1
+//                } else { break }
+//            }
+//        }
+//        
+//        return count
+//    }
+//}
+//
+////  Approach: Queue, Linked List
+////  Time complexity:
+////    - O(1)        -> for 1 call of ping()
+////    - 294 ms      -> for all calls
+////  Space complexity:
+////    - O(1)        -> for 1 call of ping()
+////    - 17.30 MB    -> for all calls
+//final class RecentCounter2: RecentCounterProtocol {
+//    private let queue: Queue<Int>
+//    private var count = 0
+//    
+//    private static let maxPing = 3000
+//    
+//    init() { 
+//        queue = .init()
+//    }
+//    
+//    func ping(_ t: Int) -> Int {
+//        count += 1
+//        queue.enqueue(t)
+//        
+//        while true {
+//            if let val = queue.peek() {
+//                if t - Self.maxPing > val {
+//                    _ = queue.dequeue()
+//                    count -= 1
+//                } else { break }
+//            }
+//        }
+//        
+//        return count
+//    }
+//}
+//
+////  Approach: Array, Two Pointers
+////  Time complexity:
+////    - O(1)        -> for 1 call of ping()
+////    - 275 ms      -> for all calls
+////  Space complexity:
+////    - O(1)        -> for 1 call of ping()
+////    - 16.86 MB    -> for all calls
+//final class RecentCounter3: RecentCounterProtocol {
+//    private var values: [Int]
+//    private var count = 0
+//    private var firstIdx = -1
+//    private var lastIdx = 0
+//    
+//    private static let maxPing = 3000
+//    private let n: Int
+//    
+//    init() {
+//        values = Array(repeating: 0, count: Self.maxPing + 2)
+//        n = values.count
+//    }
+//    
+//    func ping(_ t: Int) -> Int {
+//        firstIdx = firstIdx < n - 1 ? firstIdx + 1 : 0
+//        values[firstIdx] = t
+//        count += 1
+//        
+//        while true {
+//            if values[lastIdx] < t - Self.maxPing {
+//                lastIdx = lastIdx < n - 1 ? lastIdx + 1 : 0
+//                count -= 1
+//            } else { break }
+//        }
+//        
+//        return count
+//    }
+//}

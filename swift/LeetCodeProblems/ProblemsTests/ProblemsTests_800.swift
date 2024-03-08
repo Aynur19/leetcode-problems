@@ -85,7 +85,7 @@ final class ProblemsTests_800: XCTestCase {
         let testsData_707 = ProblemsTestCases.testsData_707()
         
         for testCases in testsData_707 {
-            let list = LinkedList(missedValue: -1)
+            let list = LinkedList<Int>()
             
             for data in testCases {
                 let message = "command: '\(data.command)'; args: \(data.args)"
@@ -101,7 +101,7 @@ final class ProblemsTests_800: XCTestCase {
                     case "deleteAtIndex":
                         list.deleteAtIndex(data.args[0])
                     case "get":
-                        actual = list.get(data.args[0])
+                        actual = list.get(data.args[0]) ?? -1
                         XCTAssertEqual(actual, data.expected, message)
                     default:
                         break

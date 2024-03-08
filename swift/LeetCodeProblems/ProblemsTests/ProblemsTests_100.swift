@@ -919,59 +919,25 @@ public final class ProblemsTests_100: XCTestCase {
     
     // MARK: Problem: 2. Add Two Numbers
     func testsProblem_2() throws {
-        lazy var testsData_2: [(l1: ListNode?, l2: ListNode?, expected: ListNode?)] = {
-            var testsData = [(l1: ListNode?, l2: ListNode?, expected: ListNode?)]()
-            
-            testsData.append((
-                l1: ListNode(2, .init(4, .init(3))),
-                l2: ListNode(5, .init(6, .init(4))),
-                expected: ListNode(7, .init(0, .init(8)))
-            ))
-            testsData.append((
-                l1: ListNode(0),
-                l2: ListNode(0),
-                expected: ListNode(0)
-            ))
-            testsData.append((
-                l1: ListNode(9, .init(9, .init(9, .init(9, .init(9, .init(9, .init(9))))))),
-                l2: ListNode(9, .init(9, .init(9, .init(9)))),
-                expected: ListNode(8, .init(9, .init(9, .init(9, .init(0, .init(0, .init(0, .init(1))))))))
-            ))
-            testsData.append((
-                l1: ListNode(2, .init(4, .init(9))),
-                l2: ListNode(5, .init(6, .init(4, .init(9)))),
-                expected: ListNode(7, .init(0, .init(4, .init(0, .init(1)))))
-            ))
-            
-            return testsData
-        }()
+        let testsData_2 = ProblemsTestCases.testsData_2()
         
         for data in testsData_2 {
+            let message = "l1: \(data.l1?.description ?? "[]"); l2: \(data.l2?.description ?? "[]")"
             let actual = Problems.problem_2_addTwoNumbers(data.l1, data.l2)
             
-            XCTAssertTrue(
-                ListNode.equalListNodes(actual, data.expected),
-                "l1: \(data.l1?.description ?? "[]"); l2: \(data.l2?.description ?? "[]")"
-            )
+            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), message)
         }
     }
     
     // MARK: Problem: 1. Two Sum
     func testsProblem_1() throws {
-        lazy var testsData_1: [(nums: [Int], target: Int, expected: [Int])] = {
-            var testsData = [(nums: [Int], target: Int, expected: [Int])]()
-            
-            testsData.append((nums: [2, 7, 11, 15], target: 9, expected: [0, 1]))
-            testsData.append((nums: [3, 2, 4], target: 6, expected: [1, 2]))
-            testsData.append((nums: [3, 3], target: 6, expected: [0, 1]))
-            
-            return testsData
-        }()
+        let testsData_1 = ProblemsTestCases.testsData_1()
         
         for data in testsData_1 {
+            let message = "nums: \(data.nums); target: \(data.target)"
             let actual = Problems.problem_1_twoSum(data.nums, data.target)
             
-            XCTAssertEqual(actual, data.expected, "nums: \(data.nums); target: \(data.target)")
+            XCTAssertEqual(actual, data.expected, message)
         }
     }
 }

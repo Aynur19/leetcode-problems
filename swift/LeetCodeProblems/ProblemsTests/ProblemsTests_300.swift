@@ -197,7 +197,7 @@ public final class ProblemsTests_300: XCTestCase {
         let testsData_232 = ProblemsTestCases.testsData_232()
         
         for testCases in testsData_232 {
-            let queue = MyQueue()
+            let queue = Queue<Int>()
             
             for data in testCases {
                 let message = "command: \(data.command), args: \(data.args)"
@@ -205,12 +205,12 @@ public final class ProblemsTests_300: XCTestCase {
         
                 switch data.command {
                     case "push":
-                        queue.push(data.args)
+                        queue.enqueue(data.args)
                     case "peek":
-                        actual = queue.peek()
+                        actual = queue.peek() ?? -1
                         XCTAssertEqual(actual, data.expected, message)
                     case "pop":
-                        actual = queue.pop()
+                        actual = queue.dequeue() ?? -1
                         XCTAssertEqual(actual, data.expected, message)
                     case "empty":
                         actual = queue.empty() ? 1 : 0
