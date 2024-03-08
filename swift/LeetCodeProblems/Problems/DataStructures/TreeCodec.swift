@@ -173,7 +173,7 @@ final class TreeCodec {
         var values = [String]()
         
         queue.enqueue(root)
-        while !queue.isEmpty {
+        while !queue.empty() {
             if let qVal = queue.dequeue(), let node = qVal {
                 queue.enqueue(node.left)
                 queue.enqueue(node.right)

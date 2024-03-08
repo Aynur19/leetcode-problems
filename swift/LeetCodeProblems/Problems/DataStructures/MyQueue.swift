@@ -1,5 +1,5 @@
 //
-//  MyQueue.swift
+//  Queue.swift
 //  LeetСodeProblems
 //
 //  Created by Aynur Nasybullin on 28.01.2024.
@@ -50,51 +50,59 @@
 // Approach: LinkedList
 // Time complexity: O(1) = 0
 // Space complexity: O(n) = 16.36
-public final class MyQueue {
-    private var head: LinkedList2<Int>?
-    private var end: LinkedList2<Int>?
+public final class Queue<ValueType> {
+    private var list = LinkedList<ValueType>()
 
     init() { }
     
-    init(_ value: Int) {
-        self.head = LinkedList2(value)
-        self.end = self.head
+    func enqueue(_ x: ValueType) {
+        list.addAtTail(x)
     }
     
-    func push(_ x: Int) {
-        if head != nil {
-            end?.next = .init(x)
-            end = end?.next
-            return
-        }
-        
-        head = .init(x)
-        end = head
+    func dequeue() -> ValueType? {
+        return list.removeAtHead()
     }
     
-    func pop() -> Int {
-        let first = head
-        let second = head?.next
-        let value = first?.value
-        
-        first?.next = nil
-        head = second
-        
-        if head == nil {
-            end = nil
-        }
-        
-        return value!
+    func peek() -> ValueType? {
+        return list.get(0)
     }
     
-    func peek() -> Int { head!.value }
-    
-    func empty() -> Bool { head == nil }
+    func empty() -> Bool {
+        return list.empty()
+    }
 }
 
 
-extension MyQueue: CustomStringConvertible {
+extension Queue: CustomStringConvertible
+where ValueType: CustomStringConvertible {
     public var description: String {
-        return head?.description ?? "[]"
+        return list.description
+    }
+}
+
+extension ProblemsTestCases {
+    typealias TestCase_232 = [(command: String, args: Int, expected: Int)]
+    
+    static func testsData_232() -> [TestCase_232] {
+        var testsData = [TestCase_232]()
+        
+        testsData.append([
+            (command: "Queue", args: 0, expected: 0),
+            (command: "push",  args: 1, expected: 0),
+            (command: "push",  args: 2, expected: 0),
+            (command: "peek",  args: 0, expected: 1),
+            (command: "pop",   args: 0, expected: 1),
+            (command: "empty", args: 0, expected: 0)
+        ])
+        
+        testsData.append([
+            (command: "Queue",  args: 0, expected: 0),
+            (command: "push",   args: 1, expected: 0),
+            (command: "pop",    args: 0, expected: 1),
+            (command: "push",   args: 2, expected: 0),
+            (command: "peek",   args: 0, expected: 2)
+        ])
+        
+        return testsData
     }
 }

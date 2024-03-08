@@ -48,8 +48,7 @@
 //  At most 2000 calls will be made to get, addAtHead, addAtTail, addAtIndex and deleteAtIndex.
 
 
-
-final class LinkedList<ValueType> {
+public final class LinkedList<ValueType> {
     private class Node {
         var value: ValueType
         var next: Node?
@@ -62,11 +61,8 @@ final class LinkedList<ValueType> {
     private var head: Node?
     private var end: Node?
     private var count = 0
-    private var missedValue: ValueType
-
-    init(missedValue: ValueType) {
-        self.missedValue = missedValue
-    }
+    
+    init() { }
     
     private func getNode(_ index: Int) -> Node? {
         guard index >= 0, index < count,
@@ -87,10 +83,14 @@ final class LinkedList<ValueType> {
         return tmp
     }
     
-    func get(_ index: Int) -> ValueType {
-        return getNode(index)?.value ?? missedValue
+    func get(_ index: Int) -> ValueType? {
+        return getNode(index)?.value
     }
     
+    func empty() -> Bool { return count == 0 }
+}
+    
+extension LinkedList {
     func addAtHead(_ val: ValueType) {
         let newHead = Node(value: val)
         newHead.next = head
@@ -134,42 +134,95 @@ final class LinkedList<ValueType> {
         
         count += 1
     }
+}
     
-    func deleteAtHead() {
-        guard let head = head else { return }
+extension LinkedList {
+    func removeAtHead() -> ValueType? {
+        guard let head = head else { return nil }
         
         self.head = head.next
         head.next = nil
         
+        if self.head == nil {
+            end = nil
+        }
+        
         count -= 1
+        return head.value
     }
     
-    func deleteAtTail() {
-        guard let prevEnd = getNode(count - 2) else { return }
+    func removeAtTail() -> ValueType? {
+        guard let end = end else { return nil }
+        let removedValue = end.value
+        
+        guard let prevEnd = getNode(count - 2) else {
+            self.head = nil
+            self.end = nil
+            count = 0
+            
+            return removedValue
+        }
         
         prevEnd.next = nil
-        end = prevEnd
+        self.end = prevEnd
         count -= 1
+        
+        return removedValue
     }
     
-    func deleteAtIndex(_ index: Int) {
-        guard index < count else { return }
+    func removeAtIndex(_ index: Int) -> ValueType? {
+        guard index < count else { return nil }
         
         guard index > 0 else {
-            return deleteAtHead()
+            return removeAtHead()
         }
         
         guard index != count - 1 else {
-            return deleteAtTail()
+            return removeAtTail()
         }
         
-        guard let prevNode = getNode(index - 1) else { return }
+        guard let prevNode = getNode(index - 1) else { return nil }
         let nextNode = prevNode.next
+        let removedValue = nextNode?.value
       
         prevNode.next = nextNode?.next
         nextNode?.next = nil
         
         count -= 1
+        return removedValue
+    }
+}
+    
+extension LinkedList {
+    func deleteAtHead() {
+        _ = removeAtHead()
+    }
+    
+    func deleteAtTail() {
+        _ = removeAtTail()
+    }
+    
+    func deleteAtIndex(_ index: Int) {
+        _ = removeAtIndex(index)
+    }
+}
+
+extension LinkedList: CustomStringConvertible
+where ValueType: CustomStringConvertible {
+    public var description: String {
+        guard var tmp = head else { return "[]" }
+        var result = ["[", "\(tmp.value)"]
+        
+        while true {
+            if let next = tmp.next {
+                result.append(" -> \(next.value)")
+                tmp = next
+            }
+            else { break }
+        }
+        
+        result.append("]")
+        return result.joined()
     }
 }
 
@@ -205,16 +258,16 @@ extension ProblemsTestCases {
         ])
         
         testsData.append([
-            (command: "MyLinkedList",   args: [0], expected: 0),  // []
-            (command: "addAtHead",      args: [7], expected: 0),     // [7]
-            (command: "addAtHead",      args: [2], expected: 0),     // [2 -> 7]
-            (command: "addAtHead",      args: [1], expected: 0),     // [1 -> 2 -> 7]
-            (command: "addAtIndex",     args: [3, 0], expected: 0), // [1 -> 2 -> 7 -> 0]
-            (command: "deleteAtIndex",  args: [2], expected: 0), // [1 -> 2 -> 0]
-            (command: "addAtHead",      args: [6], expected: 0),     // [6 -> 1 -> 2 -> 0]
-            (command: "addAtTail",      args: [4], expected: 0),     // [6 -> 1 -> 2 -> 0 -> 4]
-            (command: "get",            args: [4], expected: 4),           // 4
-            (command: "addAtHead",      args: [4], expected: 0),     // [4 -> 6 -> 1 -> 2 -> 0 -> 4]
+            (command: "MyLinkedList",   args: [0], expected: 0),
+            (command: "addAtHead",      args: [7], expected: 0),
+            (command: "addAtHead",      args: [2], expected: 0),
+            (command: "addAtHead",      args: [1], expected: 0),
+            (command: "addAtIndex",     args: [3, 0], expected: 0),
+            (command: "deleteAtIndex",  args: [2], expected: 0),
+            (command: "addAtHead",      args: [6], expected: 0),
+            (command: "addAtTail",      args: [4], expected: 0),
+            (command: "get",            args: [4], expected: 4),
+            (command: "addAtHead",      args: [4], expected: 0),
             (command: "addAtIndex",     args: [5, 0], expected: 0),
             (command: "addAtHead",      args: [6], expected: 0)
         ])

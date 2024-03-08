@@ -55,10 +55,11 @@ extension Problems {
         var nextCounts = 1
         var prevVal = 0
         var isEvenLevel = false
-        let nodes: Queue<TreeNode> = .init(root)
+        let nodes = Queue<TreeNode>()
+        nodes.enqueue(root)
         
         while true {
-            if nodes.isEmpty { break }
+            if nodes.empty() { break }
             
             counts = nextCounts
             nextCounts = 0

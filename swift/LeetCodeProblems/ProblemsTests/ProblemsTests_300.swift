@@ -194,42 +194,31 @@ public final class ProblemsTests_300: XCTestCase {
     
     // MARK: Problem 232. Implement Queue using Stacks
     func testsProblem_232() throws {
-        lazy var testsData_232: [(commands: [String], args: [[Int]], expected: [Int])] = {
-            var testsData = [(commands: [String], args: [[Int]], expected: [Int])]()
-            
-            testsData.append((
-                commands: ["MyQueue", "push", "push", "peek", "pop", "empty"],
-                args: [[], [1], [2], [], [], []],
-                expected: [1, 1, 0]
-            ))
-            
-            return testsData
-        }()
+        let testsData_232 = ProblemsTestCases.testsData_232()
         
-        for data in testsData_232 {
-            var actual = [Int]()
-            let myQueue = MyQueue()
+        for testCases in testsData_232 {
+            let queue = MyQueue()
             
-            for i in 1..<data.commands.count {
-                var method = ""
-                switch data.commands[i] {
+            for data in testCases {
+                let message = "command: \(data.command), args: \(data.args)"
+                var actual = 0
+        
+                switch data.command {
                     case "push":
-                        method = "\(i)) push(\(data.args[i])): ->  "
-                        myQueue.push(data.args[i][0])
+                        queue.push(data.args)
                     case "peek":
-                        method = "\(i)) peek(): ->  "
-                        actual.append(myQueue.peek())
+                        actual = queue.peek()
+                        XCTAssertEqual(actual, data.expected, message)
                     case "pop":
-                        method = "\(i)) pop(): ->  "
-                        actual.append(myQueue.pop())
+                        actual = queue.pop()
+                        XCTAssertEqual(actual, data.expected, message)
+                    case "empty":
+                        actual = queue.empty() ? 1 : 0
+                        XCTAssertEqual(actual, data.expected, message)
                     default:
-                        method = "\(i)) empty(): ->  "
-                        actual.append(myQueue.empty() ? 1 : 0)
+                        break
                 }
-                
-                print("\(i)) \(method)\(myQueue)")
             }
-            XCTAssertEqual(actual, data.expected, "commands: \(data.commands), args: \(data.args)")
         }
     }
     

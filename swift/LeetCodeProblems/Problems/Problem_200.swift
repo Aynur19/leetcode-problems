@@ -95,7 +95,7 @@ extension Problems {
         }
         
         func check() {
-            while !queue.isEmpty {
+            while !queue.empty() {
                 guard let idx: (row: Int, column: Int) = queue.dequeue() else { return }
                 
                 fill(&grid, row: idx.row - 1, column: idx.column)

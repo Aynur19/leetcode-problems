@@ -63,7 +63,7 @@ final class MyStack {
     }
     
     func empty() -> Bool {
-        return queue.isEmpty
+        return queue.empty()
     }
 }
 
