@@ -114,7 +114,7 @@ extension Problems {
         guard let root = root else { return 0 }
         
         var sum = 0
-        let queue = Queue<Pair>()
+        let queue = QueueList<Pair>()
         queue.enqueue(.init(root, isLeft: false))
         
         while true {

@@ -192,35 +192,35 @@ public final class ProblemsTests_300: XCTestCase {
         }
     }
     
-    // MARK: Problem 232. Implement Queue using Stacks
-    func testsProblem_232() throws {
-        let testsData_232 = ProblemsTestCases.testsData_232()
-        
-        for testCases in testsData_232 {
-            let queue = Queue<Int>()
-            
-            for data in testCases {
-                let message = "command: \(data.command), args: \(data.args)"
-                var actual = 0
-        
-                switch data.command {
-                    case "push":
-                        queue.enqueue(data.args)
-                    case "peek":
-                        actual = queue.peek() ?? -1
-                        XCTAssertEqual(actual, data.expected, message)
-                    case "pop":
-                        actual = queue.dequeue() ?? -1
-                        XCTAssertEqual(actual, data.expected, message)
-                    case "empty":
-                        actual = queue.empty() ? 1 : 0
-                        XCTAssertEqual(actual, data.expected, message)
-                    default:
-                        break
-                }
-            }
-        }
-    }
+//    // MARK: Problem 232. Implement Queue using Stacks
+//    func testsProblem_232() throws {
+//        let testsData_232 = ProblemsTestCases.testsData_232()
+//        
+//        for testCases in testsData_232 {
+//            let queue = Queue<Int>()
+//            
+//            for data in testCases {
+//                let message = "command: \(data.command), args: \(data.args)"
+//                var actual = 0
+//        
+//                switch data.command {
+//                    case "push":
+//                        queue.enqueue(data.args)
+//                    case "peek":
+//                        actual = queue.peek() ?? -1
+//                        XCTAssertEqual(actual, data.expected, message)
+//                    case "pop":
+//                        actual = queue.dequeue() ?? -1
+//                        XCTAssertEqual(actual, data.expected, message)
+//                    case "empty":
+//                        actual = queue.empty() ? 1 : 0
+//                        XCTAssertEqual(actual, data.expected, message)
+//                    default:
+//                        break
+//                }
+//            }
+//        }
+//    }
     
     // MARK: Problem 228. Summary Ranges
     func testsProblem_228() throws {

@@ -46,7 +46,7 @@
 //  Follow-up: Can you implement the stack using only one queue?
 
 final class MyStack {
-    private let queue = Queue<Int>()
+    private let queue = QueueList<Int>()
     
     init() { }
     

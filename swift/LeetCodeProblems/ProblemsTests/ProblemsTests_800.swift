@@ -9,6 +9,18 @@ import XCTest
 
 final class ProblemsTests_800: XCTestCase {
     
+    // MARK: Problem 791. Custom Sort String
+    func testsProblem_791() throws {
+        let testsData_791 = ProblemsTestCases.testsData_791()
+        let p = Problems()
+        for data in testsData_791 {
+            let message = "order: '\(data.order)'; s: '\(data.s)'"
+            let actual = p.problem_791_customSortString(data.order, data.s)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
     // MARK: Problem 787. Cheapest Flights Within K Stops
     func testsProblem_787() throws {
         typealias TestCase = (n: Int, flights: [[Int]], src: Int, dst: Int, k: Int, expected: Int)

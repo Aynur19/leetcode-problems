@@ -169,7 +169,7 @@ final class TreeCodec {
     private func serialize_3(_ root: TreeNode?) -> String {
         guard let root = root else { return "" }
         
-        let queue: Queue<TreeNode?> = .init()
+        let queue: QueueList<TreeNode?> = .init()
         var values = [String]()
         
         queue.enqueue(root)
@@ -195,7 +195,7 @@ final class TreeCodec {
         
         guard !data.isEmpty, let rootVal = Int(values[0]) else { return nil }
         let root = TreeNode(rootVal)
-        let queue: Queue<TreeNode> = .init()
+        let queue: QueueList<TreeNode> = .init()
         queue.enqueue(root)
         
         var idx = 1

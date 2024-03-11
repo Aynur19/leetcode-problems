@@ -55,7 +55,7 @@ extension Problems {
         var nextCounts = 1
         var prevVal = 0
         var isEvenLevel = false
-        let nodes = Queue<TreeNode>()
+        let nodes = QueueList<TreeNode>()
         nodes.enqueue(root)
         
         while true {

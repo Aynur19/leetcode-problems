@@ -83,7 +83,7 @@ extension Problems {
         let rows = grid.count
         let columns = grid[0].count
         var result = 0
-        let queue: Queue<(row: Int, column: Int)> = .init()
+        let queue: QueueList<(row: Int, column: Int)> = .init()
         
         func fill(_ grid: inout [[Character]], row: Int, column: Int) {
             if row < 0 || row >= rows { return }

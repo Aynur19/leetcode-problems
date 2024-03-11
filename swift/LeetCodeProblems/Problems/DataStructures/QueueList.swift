@@ -1,5 +1,5 @@
 //
-//  Queue.swift
+//  QueueList.swift
 //  LeetСodeProblems
 //
 //  Created by Aynur Nasybullin on 28.01.2024.
@@ -50,7 +50,7 @@
 // Approach: LinkedList
 // Time complexity: O(1) = 0
 // Space complexity: O(n) = 16.36
-public final class Queue<ValueType> {
+public final class QueueList<ValueType>: QueueProtocol {
     private var list = LinkedList<ValueType>()
 
     init() { }
@@ -73,7 +73,7 @@ public final class Queue<ValueType> {
 }
 
 
-extension Queue: CustomStringConvertible
+extension QueueList: CustomStringConvertible
 where ValueType: CustomStringConvertible {
     public var description: String {
         return list.description
