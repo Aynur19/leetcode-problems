@@ -51,7 +51,7 @@
 // Time complexity: O(1) = 0
 // Space complexity: O(n) = 16.36
 public final class QueueList<ValueType>: QueueProtocol {
-    private var list = LinkedList<ValueType>()
+    private var list = LinkedListOld<ValueType>()
 
     init() { }
     

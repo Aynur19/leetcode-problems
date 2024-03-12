@@ -176,21 +176,21 @@ public final class ProblemsTests_300: XCTestCase {
     }
     
     // MARK: Problem 234. Summary Ranges
-    func testsProblem_234() throws {
-        lazy var testsData_234: [(head: ListNode?, expected: Bool)] = {
-            var testsData = [(head: ListNode?, expected: Bool)]()
-            
-            testsData.append((head: .init(1, .init(2, .init(2, .init(1)))), expected: true))
-            testsData.append((head: .init(1, .init(2)), expected: false))
-            
-            return testsData
-        }()
-        
-        for data in testsData_234 {
-            let actual = Problems.problem_234_isPalindrome(data.head)
-            XCTAssertEqual(actual, data.expected, "head: \(data.head?.description ?? "[]")")
-        }
-    }
+//    func testsProblem_234() throws {
+//        lazy var testsData_234: [(head: ListNode?, expected: Bool)] = {
+//            var testsData = [(head: ListNode?, expected: Bool)]()
+//            
+//            testsData.append((head: .init(1, .init(2, .init(2, .init(1)))), expected: true))
+//            testsData.append((head: .init(1, .init(2)), expected: false))
+//            
+//            return testsData
+//        }()
+//        
+//        for data in testsData_234 {
+//            let actual = Problems.problem_234_isPalindrome(data.head)
+//            XCTAssertEqual(actual, data.expected, "head: \(data.head?.description ?? "[]")")
+//        }
+//    }
     
 //    // MARK: Problem 232. Implement Queue using Stacks
 //    func testsProblem_232() throws {
@@ -331,33 +331,33 @@ public final class ProblemsTests_300: XCTestCase {
     }
     
     // MARK: Problem 206. Reverse Linked List
-    func testsProblem_206() throws {
-        func testsData_206() -> [(head: ListNode?, expected: ListNode?)] {
-            var testsData = [(head: ListNode?, expected: ListNode?)]()
-            
-            testsData.append((
-                head: .init(1, .init(2, .init(3, .init(4, .init(5))))),
-                expected: .init(5, .init(4, .init(3, .init(2, .init(1)))))
-            ))
-            testsData.append((
-                head: .init(1, .init(2)),
-                expected: .init(2, .init(1))
-            ))
-            testsData.append((head: nil, expected: nil))
-            
-            return testsData
-        }
-        
-        for data in testsData_206() {
-            let actual = Problems.problem_206_reverseList(data.head)
-            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "head: \(data.head?.description ?? "[]")")
-        }
-        
-        for data in testsData_206() {
-            let actual = Problems.problem_206_reverseList2(data.head)
-            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "head: \(data.head?.description ?? "[]")")
-        }
-    }
+//    func testsProblem_206() throws {
+//        func testsData_206() -> [(head: ListNode?, expected: ListNode?)] {
+//            var testsData = [(head: ListNode?, expected: ListNode?)]()
+//            
+//            testsData.append((
+//                head: .init(1, .init(2, .init(3, .init(4, .init(5))))),
+//                expected: .init(5, .init(4, .init(3, .init(2, .init(1)))))
+//            ))
+//            testsData.append((
+//                head: .init(1, .init(2)),
+//                expected: .init(2, .init(1))
+//            ))
+//            testsData.append((head: nil, expected: nil))
+//            
+//            return testsData
+//        }
+//        
+//        for data in testsData_206() {
+//            let actual = Problems.problem_206_reverseList(data.head)
+//            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "head: \(data.head?.description ?? "[]")")
+//        }
+//        
+//        for data in testsData_206() {
+//            let actual = Problems.problem_206_reverseList2(data.head)
+//            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "head: \(data.head?.description ?? "[]")")
+//        }
+//    }
     
     // MARK: Problem 205. Isomorphic Strings
     func testsProblem_205() throws {

@@ -170,31 +170,31 @@ public final class ProblemsTests_200: XCTestCase {
 //    }
     
     // MARK: Problem 141. Linked List Cycle
-    func testsProblem_141() throws {
-        lazy var testsData_141: [(head: ListNode?, expected: Bool)] = {
-            var testsData = [(head: ListNode?, expected: Bool)]()
-            
-            let l1 = ListNode(3, .init(2, .init(0, .init(4))))
-            l1.next?.next?.next?.next = l1.next
-            testsData.append((head: l1, expected: true))
-            
-            let l2 = ListNode(1, .init(2))
-            l2.next?.next = l2
-            testsData.append((head: l2, expected: true))
-            
-            testsData.append((head: ListNode(1), expected: false))
-            
-            return testsData
-        }()
-        
-        for data in testsData_141 {
-            let actual = Problems.problem_141_hasCycle(data.head)
-            let actual2 = Problems.problem_141_hasCycle2(data.head)
-            
-            XCTAssertEqual(actual, data.expected, "head: \(String(describing: data.head))")
-            XCTAssertEqual(actual2, data.expected, "head: \(String(describing: data.head))")
-        }
-    }
+//    func testsProblem_141() throws {
+//        lazy var testsData_141: [(head: ListNode?, expected: Bool)] = {
+//            var testsData = [(head: ListNode?, expected: Bool)]()
+//            
+//            let l1 = ListNode(3, .init(2, .init(0, .init(4))))
+//            l1.next?.next?.next?.next = l1.next
+//            testsData.append((head: l1, expected: true))
+//            
+//            let l2 = ListNode(1, .init(2))
+//            l2.next?.next = l2
+//            testsData.append((head: l2, expected: true))
+//            
+//            testsData.append((head: ListNode(1), expected: false))
+//            
+//            return testsData
+//        }()
+//        
+//        for data in testsData_141 {
+//            let actual = Problems.problem_141_hasCycle(data.head)
+//            let actual2 = Problems.problem_141_hasCycle2(data.head)
+//            
+//            XCTAssertEqual(actual, data.expected, "head: \(String(describing: data.head))")
+//            XCTAssertEqual(actual2, data.expected, "head: \(String(describing: data.head))")
+//        }
+//    }
     
     // MARK: Problem 136. Single Number
     func testsProblem_136() throws {

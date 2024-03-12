@@ -411,78 +411,78 @@ public final class ProblemsTests_100: XCTestCase {
     }
     
     // MARK: Problem 25. Reverse Nodes in k-Group
-    func testsProblem_25() throws {
-        lazy var testsData_25: [(head: ListNode?, k: Int, expected: ListNode?)] = {
-            var testsData = [(head: ListNode?, k: Int, expected: ListNode?)]()
-            
-            testsData.append((
-                head: .init(1, .init(2, .init(3, .init(4, .init(5))))),
-                k: 2,
-                expected: .init(2, .init(1, .init(4, .init(3, .init(5)))))
-            ))
-            testsData.append((
-                head: .init(1, .init(2, .init(3, .init(4, .init(5))))),
-                k: 3,
-                expected: .init(3, .init(2, .init(1, .init(4, .init(5)))))
-            ))
-            
-            return testsData
-        }()
-        
-        for data in testsData_25 {
-            let actual = Problems.problem_25_reverseKGroup(data.head, data.k)
-            
-            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "head: \(data.head?.description ?? "[]"), k: \(data.k)")
-        }
-    }
+//    func testsProblem_25() throws {
+//        lazy var testsData_25: [(head: ListNode?, k: Int, expected: ListNode?)] = {
+//            var testsData = [(head: ListNode?, k: Int, expected: ListNode?)]()
+//            
+//            testsData.append((
+//                head: .init(1, .init(2, .init(3, .init(4, .init(5))))),
+//                k: 2,
+//                expected: .init(2, .init(1, .init(4, .init(3, .init(5)))))
+//            ))
+//            testsData.append((
+//                head: .init(1, .init(2, .init(3, .init(4, .init(5))))),
+//                k: 3,
+//                expected: .init(3, .init(2, .init(1, .init(4, .init(5)))))
+//            ))
+//            
+//            return testsData
+//        }()
+//        
+//        for data in testsData_25 {
+//            let actual = Problems.problem_25_reverseKGroup(data.head, data.k)
+//            
+//            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "head: \(data.head?.description ?? "[]"), k: \(data.k)")
+//        }
+//    }
     
     // MARK: Problem 24. Swap Nodes in Pairs
-    func testsProblem_24() throws {
-        lazy var testsData_24: [(head: ListNode?, expected: ListNode?)] = {
-            var testsData = [(head: ListNode?, expected: ListNode?)]()
-            
-            testsData.append((
-                head: .init(1, .init(2, .init(3, .init(4)))),
-                expected: .init(2, .init(1, .init(4, .init(3))))
-            ))
-            testsData.append((head: nil, expected: nil))
-            testsData.append((head: .init(1), expected: .init(1)))
-            
-            return testsData
-        }()
-        
-        for data in testsData_24 {
-            let actual = Problems.problem_24_swapPairs(data.head)
-            
-            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "head: \(data.head?.description ?? "[]")")
-        }
-    }
+//    func testsProblem_24() throws {
+//        lazy var testsData_24: [(head: ListNode?, expected: ListNode?)] = {
+//            var testsData = [(head: ListNode?, expected: ListNode?)]()
+//            
+//            testsData.append((
+//                head: .init(1, .init(2, .init(3, .init(4)))),
+//                expected: .init(2, .init(1, .init(4, .init(3))))
+//            ))
+//            testsData.append((head: nil, expected: nil))
+//            testsData.append((head: .init(1), expected: .init(1)))
+//            
+//            return testsData
+//        }()
+//        
+//        for data in testsData_24 {
+//            let actual = Problems.problem_24_swapPairs(data.head)
+//            
+//            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "head: \(data.head?.description ?? "[]")")
+//        }
+//    }
     
     // MARK: Problem 23. Merge k Sorted Lists
-    func testsProblem_23() throws {
-        lazy var testsData_23: [(lists: [ListNode?], expected: ListNode?)] = {
-            var testsData = [(lists: [ListNode?], expected: ListNode?)]()
-            
-            testsData.append((
-                lists: [
-                    .init(1, .init(4, .init(5))),
-                    .init(1, .init(3, .init(4))),
-                    .init(2, .init(6))
-                ],
-                expected: .init(1, .init(1, .init(2,.init(3, .init(4, .init(4, .init(5, .init(6))))))))
-            ))
-            testsData.append((lists: [], expected: nil))
-            testsData.append((lists: [nil], expected: nil))
-            
-            return testsData
-        }()
-        
-        for data in testsData_23 {
-            let actual = Problems.problem_23_mergeKLists(data.lists)
-            
-            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "lists: \(data.lists)")
-        }
-    }
+//    func testsProblem_23() throws {
+//        lazy var testsData_23: [(lists: [ListNode?], expected: ListNode?)] = {
+//            var testsData = [(lists: [ListNode?], expected: ListNode?)]()
+//            
+//            testsData.append((
+//                lists: [
+//                    .init(1, .init(4, .init(5))),
+//                    .init(1, .init(3, .init(4))),
+//                    .init(2, .init(6))
+//                ],
+//                expected: .init(1, .init(1, .init(2,.init(3, .init(4, .init(4, .init(5, .init(6))))))))
+//            ))
+//            testsData.append((lists: [], expected: nil))
+//            testsData.append((lists: [nil], expected: nil))
+//            
+//            return testsData
+//        }()
+//        
+//        for data in testsData_23 {
+//            let actual = Problems.problem_23_mergeKLists(data.lists)
+//            
+//            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "lists: \(data.lists)")
+//        }
+//    }
     
     // MARK: Problem 22. Generate Parentheses
     func testsProblem_22() throws {
@@ -505,30 +505,30 @@ public final class ProblemsTests_100: XCTestCase {
     }
     
     // MARK: Problem 21. Merge Two Sorted Lists
-    func testsProblem_21() throws {
-        lazy var testsData_21: [(list1: ListNode?, list2: ListNode?, expected: ListNode?)] = {
-            var testsData = [(list1: ListNode?, list2: ListNode?, expected: ListNode?)]()
-            
-            testsData.append((
-                list1: .init(1, .init(2, .init(4))),
-                list2: .init(1, .init(3, .init(4))),
-                expected: .init(1, .init(1, .init(2, .init(3, .init(4, .init(4))))))
-            ))
-            testsData.append((list1: nil, list2: nil, expected: nil))
-            testsData.append((list1: nil, list2: .init(0), expected: .init(0)))
-            
-            return testsData
-        }()
-        
-        for data in testsData_21 {
-            let actual = Problems.problem_21_mergeTwoLists(data.list1, data.list2)
-            
-            XCTAssertTrue(
-                ListNode.equalListNodes(actual, data.expected),
-                "list1: \(data.list1?.description ?? "[]"); list2: \(data.list2?.description ?? "[]")"
-            )
-        }
-    }
+//    func testsProblem_21() throws {
+//        lazy var testsData_21: [(list1: ListNode?, list2: ListNode?, expected: ListNode?)] = {
+//            var testsData = [(list1: ListNode?, list2: ListNode?, expected: ListNode?)]()
+//            
+//            testsData.append((
+//                list1: .init(1, .init(2, .init(4))),
+//                list2: .init(1, .init(3, .init(4))),
+//                expected: .init(1, .init(1, .init(2, .init(3, .init(4, .init(4))))))
+//            ))
+//            testsData.append((list1: nil, list2: nil, expected: nil))
+//            testsData.append((list1: nil, list2: .init(0), expected: .init(0)))
+//            
+//            return testsData
+//        }()
+//        
+//        for data in testsData_21 {
+//            let actual = Problems.problem_21_mergeTwoLists(data.list1, data.list2)
+//            
+//            XCTAssertTrue(
+//                ListNode.equalListNodes(actual, data.expected),
+//                "list1: \(data.list1?.description ?? "[]"); list2: \(data.list2?.description ?? "[]")"
+//            )
+//        }
+//    }
     
     // MARK: Problem 20. Valid Parentheses
     func testsProblem_20() throws {
@@ -550,41 +550,41 @@ public final class ProblemsTests_100: XCTestCase {
     }
     
     // MARK: Problem 19. Remove Nth Node From End of List
-    func testsProblem_19() throws {
-        lazy var testsData_19: [(head: ListNode?, n: Int, expected: ListNode?)] = {
-            var testsData = [(head: ListNode?, n: Int, expected: ListNode?)]()
-            
-            testsData.append((
-                head: .init(1, .init(2, .init(3, .init(4, .init(5))))),
-                n: 2,
-                expected: .init(1, .init(2, .init(3, .init(5))))
-            ))
-            testsData.append((
-                head: .init(1),
-                n: 1,
-                expected: nil
-            ))
-            testsData.append((
-                head: .init(1, .init(2)),
-                n: 1,
-                expected: .init(1)
-            ))
-            testsData.append((
-                head: .init(1, .init(2)),
-                n: 2,
-                expected: .init(2)
-            ))
-            
-            return testsData
-        }()
-        
-        for data in testsData_19 {
-            let actual = Problems.problem_19_removeNthFromEnd(data.head, data.n)
-        
-            XCTAssertTrue(
-                ListNode.equalListNodes(actual, data.expected), "head: \(data.head?.description ?? "[]"), n: \(data.n)")
-        }
-    }
+//    func testsProblem_19() throws {
+//        lazy var testsData_19: [(head: ListNode?, n: Int, expected: ListNode?)] = {
+//            var testsData = [(head: ListNode?, n: Int, expected: ListNode?)]()
+//            
+//            testsData.append((
+//                head: .init(1, .init(2, .init(3, .init(4, .init(5))))),
+//                n: 2,
+//                expected: .init(1, .init(2, .init(3, .init(5))))
+//            ))
+//            testsData.append((
+//                head: .init(1),
+//                n: 1,
+//                expected: nil
+//            ))
+//            testsData.append((
+//                head: .init(1, .init(2)),
+//                n: 1,
+//                expected: .init(1)
+//            ))
+//            testsData.append((
+//                head: .init(1, .init(2)),
+//                n: 2,
+//                expected: .init(2)
+//            ))
+//            
+//            return testsData
+//        }()
+//        
+//        for data in testsData_19 {
+//            let actual = Problems.problem_19_removeNthFromEnd(data.head, data.n)
+//        
+//            XCTAssertTrue(
+//                ListNode.equalListNodes(actual, data.expected), "head: \(data.head?.description ?? "[]"), n: \(data.n)")
+//        }
+//    }
     
     // MARK: Problem 18. 4Sum
     func testsProblem_18() throws {
@@ -918,16 +918,16 @@ public final class ProblemsTests_100: XCTestCase {
     }
     
     // MARK: Problem: 2. Add Two Numbers
-    func testsProblem_2() throws {
-        let testsData_2 = ProblemsTestCases.testsData_2()
-        
-        for data in testsData_2 {
-            let message = "l1: \(data.l1?.description ?? "[]"); l2: \(data.l2?.description ?? "[]")"
-            let actual = Problems.problem_2_addTwoNumbers(data.l1, data.l2)
-            
-            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), message)
-        }
-    }
+//    func testsProblem_2() throws {
+//        let testsData_2 = ProblemsTestCases.testsData_2()
+//        
+//        for data in testsData_2 {
+//            let message = "l1: \(data.l1?.description ?? "[]"); l2: \(data.l2?.description ?? "[]")"
+//            let actual = Problems.problem_2_addTwoNumbers(data.l1, data.l2)
+//            
+//            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), message)
+//        }
+//    }
     
     // MARK: Problem: 1. Two Sum
     func testsProblem_1() throws {

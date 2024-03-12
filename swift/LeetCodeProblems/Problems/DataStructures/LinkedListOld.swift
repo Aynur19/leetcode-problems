@@ -47,7 +47,7 @@
 //  Please do not use the built-in LinkedList library.
 //  At most 2000 calls will be made to get, addAtHead, addAtTail, addAtIndex and deleteAtIndex.
 
-public final class LinkedList<ValueType>: ListProtocol {
+public final class LinkedListOld<ValueType>: ListProtocol {
     private class Node {
         var value: ValueType
         var next: Node?
@@ -89,7 +89,7 @@ public final class LinkedList<ValueType>: ListProtocol {
     func empty() -> Bool { return count == 0 }
 }
     
-extension LinkedList {
+extension LinkedListOld {
     func addAtHead(_ val: ValueType) {
         let newHead = Node(value: val)
         newHead.next = head
@@ -138,7 +138,7 @@ extension LinkedList {
     }
 }
     
-extension LinkedList {
+extension LinkedListOld {
     func removeAtHead() -> ValueType? {
         guard let head = head else { return nil }
         
@@ -195,7 +195,7 @@ extension LinkedList {
     }
 }
     
-extension LinkedList {
+extension LinkedListOld {
     func deleteAtHead() {
         _ = removeAtHead()
     }
@@ -209,7 +209,7 @@ extension LinkedList {
     }
 }
 
-extension LinkedList: CustomStringConvertible
+extension LinkedListOld: CustomStringConvertible
 where ValueType: CustomStringConvertible {
     public var description: String {
         guard var tmp = head else { return "[]" }
