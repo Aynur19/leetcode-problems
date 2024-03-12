@@ -34,7 +34,7 @@ extension Problems {
     // Approach: Linked List
     // Time complexity: O(n) => 0 ms
     // Space complexity: O(1) => 13.93 MB
-    static func problem_19_removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
+    static func problem_19_removeNthFromEnd(_ head: ListNodeOld?, _ n: Int) -> ListNodeOld? {
         if head?.next == nil, n == 1 { return nil }
         var tmp = head
         var count = 0

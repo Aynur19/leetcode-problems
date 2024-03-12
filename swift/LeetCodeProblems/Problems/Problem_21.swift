@@ -38,16 +38,16 @@ extension Problems {
     // Approach: Linked List, Pointers
     // Time complexity: O(min(n1, n2)) => 6 ms
     // Space complexity: O(1) => 13.97 MB
-    static func problem_21_mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
+    static func problem_21_mergeTwoLists(_ list1: ListNodeOld?, _ list2: ListNodeOld?) -> ListNodeOld? {
         guard var list1 = list1 else { return list2 }
         guard var list2 = list2 else { return list1 }
         
-        let result = ListNode()
-        var current: ListNode? = result
+        let result = ListNodeOld()
+        var current: ListNodeOld? = result
         
         while true {
             if list1.val >= list2.val {
-                current?.next = ListNode(list2.val)
+                current?.next = ListNodeOld(list2.val)
                 current = current?.next
                 
                 if let tmp = list2.next {
@@ -57,7 +57,7 @@ extension Problems {
                     return result.next
                 }
             } else {
-                current?.next = ListNode(list1.val)
+                current?.next = ListNodeOld(list1.val)
                 current = current?.next
                 
                 if let tmp = list1.next {

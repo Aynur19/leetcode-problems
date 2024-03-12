@@ -34,11 +34,11 @@ extension Problems {
     // Approach: Linked List, Recursion
     // Time complexity: O(n) = 3 ms
     // Space complexity: O(1) = 14.17 MB
-    static func problem_24_swapPairs(_ head: ListNode?) -> ListNode? {
-        func swapPairs(_ head: ListNode?) -> ListNode? {
+    static func problem_24_swapPairs(_ head: ListNodeOld?) -> ListNodeOld? {
+        func swapPairs(_ head: ListNodeOld?) -> ListNodeOld? {
             guard head != nil && head?.next != nil else { return head }
             
-            var result: ListNode?
+            var result: ListNodeOld?
             let end = swapPairs(head?.next?.next)
             
             result = head?.next

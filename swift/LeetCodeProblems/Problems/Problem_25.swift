@@ -38,22 +38,22 @@ extension Problems {
     // Approach: Linked List, Recursion
     // Time complexity: O(n) = 29 ms
     // Space complexity: O(1) = 14.82 MB
-    static func problem_25_reverseKGroup(_ head: ListNode?, _ k: Int) -> ListNode? {
+    static func problem_25_reverseKGroup(_ head: ListNodeOld?, _ k: Int) -> ListNodeOld? {
         guard let head = head else { return nil }
         
-        var tmp: ListNode? = head
+        var tmp: ListNodeOld? = head
         var size = 1
         while tmp?.next != nil {
             tmp = tmp?.next
             size += 1
         }
         
-        func reverseKGroup(_ head: ListNode?, _ k: Int, _ size: Int) -> ListNode? {
+        func reverseKGroup(_ head: ListNodeOld?, _ k: Int, _ size: Int) -> ListNodeOld? {
             guard size >= k else { return head }
             
             var ptr1 = head
             var ptr2 = ptr1?.next
-            var ptr3: ListNode?
+            var ptr3: ListNodeOld?
             
             for _ in 1..<k {
                 ptr3 = ptr2?.next

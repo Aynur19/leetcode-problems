@@ -49,12 +49,12 @@ extension Problems {
     // Approach: Hash Table, Linked List
     // Time complexity: O(m * n)
     // Space complexity: O(m * n)
-    static func problem_23_mergeKLists(_ lists: [ListNode?]) -> ListNode? {
+    static func problem_23_mergeKLists(_ lists: [ListNodeOld?]) -> ListNodeOld? {
         guard !lists.isEmpty else { return nil }
 
-        let result = ListNode()
-        var dict: [Int:[ListNode]] = [:]
-        var tmp: ListNode?
+        let result = ListNodeOld()
+        var dict: [Int:[ListNodeOld]] = [:]
+        var tmp: ListNodeOld?
         
         for list in lists {
             tmp = list

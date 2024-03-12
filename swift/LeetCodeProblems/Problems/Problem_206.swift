@@ -33,10 +33,10 @@ extension Problems {
     // Approach: Linked List
     // Time complexity: O(n) = 11
     // Space complexity: O(1) = 15.89
-    static func problem_206_reverseList(_ head: ListNode?) -> ListNode? {
+    static func problem_206_reverseList(_ head: ListNodeOld?) -> ListNodeOld? {
         guard let head = head, head.next != nil else { return head }
 
-        var prev: ListNode? = head
+        var prev: ListNodeOld? = head
         var current = head.next
 
         while current != nil {
@@ -55,11 +55,11 @@ extension Problems {
     // Approach: Recursion
     // Time complexity: O(n) = 15
     // Space complexity: O(1) = 16.10
-    static func problem_206_reverseList2(_ head: ListNode?) -> ListNode? {
+    static func problem_206_reverseList2(_ head: ListNodeOld?) -> ListNodeOld? {
         guard let head = head, head.next != nil else { return head }
-        var end: ListNode?
+        var end: ListNodeOld?
         
-        func reverse(_ node: ListNode, next: ListNode?) {
+        func reverse(_ node: ListNodeOld, next: ListNodeOld?) {
             guard let next = next else {
                 end = node
                 return

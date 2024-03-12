@@ -29,10 +29,10 @@ extension Problems {
     // Approach: Linked List, Recursion
     // Time complexity: O(n) = 804
     // Space complexity: O(1) = 33.98
-    static func problem_234_isPalindrome(_ head: ListNode?) -> Bool {
+    static func problem_234_isPalindrome(_ head: ListNodeOld?) -> Bool {
         guard var tmp = head else { return true }
         
-        func check(_ node: ListNode) -> Bool {
+        func check(_ node: ListNodeOld) -> Bool {
             guard let next = node.next else { return true }
             
             let result = check(next) && tmp.val == next.val

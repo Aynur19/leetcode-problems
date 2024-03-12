@@ -33,21 +33,21 @@ extension Problems {
     // Approach: Linked List
     // Time complexity: O(max(n1, n2)) => 27 ms
     // Space complexity: O(max(n1, n2)) => 14.02 MB
-    static func problem_2_addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+    static func problem_2_addTwoNumbers(_ l1: ListNodeOld?, _ l2: ListNodeOld?) -> ListNodeOld? {
         guard let l1 = l1 else { return l2 }
         guard let l2 = l2 else { return l1 }
         
-        func addNode(_ current: inout ListNode?, _ sum: inout Int) {
-            current?.next = ListNode(sum % 10)
+        func addNode(_ current: inout ListNodeOld?, _ sum: inout Int) {
+            current?.next = ListNodeOld(sum % 10)
             current = current?.next
             
             sum /= 10
         }
         
-        let head = ListNode()
-        var current: ListNode? = head
-        var current1: ListNode? = l1
-        var current2: ListNode? = l2
+        let head = ListNodeOld()
+        var current: ListNodeOld? = head
+        var current1: ListNodeOld? = l1
+        var current2: ListNodeOld? = l2
         var sum = 0
         
         while current1 != nil, current2 != nil {
@@ -69,7 +69,7 @@ extension Problems {
         }
         
         if sum > 0 {
-            current?.next = ListNode(sum)
+            current?.next = ListNodeOld(sum)
         }
         
         return head.next
@@ -77,33 +77,33 @@ extension Problems {
 }
 
 extension ProblemsTestCases {
-    typealias TestCase_2 = (l1: ListNode?, l2: ListNode?, expected: ListNode?)
+    typealias TestCase_2 = (l1: ListNodeOld?, l2: ListNodeOld?, expected: ListNodeOld?)
      
     static func testsData_2() -> [TestCase_2] {
         var testsData = [TestCase_2]()
         
         testsData.append((
-            l1: ListNode(2, .init(4, .init(3))),
-            l2: ListNode(5, .init(6, .init(4))),
-            expected: ListNode(7, .init(0, .init(8)))
+            l1: ListNodeOld(2, .init(4, .init(3))),
+            l2: ListNodeOld(5, .init(6, .init(4))),
+            expected: ListNodeOld(7, .init(0, .init(8)))
         ))
         
         testsData.append((
-            l1: ListNode(0),
-            l2: ListNode(0),
-            expected: ListNode(0)
+            l1: ListNodeOld(0),
+            l2: ListNodeOld(0),
+            expected: ListNodeOld(0)
         ))
         
         testsData.append((
-            l1: ListNode(9, .init(9, .init(9, .init(9, .init(9, .init(9, .init(9))))))),
-            l2: ListNode(9, .init(9, .init(9, .init(9)))),
-            expected: ListNode(8, .init(9, .init(9, .init(9, .init(0, .init(0, .init(0, .init(1))))))))
+            l1: ListNodeOld(9, .init(9, .init(9, .init(9, .init(9, .init(9, .init(9))))))),
+            l2: ListNodeOld(9, .init(9, .init(9, .init(9)))),
+            expected: ListNodeOld(8, .init(9, .init(9, .init(9, .init(0, .init(0, .init(0, .init(1))))))))
         ))
         
         testsData.append((
-            l1: ListNode(2, .init(4, .init(9))),
-            l2: ListNode(5, .init(6, .init(4, .init(9)))),
-            expected: ListNode(7, .init(0, .init(4, .init(0, .init(1)))))
+            l1: ListNodeOld(2, .init(4, .init(9))),
+            l2: ListNodeOld(5, .init(6, .init(4, .init(9)))),
+            expected: ListNodeOld(7, .init(0, .init(4, .init(0, .init(1)))))
         ))
         
         return testsData

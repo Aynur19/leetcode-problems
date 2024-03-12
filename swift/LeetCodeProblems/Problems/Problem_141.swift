@@ -40,13 +40,13 @@
 //  Follow up: Can you solve it using O(1) (i.e. constant) memory?
 
 
-extension ListNode: Equatable {
-    public static func == (lhs: ListNode, rhs: ListNode) -> Bool {
+extension ListNodeOld: Equatable {
+    public static func == (lhs: ListNodeOld, rhs: ListNodeOld) -> Bool {
         ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
     }
 }
 
-extension ListNode: Hashable {
+extension ListNodeOld: Hashable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(ObjectIdentifier(self))
     }
@@ -57,10 +57,10 @@ extension Problems {
     // Approach: Hashing, Set
     // Time complexity: O(n) = 61 ms
     // Space complexity: O(n) = 16.75 MB
-    static func problem_141_hasCycle(_ head: ListNode?) -> Bool {
+    static func problem_141_hasCycle(_ head: ListNodeOld?) -> Bool {
         guard var node = head else { return false }
         
-        var set: Set<ListNode> = [node]
+        var set: Set<ListNodeOld> = [node]
         
         while true {
             if let next = node.next {
@@ -79,11 +79,11 @@ extension Problems {
     // Approach: Quick, Slow Iteration
     // Time complexity: O(n) = 63 ms
     // Space complexity: O(1) = 16.15 MB
-    static func problem_141_hasCycle2(_ head: ListNode?) -> Bool {
+    static func problem_141_hasCycle2(_ head: ListNodeOld?) -> Bool {
         if head == nil { return false }
         
-        var nodePtr1: ListNode? = head?.next
-        var nodePtr2: ListNode? = head?.next?.next
+        var nodePtr1: ListNodeOld? = head?.next
+        var nodePtr2: ListNodeOld? = head?.next?.next
         
         while nodePtr1 != nil, nodePtr2 != nil {
             if nodePtr1 == nodePtr2 { return true }

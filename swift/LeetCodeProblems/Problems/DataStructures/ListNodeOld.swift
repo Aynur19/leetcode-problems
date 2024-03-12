@@ -7,9 +7,9 @@
 
 import Foundation
 
-public final class ListNode {
+public final class ListNodeOld {
     public var val: Int
-    public var next: ListNode?
+    public var next: ListNodeOld?
     
     public init() {
         self.val = 0
@@ -21,14 +21,14 @@ public final class ListNode {
         self.next = nil
     }
     
-    public init(_ val: Int, _ next: ListNode?) {
+    public init(_ val: Int, _ next: ListNodeOld?) {
         self.val = val
         self.next = next
     }
 }
 
-extension ListNode {
-    static func equalListNodes(_ l1: ListNode? , _ l2: ListNode?) -> Bool {
+extension ListNodeOld {
+    static func equalListNodes(_ l1: ListNodeOld? , _ l2: ListNodeOld?) -> Bool {
         var l1 = l1, l2 = l2
 
         guard l1 != nil, l2 != nil else {
@@ -50,9 +50,9 @@ extension ListNode {
     }
 }
 
-extension ListNode: CustomStringConvertible {
+extension ListNodeOld: CustomStringConvertible {
     public var description: String {
-        var tmp: ListNode? = self
+        var tmp: ListNodeOld? = self
         var description = "["
         
         while tmp != nil {

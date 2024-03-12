@@ -94,8 +94,8 @@
 		A858BC882B64FF32004859BC /* Problem_29.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BC1C2B643745004859BC /* Problem_29.swift */; };
 		A858BC892B64FF32004859BC /* Problem_19.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BC292B643749004859BC /* Problem_19.swift */; };
 		A858BC8A2B64FF50004859BC /* Problems.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BBF82B64361E004859BC /* Problems.swift */; };
-		A858BC8C2B650017004859BC /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BC8B2B650017004859BC /* ListNode.swift */; };
-		A858BC8D2B650017004859BC /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BC8B2B650017004859BC /* ListNode.swift */; };
+		A858BC8C2B650017004859BC /* ListNodeOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BC8B2B650017004859BC /* ListNodeOld.swift */; };
+		A858BC8D2B650017004859BC /* ListNodeOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BC8B2B650017004859BC /* ListNodeOld.swift */; };
 		A858BC932B654DF6004859BC /* Problem_53.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BC922B654DF6004859BC /* Problem_53.swift */; };
 		A858BC952B654E34004859BC /* ProblemsTests_100.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BC942B654E34004859BC /* ProblemsTests_100.swift */; };
 		A858BC962B659310004859BC /* Problem_53.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858BC922B654DF6004859BC /* Problem_53.swift */; };
@@ -260,6 +260,7 @@
 		D763B3402B7BEF4900DF766A /* Problem_692.swift in Sources */ = {isa = PBXBuildFile; fileRef = D763B33E2B7BEF4900DF766A /* Problem_692.swift */; };
 		D767DB0E2B888BBB00E97D31 /* Problem_787.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767DB0D2B888BBB00E97D31 /* Problem_787.swift */; };
 		D767DB0F2B888BBB00E97D31 /* Problem_787.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767DB0D2B888BBB00E97D31 /* Problem_787.swift */; };
+		D76F36C42BA07F4F0017A2D3 /* SwiftDataStructures in Frameworks */ = {isa = PBXBuildFile; productRef = D76F36C32BA07F4F0017A2D3 /* SwiftDataStructures */; };
 		D7A31CF62B94C106006D170D /* Problem_1071.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A31CF52B94C106006D170D /* Problem_1071.swift */; };
 		D7A31CF72B94C106006D170D /* Problem_1071.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A31CF52B94C106006D170D /* Problem_1071.swift */; };
 		D7A31CF92B95A269006D170D /* Problem_948.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A31CF82B95A269006D170D /* Problem_948.swift */; };
@@ -358,7 +359,7 @@
 		A858BC332B64374C004859BC /* Problem_7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem_7.swift; sourceTree = "<group>"; };
 		A858BC342B64374D004859BC /* Problem_22.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem_22.swift; sourceTree = "<group>"; };
 		A858BC352B64374D004859BC /* Problem_13.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem_13.swift; sourceTree = "<group>"; };
-		A858BC8B2B650017004859BC /* ListNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
+		A858BC8B2B650017004859BC /* ListNodeOld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNodeOld.swift; sourceTree = "<group>"; };
 		A858BC922B654DF6004859BC /* Problem_53.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem_53.swift; sourceTree = "<group>"; };
 		A858BC942B654E34004859BC /* ProblemsTests_100.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsTests_100.swift; sourceTree = "<group>"; };
 		A858BC972B6593F4004859BC /* LRUCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRUCache.swift; sourceTree = "<group>"; };
@@ -471,6 +472,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D76F36C42BA07F4F0017A2D3 /* SwiftDataStructures in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,7 +587,7 @@
 				D7FFF4422B98E83200237372 /* MinStack.swift */,
 				D7FFF44E2B99F53F00237372 /* MyStack.swift */,
 				D724F0E92B7D343000E526D0 /* RecentCounter.swift */,
-				A858BC8B2B650017004859BC /* ListNode.swift */,
+				A858BC8B2B650017004859BC /* ListNodeOld.swift */,
 				A858BC972B6593F4004859BC /* LRUCache.swift */,
 				A858BCB32B6594B7004859BC /* TreeNode.swift */,
 				A8AC0F022B680DB8009DE6DE /* NestedIterator.swift */,
@@ -922,6 +924,9 @@
 			dependencies = (
 			);
 			name = Problems;
+			packageProductDependencies = (
+				D76F36C32BA07F4F0017A2D3 /* SwiftDataStructures */,
+			);
 			productName = Problems;
 			productReference = A858BBF52B64361E004859BC /* libProblems.a */;
 			productType = "com.apple.product-type.library.static";
@@ -971,6 +976,9 @@
 				Base,
 			);
 			mainGroup = A858BBEA2B6434D1004859BC;
+			packageReferences = (
+				D76F36C22BA07F4F0017A2D3 /* XCRemoteSwiftPackageReference "swift-data-structures" */,
+			);
 			productRefGroup = A858BBF62B64361E004859BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1006,7 +1014,7 @@
 				A86D9C402B7296F100F4390A /* Problem_560.swift in Sources */,
 				A858BCB12B659480004859BC /* Problem_150.swift in Sources */,
 				A8C99E932B69737700B8145D /* RandomizedSet.swift in Sources */,
-				A858BC8C2B650017004859BC /* ListNode.swift in Sources */,
+				A858BC8C2B650017004859BC /* ListNodeOld.swift in Sources */,
 				A89228CE2B68CD750086BEF6 /* Problem_347.swift in Sources */,
 				D724F0DE2B7CFF9400E526D0 /* Problem_704.swift in Sources */,
 				A8AC0F032B680DB8009DE6DE /* NestedIterator.swift in Sources */,
@@ -1183,7 +1191,7 @@
 				A8366ABA2B6B748C006F7E4B /* Problem_424.swift in Sources */,
 				D7FFF44D2B99D28400237372 /* WordDictionary.swift in Sources */,
 				D75E0F9F2B93D5A500C4C0AB /* Problem_1609.swift in Sources */,
-				A858BC8D2B650017004859BC /* ListNode.swift in Sources */,
+				A858BC8D2B650017004859BC /* ListNodeOld.swift in Sources */,
 				A858BC7E2B64FF32004859BC /* Problem_48.swift in Sources */,
 				A858BCC42B6595FA004859BC /* Problem_200.swift in Sources */,
 				A858BC7D2B64FF32004859BC /* Problem_5.swift in Sources */,
@@ -1614,6 +1622,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D76F36C22BA07F4F0017A2D3 /* XCRemoteSwiftPackageReference "swift-data-structures" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Aynur19/swift-data-structures";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D76F36C32BA07F4F0017A2D3 /* SwiftDataStructures */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D76F36C22BA07F4F0017A2D3 /* XCRemoteSwiftPackageReference "swift-data-structures" */;
+			productName = SwiftDataStructures;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A858BBEB2B6434D1004859BC /* Project object */;
 }
