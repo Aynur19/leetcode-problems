@@ -45,7 +45,7 @@
 //  s only consists of characters 'a', 'b', and 'c'.
 
 extension Problems {
-    // Approach: Hash Table
+    // Approach: Two Pointers
     // Time complexity: O(n) => 56 ms
     // Space complexity: O(n) => 19.1 MB
     func problem_1750_minimumLength(_ s: String) -> Int {
