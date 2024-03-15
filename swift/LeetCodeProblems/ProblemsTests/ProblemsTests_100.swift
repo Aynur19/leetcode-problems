@@ -21,6 +21,30 @@ public final class ProblemsTests_100: XCTestCase {
         super.tearDown()
     }
     
+    // MARK: Problem: 1. Two Sum
+    func testsProblem_1() throws {
+        let testsData = ProblemsTestCases.testsData_1()
+        
+        for data in testsData {
+            let message = "nums: \(data.nums); target: \(data.target)"
+            let actual = problems.problem_1_twoSum(data.nums, data.target)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
+    // MARK: Problem: 2. Add Two Numbers
+    func testsProblem_2() throws {
+        let testsData = ProblemsTestCases.testsData_2()
+
+        for data in testsData {
+            let message = "l1: \(data.l1?.description ?? "[]"); l2: \(data.l2?.description ?? "[]")"
+            let actual = problems.problem_2_addTwoNumbers(data.l1, data.l2)
+
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
     // MARK: Problem 53. Maximum Subarray
     func testsProblem_53() throws {
         lazy var testsData_53: [(nums: [Int], expected: Int)] = {
@@ -926,30 +950,6 @@ public final class ProblemsTests_100: XCTestCase {
             let actual = Problems.problem_3_lengthOfLongestSubstring(data.s)
             
             XCTAssertEqual(actual, data.expected, "s: '\(data.s)'")
-        }
-    }
-    
-    // MARK: Problem: 2. Add Two Numbers
-//    func testsProblem_2() throws {
-//        let testsData_2 = ProblemsTestCases.testsData_2()
-//        
-//        for data in testsData_2 {
-//            let message = "l1: \(data.l1?.description ?? "[]"); l2: \(data.l2?.description ?? "[]")"
-//            let actual = Problems.problem_2_addTwoNumbers(data.l1, data.l2)
-//            
-//            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), message)
-//        }
-//    }
-    
-    // MARK: Problem: 1. Two Sum
-    func testsProblem_1() throws {
-        let testsData = ProblemsTestCases.testsData_1()
-        
-        for data in testsData {
-            let message = "nums: \(data.nums); target: \(data.target)"
-            let actual = problems.problem_1_twoSum(data.nums, data.target)
-            
-            XCTAssertEqual(actual, data.expected, message)
         }
     }
 }
