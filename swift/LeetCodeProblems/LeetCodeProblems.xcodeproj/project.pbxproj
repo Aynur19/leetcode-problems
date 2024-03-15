@@ -264,6 +264,9 @@
 		D76F36C72BA082BC0017A2D3 /* Problem_1171.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F36C62BA082BC0017A2D3 /* Problem_1171.swift */; };
 		D76F36C82BA082BC0017A2D3 /* Problem_1171.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F36C62BA082BC0017A2D3 /* Problem_1171.swift */; };
 		D76F36CA2BA0C89E0017A2D3 /* ProblemsTests_1200.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F36C92BA0C89E0017A2D3 /* ProblemsTests_1200.swift */; };
+		D76F36CC2BA1E2640017A2D3 /* Problem_2485.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F36CB2BA1E2640017A2D3 /* Problem_2485.swift */; };
+		D76F36CD2BA1E2640017A2D3 /* Problem_2485.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F36CB2BA1E2640017A2D3 /* Problem_2485.swift */; };
+		D76F36CF2BA20CE30017A2D3 /* ProblemsTests_2500.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F36CE2BA20CE30017A2D3 /* ProblemsTests_2500.swift */; };
 		D7A31CF62B94C106006D170D /* Problem_1071.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A31CF52B94C106006D170D /* Problem_1071.swift */; };
 		D7A31CF72B94C106006D170D /* Problem_1071.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A31CF52B94C106006D170D /* Problem_1071.swift */; };
 		D7A31CF92B95A269006D170D /* Problem_948.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A31CF82B95A269006D170D /* Problem_948.swift */; };
@@ -456,6 +459,8 @@
 		D767DB0D2B888BBB00E97D31 /* Problem_787.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_787.swift; sourceTree = "<group>"; };
 		D76F36C62BA082BC0017A2D3 /* Problem_1171.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_1171.swift; sourceTree = "<group>"; };
 		D76F36C92BA0C89E0017A2D3 /* ProblemsTests_1200.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsTests_1200.swift; sourceTree = "<group>"; };
+		D76F36CB2BA1E2640017A2D3 /* Problem_2485.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_2485.swift; sourceTree = "<group>"; };
+		D76F36CE2BA20CE30017A2D3 /* ProblemsTests_2500.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsTests_2500.swift; sourceTree = "<group>"; };
 		D7A31CF52B94C106006D170D /* Problem_1071.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_1071.swift; sourceTree = "<group>"; };
 		D7A31CF82B95A269006D170D /* Problem_948.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_948.swift; sourceTree = "<group>"; };
 		D7CE84E92B9F882200F0CB17 /* Problem_791.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_791.swift; sourceTree = "<group>"; };
@@ -831,6 +836,7 @@
 				D75E0F902B92164100C4C0AB /* Problems_2900 */,
 				D725FEC72B84A77200DBBD20 /* Problems_2700 */,
 				D73B13752B7F299000A870F1 /* Problems_2300 */,
+				D76F36CB2BA1E2640017A2D3 /* Problem_2485.swift */,
 			);
 			name = Problems_3000;
 			sourceTree = "<group>";
@@ -849,6 +855,7 @@
 				D75E0F942B92231700C4C0AB /* ProblemsTests_2900.swift */,
 				D725FECB2B84AD4000DBBD20 /* ProblemsTests_2700.swift */,
 				D73B137A2B7F3A9600A870F1 /* ProblemsTests_2300.swift */,
+				D76F36CE2BA20CE30017A2D3 /* ProblemsTests_2500.swift */,
 			);
 			name = ProblemsTests_3000;
 			sourceTree = "<group>";
@@ -1022,6 +1029,7 @@
 				D724F0EF2B7DEE8400E526D0 /* Problem_938.swift in Sources */,
 				A858BCD82B66C814004859BC /* Problem_228.swift in Sources */,
 				A86D9C312B70B5E300F4390A /* TreeCodec.swift in Sources */,
+				D76F36CC2BA1E2640017A2D3 /* Problem_2485.swift in Sources */,
 				A858BCB72B6594E6004859BC /* DoubleLinkedList.swift in Sources */,
 				A858BC462B64374D004859BC /* Problem_36.swift in Sources */,
 				A858BC552B64374D004859BC /* Problem_25.swift in Sources */,
@@ -1294,6 +1302,7 @@
 				D725FECC2B84AD4000DBBD20 /* ProblemsTests_2700.swift in Sources */,
 				A858BC6E2B64FF32004859BC /* Problem_21.swift in Sources */,
 				D7FFF4442B98E83200237372 /* MinStack.swift in Sources */,
+				D76F36CD2BA1E2640017A2D3 /* Problem_2485.swift in Sources */,
 				A86D9C412B7296F100F4390A /* Problem_560.swift in Sources */,
 				D725FEC32B83865500DBBD20 /* ProblemsTests_1600.swift in Sources */,
 				D724F0F42B7DFD8900E526D0 /* Problem_974.swift in Sources */,
@@ -1306,6 +1315,7 @@
 				A858BCB82B6594E6004859BC /* DoubleLinkedList.swift in Sources */,
 				A858BC662B64FF32004859BC /* Problem_22.swift in Sources */,
 				A858BCE22B678019004859BC /* Problem_235.swift in Sources */,
+				D76F36CF2BA20CE30017A2D3 /* ProblemsTests_2500.swift in Sources */,
 				A8C99E972B6AB71500B8145D /* Problem_387.swift in Sources */,
 				A858BC782B64FF32004859BC /* Problem_15.swift in Sources */,
 				D7FFF4472B99A2F000237372 /* BSTIterator.swift in Sources */,
