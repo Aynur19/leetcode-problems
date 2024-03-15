@@ -30,4 +30,18 @@ final class ProblemsTests_1800: XCTestCase {
             XCTAssertEqual(actual, data.expected, message)
         }
     }
+    
+    
+    // MARK: Problem 1750. Minimum Length of String After Deleting Similar Ends
+    func testsProblem_1750() throws {
+        let testsData = ProblemsTestCases.testsData_1750()
+        let problems = Problems()
+        
+        for data in testsData {
+            let message = "s: '\(data.s)'"
+            let actual = problems.problem_1750_minimumLength(data.s)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
 }
