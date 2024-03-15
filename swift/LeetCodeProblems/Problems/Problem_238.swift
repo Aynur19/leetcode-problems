@@ -36,7 +36,7 @@ extension Problems {
     // Approach: Array, Prefix Sum
     // Time complexity: O(n) = 161 ms
     // Space complexity: O(1) = 22.23 MB
-    static func problem_238_productExceptSelf(_ nums: [Int]) -> [Int] {
+    func problem_238_productExceptSelf(_ nums: [Int]) -> [Int] {
         var result = Array<Int>(repeating: 1, count: nums.count)
         var tmp = 1
         let n = nums.count
@@ -56,3 +56,14 @@ extension Problems {
     }
 }
 
+
+extension ProblemsTestCases {
+    static func testsData_238() -> [(nums: [Int], expected: [Int])] {
+        var testsData = [(nums: [Int], expected: [Int])]()
+        
+        testsData.append((nums: [1,2,3,4], expected: [24,12,8,6]))
+        testsData.append((nums: [-1,1,0,-3,3], expected: [0,0,9,0,0]))
+        
+        return testsData
+    }
+}

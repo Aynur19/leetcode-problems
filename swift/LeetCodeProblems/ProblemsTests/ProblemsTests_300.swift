@@ -90,18 +90,14 @@ public final class ProblemsTests_300: XCTestCase {
     
     // MARK: Problem 238. Product of Array Except Self
     func testsProblem_238() throws {
-        lazy var testsData_238: [(nums: [Int], expected: [Int])] = {
-            var testsData = [(nums: [Int], expected: [Int])]()
-            
-            testsData.append((nums: [1,2,3,4], expected: [24,12,8,6]))
-            testsData.append((nums: [-1,1,0,-3,3], expected: [0,0,9,0,0]))
-            
-            return testsData
-        }()
+        let testData = ProblemsTestCases.testsData_238()
+        let problems = Problems()
         
-        for data in testsData_238 {
-            let actual = Problems.problem_238_productExceptSelf(data.nums)
-            XCTAssertEqual(actual, data.expected, "nums: \(data.nums)")
+        for data in testData {
+            let message = "nums: \(data.nums)"
+            let actual = problems.problem_238_productExceptSelf(data.nums)
+            
+            XCTAssertEqual(actual, data.expected, message)
         }
     }
     
