@@ -585,7 +585,6 @@
 				A858BC2D2B64374A004859BC /* Problem_4.swift */,
 				A858BC122B643742004859BC /* Problem_3.swift */,
 				A858BC142B643743004859BC /* Problem_2.swift */,
-				A858BC1A2B643745004859BC /* Problem_1.swift */,
 			);
 			name = Problems_100;
 			sourceTree = "<group>";
@@ -679,6 +678,7 @@
 		A86D9C4F2B74DDD000F4390A /* Problems_1000 */ = {
 			isa = PBXGroup;
 			children = (
+				D7ABE9162BA49BEB00DB3336 /* Problems_100 */,
 				D724F0F12B7DFD7400E526D0 /* Problems_1000 */,
 				D724F0E22B7D2B4C00E526D0 /* Problems_900 */,
 				D724F0D32B7CF40300E526D0 /* Problems_800 */,
@@ -688,7 +688,7 @@
 				A8C99E892B69655D00B8145D /* Problems_400 */,
 				A858BCCE2B6698D5004859BC /* Problems_300 */,
 				A858BC9A2B6593FD004859BC /* Problems_200 */,
-				A858BC0C2B6436F8004859BC /* Problems_100 */,
+				D7ABE9152BA49BC800DB3336 /* Problems_1100 */,
 			);
 			name = Problems_1000;
 			sourceTree = "<group>";
@@ -902,6 +902,22 @@
 				D7ABE9122BA445E600DB3336 /* Problem_1750.swift */,
 			);
 			path = Problems_1800;
+			sourceTree = "<group>";
+		};
+		D7ABE9152BA49BC800DB3336 /* Problems_1100 */ = {
+			isa = PBXGroup;
+			children = (
+				A858BC0C2B6436F8004859BC /* Problems_100 */,
+			);
+			name = Problems_1100;
+			sourceTree = "<group>";
+		};
+		D7ABE9162BA49BEB00DB3336 /* Problems_100 */ = {
+			isa = PBXGroup;
+			children = (
+				A858BC1A2B643745004859BC /* Problem_1.swift */,
+			);
+			path = Problems_100;
 			sourceTree = "<group>";
 		};
 		D7FFF4512B9B985E00237372 /* List */ = {

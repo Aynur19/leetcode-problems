@@ -9,6 +9,18 @@ import XCTest
 @testable import Problems
 
 public final class ProblemsTests_100: XCTestCase {
+    var problems: Problems!
+    
+    override public func setUp() {
+        super.setUp()
+        problems = Problems()
+    }
+    
+    public override func tearDown() {
+        problems = nil
+        super.tearDown()
+    }
+    
     // MARK: Problem 53. Maximum Subarray
     func testsProblem_53() throws {
         lazy var testsData_53: [(nums: [Int], expected: Int)] = {
@@ -931,11 +943,11 @@ public final class ProblemsTests_100: XCTestCase {
     
     // MARK: Problem: 1. Two Sum
     func testsProblem_1() throws {
-        let testsData_1 = ProblemsTestCases.testsData_1()
+        let testsData = ProblemsTestCases.testsData_1()
         
-        for data in testsData_1 {
+        for data in testsData {
             let message = "nums: \(data.nums); target: \(data.target)"
-            let actual = Problems.problem_1_twoSum(data.nums, data.target)
+            let actual = problems.problem_1_twoSum(data.nums, data.target)
             
             XCTAssertEqual(actual, data.expected, message)
         }

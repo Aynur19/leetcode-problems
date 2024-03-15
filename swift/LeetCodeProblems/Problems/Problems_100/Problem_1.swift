@@ -7,6 +7,7 @@
 
 // 1. Two Sum
 // Easy
+// Topics: Array, Hash Table
 
 // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -33,20 +34,22 @@
 
 
 extension Problems {
+    // Link: https://leetcode.com/problems/two-sum/description/
     // Approach: Hash Table
-    // Time complexity: O(n) => 39 ms
-    // Space complexity: O(n) => 14.29 MB
-    static func problem_1_twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+    // Time complexity: O(n) => 24 ms
+    // Space complexity: O(n) => 16.40 MB
+    func problem_1_twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        guard nums.count > 1 else { return [] }
         var dict = [Int:Int]()
         
-        for i in nums.indices {                     
-            let num = nums[i]
+        for idx in nums.indices {
+            let num = nums[idx]
             
-            if let idx = dict[target - num] {
-                return [idx, i]
+            if let index = dict[target - num] {
+                return [index, idx]
             }
             
-            dict[num] = i
+            dict[num] = idx
         }
         
         return []
@@ -54,10 +57,8 @@ extension Problems {
 }
 
 extension ProblemsTestCases {
-    typealias TestCase_1 = (nums: [Int], target: Int, expected: [Int])
-    
-    static func testsData_1() -> [TestCase_1] {
-        var testsData = [TestCase_1]()
+    static func testsData_1() -> [(nums: [Int], target: Int, expected: [Int])] {
+        var testsData = [(nums: [Int], target: Int, expected: [Int])]()
         
         testsData.append((nums: [2, 7, 11, 15], target: 9, expected: [0, 1]))
         testsData.append((nums: [3, 2, 4],      target: 6, expected: [1, 2]))

@@ -1,0 +1,9 @@
+disabled_rules:
+  - trailing_whitespace
+  - vertical_whitespace
+  - comma
+  - switch_case_alignment
+  - colon
+  - large_tuple
+  - identifier_name
+  - line_length
