@@ -8,6 +8,18 @@
 import XCTest
 
 final class ProblemsTests_600: XCTestCase {
+    var problems: Problems!
+    
+    override func setUp() {
+        super.setUp()
+        problems = .init()
+    }
+    
+    override func tearDown() {
+        problems = nil
+        super.tearDown()
+    }
+    
     // MARK: Problem 581. Shortest Unsorted Continuous Subarray
     func testsProblem_581() throws {
         lazy var testsData_581: [(nums: [Int], expected: Int)] = {
@@ -94,6 +106,19 @@ final class ProblemsTests_600: XCTestCase {
             
             XCTAssertEqual(actual, data.expected, "s: '\(data.s)'")
             XCTAssertEqual(actual2, data.expected, "s: '\(data.s)'")
+        }
+    }
+    
+    // MARK: Problem 525. Contiguous Array
+    // Link: https://leetcode.com/problems/contiguous-array/description/
+    func testsProblem_525() throws {
+        let testsData = ProblemsTestCases.testsData_525()
+        
+        for data in testsData {
+            let message = "nums: \(data.nums)"
+            let actual = problems.problem_525_findMaxLength(data.nums)
+            
+            XCTAssertEqual(actual, data.expected, message)
         }
     }
     
