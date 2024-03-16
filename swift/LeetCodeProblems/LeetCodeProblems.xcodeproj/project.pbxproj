@@ -584,8 +584,6 @@
 				A858BC302B64374B004859BC /* Problem_8.swift */,
 				A858BC332B64374C004859BC /* Problem_7.swift */,
 				A858BC152B643743004859BC /* Problem_6.swift */,
-				A858BC1B2B643745004859BC /* Problem_5.swift */,
-				A858BC2D2B64374A004859BC /* Problem_4.swift */,
 			);
 			name = Problems_100;
 			sourceTree = "<group>";
@@ -917,6 +915,8 @@
 		D7ABE9162BA49BEB00DB3336 /* Problems_100 */ = {
 			isa = PBXGroup;
 			children = (
+				A858BC1B2B643745004859BC /* Problem_5.swift */,
+				A858BC2D2B64374A004859BC /* Problem_4.swift */,
 				A858BC122B643742004859BC /* Problem_3.swift */,
 				A858BC142B643743004859BC /* Problem_2.swift */,
 				A858BC1A2B643745004859BC /* Problem_1.swift */,

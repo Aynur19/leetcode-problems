@@ -64,6 +64,33 @@ public final class ProblemsTests_100: XCTestCase {
     }
     
     
+    // MARK: LeetCode Problem 4. Median of Two Sorted Arrays
+    // Link: https://leetcode.com/problems/median-of-two-sorted-arrays/
+    func testsProblem_4() throws {
+        let testsData = ProblemsTestCases.testsData_4()
+        
+        for data in testsData {
+            let message = "nums1: \(data.nums1); nums2: \(data.nums2)"
+            let actual = problems.problem_4_findMedianSortedArrays(data.nums1, data.nums2)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
+
+    // MARK: LeetCode Problem 5. Longest Palindromic Substring
+    // Link: https://leetcode.com/problems/longest-palindromic-substring/
+    func testsProblem_5() throws {
+        let testsData = ProblemsTestCases.testsData_5()
+        
+        for data in testsData {
+            let message = "s: '\(data.s)'"
+            let actual = problems.problem_5_longestPalindrome(data.s)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
     // MARK: Problem 53. Maximum Subarray
     func testsProblem_53() throws {
         lazy var testsData_53: [(nums: [Int], expected: Int)] = {
@@ -915,43 +942,5 @@ public final class ProblemsTests_100: XCTestCase {
             XCTAssertEqual(actual, data.expected, "s: '\(data.s)'; numRows: \(data.numRows)")
         }
     }
-    
-    // MARK: Problem 5. Longest Palindromic Substring
-    func testsProblem_5() throws {
-        lazy var testsData_5: [(s: String, expected: String)] = {
-            var testsData = [(s: String, expected: String)]()
-            
-            testsData.append((s: "babad", expected: "bab"))
-            testsData.append((s: "cbbd", expected: "bb"))
-            testsData.append((s: "a", expected: "a"))
-            
-            return testsData
-        }()
-        
-        for data in testsData_5 {
-            let actual = Problems.problem_5_longestPalindrome(data.s)
-            
-            XCTAssertEqual(actual, data.expected, "s: '\(data.s)'")
-        }
-    }
-    
-    // MARK: Problem: 4. Median of Two Sorted Arrays
-    func testsProblem_4() throws {
-        lazy var testsData_4: [(nums1: [Int], nums2: [Int], expected: Double)] = {
-            var testsData = [(nums1: [Int], nums2: [Int], expected: Double)]()
-            
-            testsData.append((nums1: [1, 3], nums2: [2], expected: 2))
-            testsData.append((nums1: [1, 2], nums2: [3, 4], expected: 2.5))
-            
-            return testsData
-        }()
-        
-        for data in testsData_4 {
-            let actual = Problems.problem_4_findMedianSortedArrays(data.nums1, data.nums2)
-            
-            XCTAssertEqual(actual, data.expected, "nums1: \(data.nums1); nums2: \(data.nums2)")
-        }
-    }
-    
 
 }
