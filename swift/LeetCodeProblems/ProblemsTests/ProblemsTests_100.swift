@@ -21,7 +21,9 @@ public final class ProblemsTests_100: XCTestCase {
         super.tearDown()
     }
     
-    // MARK: Problem: 1. Two Sum
+
+    // MARK: LeetCode Problem 1. Two Sum
+    // Link: https://leetcode.com/problems/two-sum/
     func testsProblem_1() throws {
         let testsData = ProblemsTestCases.testsData_1()
         
@@ -33,7 +35,9 @@ public final class ProblemsTests_100: XCTestCase {
         }
     }
     
-    // MARK: Problem: 2. Add Two Numbers
+    
+    // MARK: LeetCode Problem 2. Add Two Numbers
+    // Link: https://leetcode.com/problems/add-two-numbers/
     func testsProblem_2() throws {
         let testsData = ProblemsTestCases.testsData_2()
 
@@ -44,6 +48,21 @@ public final class ProblemsTests_100: XCTestCase {
             XCTAssertEqual(actual, data.expected, message)
         }
     }
+    
+    
+    // MARK: LeetCode Problem 3. Longest Substring Without Repeating Characters
+    // Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
+    func testsProblem_3() throws {
+        let testsData = ProblemsTestCases.testsData_3()
+        
+        for data in testsData {
+            let message = "s: '\(data.s)'"
+            let actual = problems.problem_3_lengthOfLongestSubstring(data.s)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
     
     // MARK: Problem 53. Maximum Subarray
     func testsProblem_53() throws {
@@ -934,22 +953,5 @@ public final class ProblemsTests_100: XCTestCase {
         }
     }
     
-    // MARK: Problem: 3. Longest Substring Without Repeating Characters
-    func testsProblem_3() throws {
-        lazy var testsData_3: [(s: String, expected: Int)] = {
-            var testsData = [(s: String, expected: Int)]()
-            
-            testsData.append((s: "abcabcbb", expected: 3))
-            testsData.append((s: "bbbbb", expected: 1))
-            testsData.append((s: "pwwkew", expected: 3))
-            
-            return testsData
-        }()
-        
-        for data in testsData_3 {
-            let actual = Problems.problem_3_lengthOfLongestSubstring(data.s)
-            
-            XCTAssertEqual(actual, data.expected, "s: '\(data.s)'")
-        }
-    }
+
 }

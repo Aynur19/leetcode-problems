@@ -31,10 +31,12 @@
 // s consists of English letters, digits, symbols and spaces.
 
 extension Problems {
+    // MARK: LeetCode Problem 3. Longest Substring Without Repeating Characters
+    // Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
     // Approach: Hash Table
     // Time complexity: O(n) => 10 ms
     // Space complexity: O(n) => 14.68 MB
-    static func problem_3_lengthOfLongestSubstring(_ s: String) -> Int {
+    public func problem_3_lengthOfLongestSubstring(_ s: String) -> Int {
         guard s.count > 1 else { return s.count }
         
         var dict = [Character:Int]()
@@ -60,3 +62,14 @@ extension Problems {
     }
 }
 
+extension ProblemsTestCases {
+    static func testsData_3() -> [(s: String, expected: Int)] {
+        var testsData = [(s: String, expected: Int)]()
+        
+        testsData.append((s: "abcabcbb", expected: 3))
+        testsData.append((s: "bbbbb", expected: 1))
+        testsData.append((s: "pwwkew", expected: 3))
+        
+        return testsData
+    }
+}
