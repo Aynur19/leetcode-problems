@@ -21,43 +21,45 @@ public final class ProblemsTests_100: XCTestCase {
         super.tearDown()
     }
     
-
-    // MARK: LeetCode Problem 1. Two Sum
-    // Link: https://leetcode.com/problems/two-sum/
-    func testsProblem_1() throws {
-        let testsData = ProblemsTestCases.testsData_1()
+    
+    // MARK: LeetCode Problem 57. Insert Interval
+    // Link: https://leetcode.com/problems/insert-interval/
+    func testsProblem_57() throws {
+        let testsData = ProblemsTestCases.testsData_57()
         
         for data in testsData {
-            let message = "nums: \(data.nums); target: \(data.target)"
-            let actual = problems.problem_1_twoSum(data.nums, data.target)
+            let message = "intervals: \(data.intervals); newInterval: \(data.newInterval)"
+            let actual = problems.problem_57_insert(data.intervals, data.newInterval)
             
             XCTAssertEqual(actual, data.expected, message)
         }
     }
     
     
-    // MARK: LeetCode Problem 2. Add Two Numbers
-    // Link: https://leetcode.com/problems/add-two-numbers/
-    func testsProblem_2() throws {
-        let testsData = ProblemsTestCases.testsData_2()
-
+    // MARK: LeetCode Problem 6. Zigzag Conversion
+    // Link: https://leetcode.com/problems/zigzag-conversion/
+    func testsProblem_6() throws {
+        let testsData = ProblemsTestCases.testsData_6()
+        
         for data in testsData {
-            let message = "l1: \(data.l1?.description ?? "[]"); l2: \(data.l2?.description ?? "[]")"
-            let actual = problems.problem_2_addTwoNumbers(data.l1, data.l2)
-
+            let message = "s: '\(data.s)'; numRows: \(data.numRows)"
+            let actual = problems.problem_6_convert(data.s, data.numRows)
+            let actual2 = problems.problem_6_convert_2(data.s, data.numRows)
+            
             XCTAssertEqual(actual, data.expected, message)
+            XCTAssertEqual(actual2, data.expected, message)
         }
     }
     
     
-    // MARK: LeetCode Problem 3. Longest Substring Without Repeating Characters
-    // Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
-    func testsProblem_3() throws {
-        let testsData = ProblemsTestCases.testsData_3()
+    // MARK: LeetCode Problem 5. Longest Palindromic Substring
+    // Link: https://leetcode.com/problems/longest-palindromic-substring/
+    func testsProblem_5() throws {
+        let testsData = ProblemsTestCases.testsData_5()
         
         for data in testsData {
             let message = "s: '\(data.s)'"
-            let actual = problems.problem_3_lengthOfLongestSubstring(data.s)
+            let actual = problems.problem_5_longestPalindrome(data.s)
             
             XCTAssertEqual(actual, data.expected, message)
         }
@@ -77,33 +79,48 @@ public final class ProblemsTests_100: XCTestCase {
         }
     }
     
-
-    // MARK: LeetCode Problem 5. Longest Palindromic Substring
-    // Link: https://leetcode.com/problems/longest-palindromic-substring/
-    func testsProblem_5() throws {
-        let testsData = ProblemsTestCases.testsData_5()
+    
+    // MARK: LeetCode Problem 3. Longest Substring Without Repeating Characters
+    // Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
+    func testsProblem_3() throws {
+        let testsData = ProblemsTestCases.testsData_3()
         
         for data in testsData {
             let message = "s: '\(data.s)'"
-            let actual = problems.problem_5_longestPalindrome(data.s)
+            let actual = problems.problem_3_lengthOfLongestSubstring(data.s)
             
             XCTAssertEqual(actual, data.expected, message)
         }
     }
     
     
-    // MARK: LeetCode Problem 57. Insert Interval
-    // Link: https://leetcode.com/problems/insert-interval/
-    func testsProblem_57() throws {
-        let testsData = ProblemsTestCases.testsData_57()
+    // MARK: LeetCode Problem 2. Add Two Numbers
+    // Link: https://leetcode.com/problems/add-two-numbers/
+    func testsProblem_2() throws {
+        let testsData = ProblemsTestCases.testsData_2()
+
+        for data in testsData {
+            let message = "l1: \(data.l1?.description ?? "[]"); l2: \(data.l2?.description ?? "[]")"
+            let actual = problems.problem_2_addTwoNumbers(data.l1, data.l2)
+
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+
+    
+    // MARK: LeetCode Problem 1. Two Sum
+    // Link: https://leetcode.com/problems/two-sum/
+    func testsProblem_1() throws {
+        let testsData = ProblemsTestCases.testsData_1()
         
         for data in testsData {
-            let message = "intervals: \(data.intervals); newInterval: \(data.newInterval)"
-            let actual = problems.problem_57_insert(data.intervals, data.newInterval)
+            let message = "nums: \(data.nums); target: \(data.target)"
+            let actual = problems.problem_1_twoSum(data.nums, data.target)
             
             XCTAssertEqual(actual, data.expected, message)
         }
     }
+    
     
     // MARK: Problem 53. Maximum Subarray
     func testsProblem_53() throws {
@@ -938,23 +955,5 @@ public final class ProblemsTests_100: XCTestCase {
         }
     }
     
-    // MARK: Problem 6. Zigzag Conversion
-    func testsProblem_6() throws {
-        lazy var testsData_6: [(s: String, numRows: Int, expected: String)] = {
-            var testsData = [(s: String, numRows: Int, expected: String)]()
-            
-            testsData.append((s: "PAYPALISHIRING", numRows: 3, expected: "PAHNAPLSIIGYIR"))
-            testsData.append((s: "PAYPALISHIRING", numRows: 4, expected: "PINALSIGYAHRPI"))
-            testsData.append((s: "A", numRows: 1, expected: "A"))
-            
-            return testsData
-        }()
-        
-        for data in testsData_6 {
-            let actual = Problems.problem_6_convert(data.s, data.numRows)
-            
-            XCTAssertEqual(actual, data.expected, "s: '\(data.s)'; numRows: \(data.numRows)")
-        }
-    }
 
 }
