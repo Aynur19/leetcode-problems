@@ -91,6 +91,20 @@ public final class ProblemsTests_100: XCTestCase {
         }
     }
     
+    
+    // MARK: LeetCode Problem 57. Insert Interval
+    // Link: https://leetcode.com/problems/insert-interval/
+    func testsProblem_57() throws {
+        let testsData = ProblemsTestCases.testsData_57()
+        
+        for data in testsData {
+            let message = "intervals: \(data.intervals); newInterval: \(data.newInterval)"
+            let actual = problems.problem_57_insert(data.intervals, data.newInterval)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
     // MARK: Problem 53. Maximum Subarray
     func testsProblem_53() throws {
         lazy var testsData_53: [(nums: [Int], expected: Int)] = {
