@@ -45,7 +45,7 @@ public final class ProblemsTests_100: XCTestCase {
             let message = "x: \(data.x)"
             let actual = problems.problem_7_reverse(data.x)
             
-            XCTAssertEqual(actual, data.expected, messageм)
+            XCTAssertEqual(actual, data.expected, message)
         }
     }
     

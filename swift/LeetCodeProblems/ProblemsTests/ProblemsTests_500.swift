@@ -8,6 +8,33 @@
 import XCTest
 
 final class ProblemsTests_500: XCTestCase {
+    var problems: Problems!
+    
+    override func setUp() {
+        super.setUp()
+        problems = Problems()
+    }
+    
+    override func tearDown() {
+        problems = nil
+        super.tearDown()
+    }
+    
+    
+    // MARK: LeetCode Problem 452. Minimum Number of Arrows to Burst Balloons
+    // Link: https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/
+    func testsProblem_452() throws {
+        let testsData = ProblemsTestCases.testsData_452()
+        
+        for data in testsData {
+            let message = "points: \(data.points)"
+            let actual = problems.problem_452_findMinArrowShots(data.points)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
+    
     // MARK: Problem 449. Serialize and Deserialize BST
     func testsProblem_449() throws {
         lazy var testsData_449: [(root: TreeNode?, expectedData: [String], expectedObject: TreeNode?)] = {
