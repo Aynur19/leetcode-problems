@@ -36,6 +36,20 @@ public final class ProblemsTests_100: XCTestCase {
     }
     
     
+    // MARK: LeetCode Problem 7. Reverse Integer
+    // Link: https://leetcode.com/problems/reverse-integer/
+    func testsProblem_7() throws {
+        let testsData = ProblemsTestCases.testsData_7()
+        
+        for data in testsData {
+            let message = "x: \(data.x)"
+            let actual = problems.problem_7_reverse(data.x)
+            
+            XCTAssertEqual(actual, data.expected, messageм)
+        }
+    }
+    
+    
     // MARK: LeetCode Problem 6. Zigzag Conversion
     // Link: https://leetcode.com/problems/zigzag-conversion/
     func testsProblem_6() throws {
@@ -935,25 +949,4 @@ public final class ProblemsTests_100: XCTestCase {
             XCTAssertEqual(actual, data.expected, "s: '\(data.s)'")
         }
     }
-    
-    // MARK: Problem 7. Reverse Integer
-    func testsProblem_7() throws {
-        lazy var testsData_7: [(x: Int, expected: Int)] = {
-            var testsData = [(x: Int, expected: Int)]()
-            
-            testsData.append((x: 123, expected: 321))
-            testsData.append((x: -123, expected: -321))
-            testsData.append((x: 120, expected: 21))
-            
-            return testsData
-        }()
-        
-        for data in testsData_7 {
-            let actual = Problems.problem_7_reverse(data.x)
-            
-            XCTAssertEqual(actual, data.expected, "x: \(data.x)")
-        }
-    }
-    
-
 }

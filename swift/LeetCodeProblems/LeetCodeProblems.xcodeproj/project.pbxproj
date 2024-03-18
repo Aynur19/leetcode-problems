@@ -527,9 +527,10 @@
 		A858BBF72B64361E004859BC /* Problems */ = {
 			isa = PBXGroup;
 			children = (
+				D7ABE9212BA8210000DB3336 /* Problems_1000 */,
 				D73B13742B7E7AFA00A870F1 /* Problems_3000 */,
 				D73B136C2B7E71BC00A870F1 /* Problems_2000 */,
-				A86D9C4F2B74DDD000F4390A /* Problems_1000 */,
+				A86D9C4F2B74DDD000F4390A /* Problems__1000 */,
 				A858BBF82B64361E004859BC /* Problems.swift */,
 				A89228D32B68F6230086BEF6 /* Extentions */,
 				A858BC902B654D91004859BC /* DataStructures */,
@@ -649,7 +650,7 @@
 			name = Problems_300;
 			sourceTree = "<group>";
 		};
-		A86D9C3C2B72966C00F4390A /* Problems_600 */ = {
+		A86D9C3C2B72966C00F4390A /* Problems__600 */ = {
 			isa = PBXGroup;
 			children = (
 				A86D9C482B74269800F4390A /* Problem_581.swift */,
@@ -658,7 +659,7 @@
 				A86D9C392B7282AA00F4390A /* Problem_557.swift */,
 				A86D9C342B722FC100F4390A /* Problem_523.swift */,
 			);
-			name = Problems_600;
+			name = Problems__600;
 			sourceTree = "<group>";
 		};
 		A86D9C4B2B74C83400F4390A /* Problems_700 */ = {
@@ -672,23 +673,21 @@
 			name = Problems_700;
 			sourceTree = "<group>";
 		};
-		A86D9C4F2B74DDD000F4390A /* Problems_1000 */ = {
+		A86D9C4F2B74DDD000F4390A /* Problems__1000 */ = {
 			isa = PBXGroup;
 			children = (
-				D7ABE9192BA58C3300DB3336 /* Problems_500 */,
-				D7ABE9162BA49BEB00DB3336 /* Problems_100 */,
 				D724F0F12B7DFD7400E526D0 /* Problems_1000 */,
 				D724F0E22B7D2B4C00E526D0 /* Problems_900 */,
 				D724F0D32B7CF40300E526D0 /* Problems_800 */,
 				A86D9C4B2B74C83400F4390A /* Problems_700 */,
-				A86D9C3C2B72966C00F4390A /* Problems_600 */,
+				A86D9C3C2B72966C00F4390A /* Problems__600 */,
 				A8C99E9B2B6AC86E00B8145D /* Problems__500 */,
 				A8C99E892B69655D00B8145D /* Problems_400 */,
 				A858BCCE2B6698D5004859BC /* Problems_300 */,
 				A858BC9A2B6593FD004859BC /* Problems_200 */,
 				D7ABE9152BA49BC800DB3336 /* Problems_1100 */,
 			);
-			name = Problems_1000;
+			name = Problems__1000;
 			sourceTree = "<group>";
 		};
 		A89228D32B68F6230086BEF6 /* Extentions */ = {
@@ -931,9 +930,26 @@
 		D7ABE9192BA58C3300DB3336 /* Problems_500 */ = {
 			isa = PBXGroup;
 			children = (
-				D7ABE91A2BA58C5500DB3336 /* Problem_525.swift */,
 			);
 			path = Problems_500;
+			sourceTree = "<group>";
+		};
+		D7ABE9202BA820E200DB3336 /* Problems_600 */ = {
+			isa = PBXGroup;
+			children = (
+				D7ABE91A2BA58C5500DB3336 /* Problem_525.swift */,
+			);
+			path = Problems_600;
+			sourceTree = "<group>";
+		};
+		D7ABE9212BA8210000DB3336 /* Problems_1000 */ = {
+			isa = PBXGroup;
+			children = (
+				D7ABE9202BA820E200DB3336 /* Problems_600 */,
+				D7ABE9192BA58C3300DB3336 /* Problems_500 */,
+				D7ABE9162BA49BEB00DB3336 /* Problems_100 */,
+			);
+			path = Problems_1000;
 			sourceTree = "<group>";
 		};
 		D7FFF4512B9B985E00237372 /* List */ = {
