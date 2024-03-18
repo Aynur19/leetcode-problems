@@ -36,6 +36,48 @@ public final class ProblemsTests_100: XCTestCase {
     }
     
     
+    // MARK: LeetCode Problem 10. Regular Expression Matching
+    // Link: https://leetcode.com/problems/regular-expression-matching/
+    func testsProblem_10() throws {
+        let testsData = ProblemsTestCases.testsData_10()
+        
+        for data in testsData {
+            let message = "s: '\(data.s)'; p: '\(data.p)'"
+            let actual = problems.problem_10_cleanPattern(data.s, data.p)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
+    
+    // MARK: LeetCode Problem 9. Palindrome Number
+    // Link: https://leetcode.com/problems/palindrome-number/
+    func testsProblem_9() throws {
+        let testsData = ProblemsTestCases.testsData_9()
+        
+        for data in testsData {
+            let message = "x: \(data.x)"
+            let actual = problems.problem_9_isPalindrome(data.x)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
+    
+    // MARK: LeetCode Problem 8. String to Integer (atoi)
+    // Link: https://leetcode.com/problems/string-to-integer-atoi/
+    func testsProblem_8() throws {
+        let testsData = ProblemsTestCases.testsData_8()
+        
+        for data in testsData {
+            let message = "s: '\(data.s)'"
+            let actual = problems.problem_8_myAtoi(data.s)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
+    
     // MARK: LeetCode Problem 7. Reverse Integer
     // Link: https://leetcode.com/problems/reverse-integer/
     func testsProblem_7() throws {
@@ -887,66 +929,6 @@ public final class ProblemsTests_100: XCTestCase {
             let actual = Problems.problem_11_maxArea(data.height)
             
             XCTAssertEqual(actual, data.expected, "height: \(data.height)")
-        }
-    }
-    
-    // MARK: Problem 10. Regular Expression Matching
-    func testsProblem_10() throws {
-        lazy var testsData_10: [(s: String, p: String, expected: Bool)] = {
-            var testsData = [(s: String, p: String, expected: Bool)]()
-            
-            testsData.append((s: "aa", p: "a", expected: false))
-            testsData.append((s: "aa", p: "a*", expected: true))
-            testsData.append((s: "ab", p: ".*", expected: true))
-            
-            return testsData
-        }()
-        
-        for data in testsData_10 {
-            let actual = Problems.problem_10_cleanPattern(data.s, data.p)
-            
-            XCTAssertEqual(actual, data.expected, "s: '\(data.s)'; p: '\(data.p)'")
-        }
-    }
-    
-    // MARK: Problem 9. Palindrome Number
-    func testsProblem_9() throws {
-        lazy var testsData_9: [(x: Int, expected: Bool)] = {
-            var testsData = [(x: Int, expected: Bool)]()
-            
-            testsData.append((x: 121, expected: true))
-            testsData.append((x: -121, expected: false))
-            testsData.append((x: 10, expected: false))
-            
-            return testsData
-        }()
-        
-        for data in testsData_9 {
-            let actual = Problems.problem_9_isPalindrome(data.x)
-            
-            XCTAssertEqual(actual, data.expected, "x: \(data.x)")
-        }
-    }
-    
-    // MARK: Problem 8. String to Integer (atoi)
-    func testsProblem_8() throws {
-        lazy var testsData_problem_8: [(s: String, expected: Int)] = {
-            var testsData = [(s: String, expected: Int)]()
-            
-            testsData.append((s: "42", expected: 42))
-            testsData.append((s: "   -42", expected: -42))
-            testsData.append((s: "4193 with words", expected: 4193))
-            testsData.append((s: "00000-42a1234", expected: 0))
-            testsData.append((s: "words and 987", expected: 0))
-            testsData.append((s: "20000000000000000000", expected: Int(Int32.max)))
-            
-            return testsData
-        }()
-        
-        for data in testsData_problem_8 {
-            let actual = Problems.problem_8_myAtoi(data.s)
-            
-            XCTAssertEqual(actual, data.expected, "s: '\(data.s)'")
         }
     }
 }

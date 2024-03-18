@@ -42,7 +42,7 @@ extension Problems {
         while x != 0 {
             result *= 10
             result += x % 10
-            x = x / 10
+            x /= 10
         }
         
         return result <= Int32.max && result >= Int32.min ? result : 0
