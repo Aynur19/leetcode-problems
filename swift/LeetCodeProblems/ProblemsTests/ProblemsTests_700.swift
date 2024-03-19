@@ -8,6 +8,34 @@
 import XCTest
 
 final class ProblemsTests_700: XCTestCase {
+    var problems: Problems!
+    
+    
+    override  func setUp() {
+        super.setUp()
+        problems = Problems()
+    }
+    
+    override func tearDown() {
+        problems = nil
+        super.tearDown()
+    }
+    
+    
+    // MARK: LeetCode Problem 621. Task Scheduler
+    // Link: https://leetcode.com/problems/task-scheduler/
+    func testsProblem_621() throws {
+        let testsData = ProblemsTestCases.testsData_621()
+        
+        for data in testsData {
+            let message = "tasks: \(data.tasks); n: \(data.n)"
+            let actual = problems.problem_621_leastInterval(data.tasks, data.n)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
+    
     // MARK: Problem 692. Top K Frequent Words
     func testsProblem_692() throws {
         typealias TestCase = (words: [String], k: Int, expected: [String])

@@ -5,6 +5,8 @@
 //  Created by Aynur Nasybullin on 09.03.2024.
 //
 
+import Foundation
+
 protocol HeapProtocol {
     associatedtype ValueType
         
@@ -16,39 +18,99 @@ protocol HeapProtocol {
 }
 
 
-
-public final class HeapArray<ValueType>: HeapProtocol {
-    private var data: [ValueType]
-    private var size: Int
-    private let defaultValue: ValueType
+public final class HeapArray<T> {
+    private var data = [T]()
+    private var comparator: (T, T) -> Bool
     
-    init(_ size: Int = 10, defaultValue: ValueType) {
-        self.size = size
-        self.defaultValue = defaultValue
-        self.data = .init(repeating: defaultValue, count: size)
+    public init(comparator: @escaping (T, T) -> Bool) {
+        self.comparator = comparator
+    }
+    
+    public func add(_ val: T) {
+        data.append(val)
+        heapify()
+    }
+    
+    public func buildHeap(_ values: [T]) {
+        data.append(contentsOf: values)
+        
+        var idx = (data.count / 2)
+        while idx >= 0 {
+            heapify(idx)
+            idx -= 1
+        }
+    }
+    
+    // O(log n)
+    private func heapify() {
+        var addedIdx = data.count - 1
+        var parentIdx = (addedIdx - 1) / 2
+        
+        while addedIdx > 0, !comparator(data[parentIdx], data[addedIdx]) {
+            let tmp = data[parentIdx]
+            data[parentIdx] = data[addedIdx]
+            data[addedIdx] = tmp
+            
+            addedIdx = parentIdx
+            parentIdx = (addedIdx - 1) / 2
+        }
+    }
+    
+    // O(log n)
+    private func heapify(_ idx: Int) {
+        var idx = idx
+        let size = data.count
+        
+        while true {
+            var parentIdx = idx
+            let leftIdx = idx * 2 + 1
+            let rightIdx = idx * 2 + 2
+            
+            if leftIdx < size, !comparator(data[parentIdx], data[leftIdx]) {
+                parentIdx = leftIdx
+            }
+            
+            if rightIdx < size, !comparator(data[parentIdx], data[rightIdx]) {
+                parentIdx = rightIdx
+            }
+            
+            if parentIdx == idx { return }
+            
+            let tmp = data[idx]
+            data[idx] = data[parentIdx]
+            data[parentIdx] = tmp
+            
+            idx = parentIdx
+        }
+    }
+    
+    public func peak() -> T? {
+        return empty() ? data[0] : nil
+    }
+    
+    public func remove() -> T? {
+        guard !empty() else { return nil }
+        
+        let result = data[0]
+        data[0] = data[data.count - 1]
+        _ = data.removeLast()
+        
+        return result
+    }
+    
+    public func heapSort(values: inout [T])
+    {
+        buildHeap(values);
+        var idx = data.count - 1
+        
+        while idx >= 0 {
+            heapify(0)
+            idx -= 1
+        }
     }
     
     
-    func add(_ val: ValueType) -> Bool {
-        return true
-    }
-    //    public void add(E element) {
-    //        if (size == kSize - 1) {
-    //            expandArray();
-    //        }
-    //
-    //        array[size] = element;
-    //        upAndSwap(size);
-    //        size++;
-    //    }
-    func empty() -> Bool {
-        return true
-    }
-    
-    
-    func removeMin() -> ValueType? {
-        return defaultValue
-    }
+    public func empty() -> Bool { return data.count == 0 }
 }
 
 //public class ArrayHeap<E> implements Heap<E> {
