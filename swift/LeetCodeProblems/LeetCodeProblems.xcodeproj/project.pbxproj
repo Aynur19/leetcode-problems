@@ -584,11 +584,6 @@
 				A858BC312B64374C004859BC /* Problem_18.swift */,
 				A858BC0F2B643742004859BC /* Problem_17.swift */,
 				A858BC162B643743004859BC /* Problem_16.swift */,
-				A858BC112B643742004859BC /* Problem_15.swift */,
-				A858BC272B643749004859BC /* Problem_14.swift */,
-				A858BC352B64374D004859BC /* Problem_13.swift */,
-				A858BC212B643747004859BC /* Problem_12.swift */,
-				A858BC2B2B64374A004859BC /* Problem_11.swift */,
 			);
 			name = Problems_100;
 			sourceTree = "<group>";
@@ -919,6 +914,11 @@
 			isa = PBXGroup;
 			children = (
 				D7ABE91D2BA6BD5C00DB3336 /* Problem_57.swift */,
+				A858BC112B643742004859BC /* Problem_15.swift */,
+				A858BC272B643749004859BC /* Problem_14.swift */,
+				A858BC352B64374D004859BC /* Problem_13.swift */,
+				A858BC212B643747004859BC /* Problem_12.swift */,
+				A858BC2B2B64374A004859BC /* Problem_11.swift */,
 				A858BC2A2B64374A004859BC /* Problem_10.swift */,
 				A858BC1E2B643746004859BC /* Problem_9.swift */,
 				A858BC302B64374B004859BC /* Problem_8.swift */,

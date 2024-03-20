@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import SwiftDataStructures
 @testable import Problems
 
 public final class ProblemsTests_100: XCTestCase {
@@ -30,6 +31,86 @@ public final class ProblemsTests_100: XCTestCase {
         for data in testsData {
             let message = "intervals: \(data.intervals); newInterval: \(data.newInterval)"
             let actual = problems.problem_57_insert(data.intervals, data.newInterval)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
+    
+    // MARK: LeetCode Problem 15. 3Sum
+    // Link: https://leetcode.com/problems/3sum/
+    func testsProblem_15() throws {
+        let testsData = ProblemsTestCases.testsData_15()
+        
+        for data in testsData {
+            let message = "nums: \(data.nums)"
+            let actual = problems.problem_15_threeSum(data.nums)
+                .sorted(by: { $0.sorted().lexicographicallyPrecedes($1.sorted()) })
+            let actual2 = data.nums.getSet3SumWithResult0()
+                .sorted(by: { $0.sorted().lexicographicallyPrecedes($1.sorted()) })
+            let expected = data.expected
+                .sorted(by: { $0.sorted().lexicographicallyPrecedes($1.sorted()) })
+            
+            XCTAssertEqual(actual, expected, message)
+            XCTAssertEqual(actual2, expected, message)
+        }
+    }
+    
+    
+    // MARK: LeetCode Problem 14. Longest Common Prefix
+    // Link: https://leetcode.com/problems/longest-common-prefix/
+    func testsProblem_14() throws {
+        let testsData = ProblemsTestCases.testsData_14()
+        
+        for data in testsData {
+            let message = "strs: '\(data.strs)'"
+            let actual = problems.problem_14_longestCommonPrefix(data.strs)
+            let actual2 = String.longestCommonPrefix(data.strs)
+            
+            XCTAssertEqual(actual, data.expected, message)
+            XCTAssertEqual(actual2, data.expected, message)
+        }
+    }
+    
+    
+    // MARK: LeetCode Problem 13. Roman to Integer
+    // Link: https://leetcode.com/problems/roman-to-integer/
+    func testsProblem_13() throws {
+        let testsData = ProblemsTestCases.testsData_13()
+        
+        for data in testsData {
+            let message = "s: '\(data.s)'"
+            let actual = problems.problem_13_romanToInt(data.s)
+            let actual2 = problems.problem_13_romanToInt_2(data.s)
+            
+            XCTAssertEqual(actual, data.expected, message)
+            XCTAssertEqual(actual2, data.expected, message)
+        }
+    }
+    
+    
+    // MARK: LeetCode Problem 12. Integer to Roman
+    // Link: https://leetcode.com/problems/integer-to-roman/
+    func testsProblem_12() throws {
+        let testsData = ProblemsTestCases.testsData_12()
+        
+        for data in testsData {
+            let message = "num: \(data.num)"
+            let actual = problems.problem_12_intToRoman(data.num)
+            
+            XCTAssertEqual(actual, data.expected, message)
+        }
+    }
+    
+    
+    // MARK: LeetCode Problem 11. Container With Most Water
+    // Link: https://leetcode.com/problems/container-with-most-water/
+    func testsProblem_11() throws {
+        let testsData = ProblemsTestCases.testsData_11()
+        
+        for data in testsData {
+            let message = "height: \(data.height)"
+            let actual = problems.problem_11_maxArea(data.height)
             
             XCTAssertEqual(actual, data.expected, message)
         }
@@ -828,107 +909,6 @@ public final class ProblemsTests_100: XCTestCase {
             let actual = Problems.problem_16_threeSumClosest(data.nums, data.target)
             
             XCTAssertEqual(actual, data.expected, "nums: \(data.nums)")
-        }
-    }
-    
-    // MARK: Problem 15. 3Sum
-    func testsProblem_15() throws {
-        lazy var testsData_15: [(nums: [Int], expected:  [[Int]])] = {
-            var testsData = [(nums: [Int], expected:  [[Int]])]()
-            
-            testsData.append((nums: [-1, 0, 1, 2, -1, -4], expected: [[-1, -1, 2], [-1, 0, 1]]))
-            testsData.append((nums: [0, 1, 1], expected:  []))
-            testsData.append((nums: [0, 0, 0], expected:  [[0, 0, 0]]))
-            testsData.append((nums: [-1, 0, 1, 0], expected:  [[-1, 0, 1]]))
-            testsData.append((nums: [1, -1, -1, 0], expected:  [[-1, 0, 1]]))
-            testsData.append((nums: [-2, 0, 1, 1, 2], expected:  [[-2, 0, 2], [-2, 1, 1]]))
-            
-            return testsData
-        }()
-        
-        for data in testsData_15 {
-            let actual = Problems.problem_15_threeSum(data.nums)
-                .sorted(by: { $0.sorted().lexicographicallyPrecedes($1.sorted()) })
-            let expected = data.expected
-                .sorted(by: { $0.sorted().lexicographicallyPrecedes($1.sorted()) })
-            
-            XCTAssertEqual(actual, expected, "nums: \(data.nums)")
-        }
-    }
-    
-    // MARK: Problem 14. Longest Common Prefix
-    func testsProblem_14() throws {
-        lazy var testsData_14: [(strs: [String], expected: String)] = {
-            var testsData = [(strs: [String], expected: String)]()
-            
-            testsData.append((strs: ["flower", "flow", "flight"], expected: "fl"))
-            testsData.append((strs: ["dog", "racecar", "car"], expected: ""))
-            
-            return testsData
-        }()
-        
-        for data in testsData_14 {
-            let actual = Problems.problem_14_longestCommonPrefix(data.strs)
-            
-            XCTAssertEqual(actual, data.expected, "strs: '\(data.strs)'")
-        }
-    }
-    
-    // MARK: Problem 13. Integer to Roman
-    func testsProblem_13() throws {
-        lazy var testsData_13: [(s: String, expected: Int)] = {
-            var testsData = [(s: String, expected: Int)]()
-            
-            testsData.append((s: "III", expected: 3))
-            testsData.append((s: "LVIII", expected: 58))
-            testsData.append((s: "MCMXCIV", expected: 1994))
-            
-            return testsData
-        }()
-        
-        for data in testsData_13 {
-            let actual = Problems.problem_13_romanToInt(data.s)
-            let actual2 = Problems.problem_13_romanToInt2(data.s)
-            
-            XCTAssertEqual(actual, data.expected, "s: '\(data.s)'")
-            XCTAssertEqual(actual2, data.expected, "s: '\(data.s)'")
-        }
-    }
-    
-    // MARK: Problem 12. Integer to Roman
-    func testsProblem_12() throws {
-        lazy var testsData_12: [(num: Int, expected: String)] = {
-            var testsData = [(num: Int, expected: String)]()
-            
-            testsData.append((num: 3, expected: "III"))
-            testsData.append((num: 58, expected: "LVIII"))
-            testsData.append((num: 1994, expected: "MCMXCIV"))
-            
-            return testsData
-        }()
-        
-        for data in testsData_12 {
-            let actual = Problems.problem_12_intToRoman(data.num)
-            
-            XCTAssertEqual(actual, data.expected, "num: \(data.num)")
-        }
-    }
-    
-    // MARK: Problem 11. Container With Most Water
-    func testsProblem_11() throws {
-        lazy var testsData_11: [(height: [Int], expected: Int)] = {
-            var testsData = [(height: [Int], expected: Int)]()
-            
-            testsData.append((height: [1, 8, 6, 2, 5, 4, 8, 3, 7], expected: 49))
-            testsData.append((height: [1, 1], expected: 1))
-            
-            return testsData
-        }()
-        
-        for data in testsData_11 {
-            let actual = Problems.problem_11_maxArea(data.height)
-            
-            XCTAssertEqual(actual, data.expected, "height: \(data.height)")
         }
     }
 }
