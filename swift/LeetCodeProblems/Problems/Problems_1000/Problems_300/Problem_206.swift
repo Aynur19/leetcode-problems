@@ -29,14 +29,19 @@
  
 //  Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
 
+
+import SwiftDataStructures
+
+// MARK: LeetCode Problem 206. Reverse Linked List
+// Link: https://leetcode.com/problems/3sum/
 extension Problems {
     // Approach: Linked List
-    // Time complexity: O(n) = 11
-    // Space complexity: O(1) = 15.89
-    static func problem_206_reverseList(_ head: ListNodeOld?) -> ListNodeOld? {
+    // Time complexity: O(n) = 3
+    // Space complexity: O(1) = 15.35
+    public func problem_206_reverseList(_ head: ListNode<Int>?) -> ListNode<Int>? {
         guard let head = head, head.next != nil else { return head }
 
-        var prev: ListNodeOld? = head
+        var prev: ListNode<Int>? = head
         var current = head.next
 
         while current != nil {
@@ -55,11 +60,11 @@ extension Problems {
     // Approach: Recursion
     // Time complexity: O(n) = 15
     // Space complexity: O(1) = 16.10
-    static func problem_206_reverseList2(_ head: ListNodeOld?) -> ListNodeOld? {
+    public func problem_206_reverseList_2(_ head: ListNode<Int>?) -> ListNode<Int>? {
         guard let head = head, head.next != nil else { return head }
-        var end: ListNodeOld?
+        var end: ListNode<Int>?
         
-        func reverse(_ node: ListNodeOld, next: ListNodeOld?) {
+        func reverse(_ node: ListNode<Int>, next: ListNode<Int>?) {
             guard let next = next else {
                 end = node
                 return
@@ -73,5 +78,24 @@ extension Problems {
         
         reverse(head, next: head.next)
         return end
+    }
+}
+
+
+extension ProblemsTestCases {
+    static func testsData_206() -> [(head: ListNode<Int>?, expected: ListNode<Int>?)] {
+        var testsData = [(head: ListNode<Int>?, expected: ListNode<Int>?)]()
+        
+        testsData.append((
+            head: LinkedList([1, 2, 3, 4, 5]).getNode(0),
+            expected: LinkedList([5, 4, 3, 2, 1]).getNode(0)
+        ))
+        testsData.append((
+            head: .init(1, next: .init(2)),
+            expected: .init(2, next: .init(1))
+        ))
+        testsData.append((head: nil, expected: nil))
+        
+        return testsData
     }
 }

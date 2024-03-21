@@ -6,9 +6,50 @@
 //
 
 import XCTest
+import SwiftDataStructures
 @testable import Problems
 
 public final class ProblemsTests_300: XCTestCase {
+    var problems: Problems!
+    
+    public override func setUp() {
+        super.setUp()
+        problems = Problems()
+    }
+    
+    public override func tearDown() {
+        problems = nil
+        super.tearDown()
+    }
+    
+    
+    // MARK: LeetCode Problem 206. Reverse Linked List
+    // Link: https://leetcode.com/problems/3sum/
+    func testsProblem_206() throws {
+        for idx in 0...1 {
+            let testsData = ProblemsTestCases.testsData_206()
+            
+            for data in testsData {
+                let message = "idx: \(idx + 1); head: \(data.head?.description ?? "[]")"
+                let actual: ListNode<Int>?
+                
+                switch idx {
+                    case 0:
+                        actual = problems.problem_206_reverseList(data.head)
+                    default:
+                        actual = problems.problem_206_reverseList_2(data.head)
+                }
+                
+                if data.expected != nil {
+                    XCTAssertEqual(actual!, data.expected!, message)
+                } else {
+                    XCTAssertTrue((actual == nil && data.expected == nil), message)
+                }
+            }
+        }
+    }
+    
+    
     // MARK: Problem 283. Move Zeroes
     func testsProblem_283() throws {
         lazy var testsData_283: [(nums: [Int], expected: [Int])] = {
@@ -325,35 +366,6 @@ public final class ProblemsTests_300: XCTestCase {
             }
         }
     }
-    
-    // MARK: Problem 206. Reverse Linked List
-//    func testsProblem_206() throws {
-//        func testsData_206() -> [(head: ListNode?, expected: ListNode?)] {
-//            var testsData = [(head: ListNode?, expected: ListNode?)]()
-//            
-//            testsData.append((
-//                head: .init(1, .init(2, .init(3, .init(4, .init(5))))),
-//                expected: .init(5, .init(4, .init(3, .init(2, .init(1)))))
-//            ))
-//            testsData.append((
-//                head: .init(1, .init(2)),
-//                expected: .init(2, .init(1))
-//            ))
-//            testsData.append((head: nil, expected: nil))
-//            
-//            return testsData
-//        }
-//        
-//        for data in testsData_206() {
-//            let actual = Problems.problem_206_reverseList(data.head)
-//            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "head: \(data.head?.description ?? "[]")")
-//        }
-//        
-//        for data in testsData_206() {
-//            let actual = Problems.problem_206_reverseList2(data.head)
-//            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "head: \(data.head?.description ?? "[]")")
-//        }
-//    }
     
     // MARK: Problem 205. Isomorphic Strings
     func testsProblem_205() throws {

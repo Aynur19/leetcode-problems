@@ -648,7 +648,6 @@
 				A858BCE02B678019004859BC /* Problem_235.swift */,
 				A858BCDD2B66D630004859BC /* Problem_234.swift */,
 				A858BCD72B66C814004859BC /* Problem_228.swift */,
-				A858BCD42B66A170004859BC /* Problem_206.swift */,
 				A858BCCF2B6698ED004859BC /* Problem_205.swift */,
 				D725FECD2B85D87100DBBD20 /* Problem_201.swift */,
 			);
@@ -959,6 +958,7 @@
 				D7ABE9252BA98B5600DB3336 /* Problems_700 */,
 				D7ABE9202BA820E200DB3336 /* Problems_600 */,
 				D7ABE9192BA58C3300DB3336 /* Problems_500 */,
+				D7ABE99D2BAC0BCA00DB3336 /* Problems_300 */,
 				D7ABE9162BA49BEB00DB3336 /* Problems_100 */,
 			);
 			path = Problems_1000;
@@ -986,6 +986,14 @@
 				D7ABE9662BAAD97C00DB3336 /* Problem_1669.swift */,
 			);
 			path = Problems_1700;
+			sourceTree = "<group>";
+		};
+		D7ABE99D2BAC0BCA00DB3336 /* Problems_300 */ = {
+			isa = PBXGroup;
+			children = (
+				A858BCD42B66A170004859BC /* Problem_206.swift */,
+			);
+			path = Problems_300;
 			sourceTree = "<group>";
 		};
 		D7FFF4512B9B985E00237372 /* List */ = {
