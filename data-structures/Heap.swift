@@ -1,3 +1,30 @@
+public protocol HeapProtocol {
+    associatedtype Element
+    
+    init(
+        compare: @escaping (_ parent: Element, _ child: Element) -> Bool
+    )
+    
+    init(
+        items: [Element],
+        compare: @escaping (_ parent: Element, _ child: Element) -> Bool
+    )
+    
+    var size: Int { get }
+    
+    func peek() -> Element?
+    
+    func push(_ value: Element)
+    
+    func pop() -> Element?
+    
+    static func sort(
+        array: inout [Element],
+        compare: @escaping (_ parent: Element, _ child: Element) -> Bool
+    )
+}
+
+
 public final class Heap<Element>: HeapProtocol {
     typealias Element = Element
     
