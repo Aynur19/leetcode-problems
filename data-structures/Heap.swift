@@ -26,7 +26,7 @@ public protocol HeapProtocol {
 
 
 public final class Heap<Element>: HeapProtocol {
-    typealias Element = Element
+    public typealias Element = Element
     
     private var items: [Element]
     
